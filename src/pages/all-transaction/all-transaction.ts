@@ -50,14 +50,37 @@ export class AllTransactionPage {
 
     //(this.navCtrl.parent as Tabs).select(1);
 
+    
+    var myJsonString = JSON.stringify(this.itemsprice);
+
+    var tempJSON={"itemslist":[],};
+
+    
+
+    this.itemsprice.forEach((element, index) => {
+
+      tempJSON.itemslist.push(
+        {'name': "Blank_Item",
+        'price': parseInt(element),
+        'qty': 0,
+        })      
+    });
+
+
+    var sampledat={ 'itemslist': myJsonString,};
+
+    const myObjStr = JSON.stringify(tempJSON);
+    
+
     (this.navCtrl.parent as Tabs).select(2);
-    this.navCtrl.push(IncomeTransactionPage , this.itemsprice);
-    this.events.publish('genRec:created', this.itemsprice);
-    console.log("Sent: "+this.itemsprice);
+
+    //this.navCtrl.push(IncomeTransactionPage , myObjStr);
+    
+    this.events.publish('genRec:created', myObjStr);
+    console.log("Sent: "+ myObjStr);
   
   }
   
-
 
 	btnClicked(btn) {
 		console.log('CalculatorPage::btnClicked = ' + btn);

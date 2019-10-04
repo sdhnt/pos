@@ -49,7 +49,7 @@ export class AddProductPage {
           duration: 3000
         });
         toast.present();
-        this.navCtrl.setRoot(ListPage);
+        this.navCtrl.push(ListPage);
       },1000)
     })
   }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { StorageProvider} from '../../providers/storage/storage';
 import { SingleProductPage } from '../singleproduct/singleproduct';
+import { DashboardPage } from '../dashboard/dashboard';
 
 @Component({
   selector: 'page-list',
@@ -21,6 +22,11 @@ export class ListPage {
 
   ionViewDidLoad() {
     this.getProducts();
+  }
+  backBtn(){
+      //Hide back btn if src is tab
+      this.navCtrl.pop();
+    
   }
 
   getProducts(){

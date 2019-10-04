@@ -8,6 +8,8 @@
 
     <ion-card >
 
+     
+
        
 
         <ion-list>
@@ -27,14 +29,16 @@
           </ion-item>
         </ion-list>
 
-        <ion-list *ngFor="let item of itemsprice; let i = index" no-lines>
+
+        
+        <ion-list *ngFor="let item of datastore.itemslist; let i = index" no-lines>
 
           <ion-item>
 
 
 
             <button ion-button clear>{{i+1}}. </button>
-            <button ion-button clear>ထုတ်ကုန်ကိုရှေးခယျြ</button> <button ion-button clear>{{item}}</button>
+            <button ion-button clear>{{item.name}}</button> <button ion-button clear>{{item.price}}</button>
             <button ion-button round color="danger">
               <ion-icon name="close"></ion-icon>
             </button>
@@ -63,3 +67,21 @@
   <!-- Dynamically Generate All expense from backend - see feed from prev -->
 
 </ion-content>
+<ion-footer>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <button ion-button full color="dark"> <ion-icon name="checkmark"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+            <button ion-button full color="dark"> <ion-icon name="print"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-4>
+              <button ion-button full color="dark">  <ion-icon name="close"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-footer>

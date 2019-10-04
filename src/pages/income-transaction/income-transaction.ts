@@ -15,22 +15,29 @@ import { IonicPage, NavController, NavParams, Events} from 'ionic-angular';
 })
 export class IncomeTransactionPage {
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
 
     
-    console.log(this.navParams.get('itemsprice'));
+    console.log("Recieved" + this.navParams.get('itemslist'));
 
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IncomeTransactionPage');
     this.events.subscribe('genRec:created', (data) => {
-      console.log( data);
+      console.log("Received" + data);
+      var JSONitems=JSON.parse(data);
+      this.datastore=JSONitems;
     });
-  }
 
+
+
+    
+  }
   
   result = "";
+  datastore={'itemslist':[]};
   flag_mode=0;
   showSampleRec=true;
   itemsprice: string[] = [] ;
@@ -40,6 +47,8 @@ export class IncomeTransactionPage {
   lastdigit=0;
 
 	ngOnInit() {
+
+    //this.itemsprice=JSON.parse(this.dataparm);
   }
 
   createRec(){
