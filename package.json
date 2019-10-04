@@ -40,6 +40,7 @@
     "cordova-plugin-x-toast": "^2.7.2",
     "cordova-sqlite-storage": "^3.3.0",
     "firebase": "^6.6.1",
+    "firebase-tools": "^7.4.0",
     "ionic-angular": "3.9.5",
     "ionicons": "3.0.0",
     "phonegap-plugin-barcodescanner": "^8.1.0",
