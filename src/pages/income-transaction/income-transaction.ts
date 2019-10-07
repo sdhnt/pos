@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events, Tabs} from 'ionic-angular';
+import { AllTransactionPage } from '../all-transaction/all-transaction';
 
 /**
  * Generated class for the IncomeTransactionPage page.
@@ -19,23 +20,33 @@ export class IncomeTransactionPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
 
     
-    console.log("Recieved" + this.navParams.get('itemslist'));
-
+    //console.log("Recieved -1" + this.navParams.get('itemslist'));
+    
   }
+
+  async delay(ms: number) {
+    await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
+}
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IncomeTransactionPage');
-    this.events.subscribe('genRec:created', (data) => {
-      console.log("Received" + data);
+    
+      this.events.subscribe('genRec:created',(data) => {
+      console.log("ENTERED!");
+      console.log("Received 0 " + data);
       var JSONitems=JSON.parse(data);
       this.datastore=JSONitems;
     });
-
+  
+}
 
 
     
-  }
   
+
+
   result = "";
   datastore={'itemslist':[]};
   flag_mode=0;

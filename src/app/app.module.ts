@@ -25,6 +25,13 @@ import { AllTransactionPage } from '../pages/all-transaction/all-transaction';
 import { ExpenseTransactionPage } from '../pages/expense-transaction/expense-transaction';
 import { IncomeTransactionPage } from '../pages/income-transaction/income-transaction';
 import { CalculatorPage } from '../pages/calculator/calculator';
+import { SummaryHomePage } from '../pages/summary-home/summary-home';
+import { CoachHomePage } from '../pages/coach-home/coach-home';
+import { CoachGoalsPage } from '../pages/coach-goals/coach-goals';
+import { CoachCoachPage } from '../pages/coach-coach/coach-coach';
+import { CoachBusinesstipsPage } from '../pages/coach-businesstips/coach-businesstips';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { TransactionProductPage } from '../pages/transaction-product/transaction-product';
 
 
 var config = {
@@ -53,6 +60,13 @@ firebase.initializeApp(config);
     ExpenseTransactionPage,
     IncomeTransactionPage,
     CalculatorPage,
+    SummaryHomePage,
+    CoachHomePage,
+    CoachGoalsPage,
+    CoachCoachPage,
+    CoachBusinesstipsPage,
+    ContactUsPage,
+    TransactionProductPage,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +87,13 @@ firebase.initializeApp(config);
     IncomeTransactionPage,
     AllTransactionPage,
     CalculatorPage,
+    CoachHomePage,
+    SummaryHomePage,
+    CoachGoalsPage,
+    CoachCoachPage,
+    CoachBusinesstipsPage,
+    ContactUsPage,
+    TransactionProductPage,
   ],
   providers: [
     StatusBar,

@@ -8,6 +8,10 @@ import { LoginPage } from '../pages/login/login';
 
 import * as firebase from 'firebase';
 import { TransactionHomePage } from '../pages/transaction-home/transaction-home';
+import { SummaryHomePage } from '../pages/summary-home/summary-home';
+import { CoachHomePage } from '../pages/coach-home/coach-home';
+import { ContactUsPageModule } from '../pages/contact-us/contact-us.module';
+import { ContactUsPage } from '../pages/contact-us/contact-us';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,8 +27,11 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Transactions', component: TransactionHomePage },
+      { title: 'Sales', component: TransactionHomePage },
       { title: 'Products', component: DashboardPage },
+      { title: 'Coach', component: CoachHomePage },
+      { title: 'Summary', component: SummaryHomePage },
+      { title: 'Contact Us', component: ContactUsPage },
       
 
     ];

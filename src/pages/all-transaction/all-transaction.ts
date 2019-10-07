@@ -41,6 +41,9 @@ export class AllTransactionPage {
 
 	ngOnInit() {
   }
+  async delay(ms: number) {
+    await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
+  }
 
   createRec(){
     //Nav to Rec Page
@@ -54,6 +57,8 @@ export class AllTransactionPage {
     var myJsonString = JSON.stringify(this.itemsprice);
 
     var tempJSON={"itemslist":[],};
+
+    
 
     
 
@@ -73,11 +78,19 @@ export class AllTransactionPage {
     
 
     (this.navCtrl.parent as Tabs).select(2);
+    this.delay(300).then(any=>{
+      this.events.publish('genRec:created', myObjStr);
+    
+    console.log("Sent: "+ myObjStr);
+    
+      //your task after delay.
+    });
 
     //this.navCtrl.push(IncomeTransactionPage , myObjStr);
     
-    this.events.publish('genRec:created', myObjStr);
-    console.log("Sent: "+ myObjStr);
+    
+    //this.events.publish('genRec:created', myObjStr);
+    //console.log("Sent1: "+ myObjStr);
   
   }
   

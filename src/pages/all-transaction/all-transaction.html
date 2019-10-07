@@ -168,7 +168,13 @@
 </ion-content>
 
 <ion-footer>
-<ion-toolbar>
-    <ion-title> <button ion-button (click)="createRec()">Generate Receipt</button></ion-title>
-  </ion-toolbar>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+   
 </ion-footer>
