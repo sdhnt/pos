@@ -4,6 +4,51 @@ webpackJsonp([14],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoachCoachPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the CoachCoachPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CoachCoachPage = /** @class */ (function () {
+    function CoachCoachPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CoachCoachPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CoachCoachPage');
+    };
+    CoachCoachPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-coach-coach',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-coach\coach-coach.html"*/'<!--\n  Generated template for the CoachCoachPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>coach-coach</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n    <ion-card>\n        <ion-grid line>\n            <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n              <ion-col col-10 style="color: grey; font-size: 10px;"> Thus, 12th October 2018 </ion-col>\n              <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n            </ion-row>\n            <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n              <ion-col><h2><b>EC Coach Tip</b></h2></ion-col>\n            </ion-row>\n    \n          <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n              Want to look professional? Provide your customers a receipt with their purchases.\n          </ion-row>\n          <ion-row  style="background-color: #f0f0f0">\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-up" ></ion-icon>\n            </ion-col>\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-down"></ion-icon>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card> \n\n      \n    <ion-card>\n        <ion-grid line>\n            <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n              <ion-col col-10 style="color: grey; font-size: 10px;"> Thus, 12th October 2018 </ion-col>\n              <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n            </ion-row>\n            <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n              <ion-col><h2><b>EC Coach Tip</b></h2></ion-col>\n            </ion-row>\n    \n          <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n              Let your customers know that you are listening. Tell them, "I hear what you are saying" and ask "Tell me more about that". This way you indicate that you are paying attention without agreeing or disagreeing with them.\n          </ion-row>\n          <ion-row  style="background-color: #f0f0f0">\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-up" ></ion-icon>\n            </ion-col>\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-down"></ion-icon>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card> \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-coach\coach-coach.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], CoachCoachPage);
+    return CoachCoachPage;
+}());
+
+//# sourceMappingURL=coach-coach.js.map
+
+/***/ }),
+
+/***/ 112:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllTransactionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
@@ -167,7 +212,7 @@ var AllTransactionPage = /** @class */ (function () {
     };
     AllTransactionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-all-transaction',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\all-transaction\all-transaction.html"*/'<!--\n  Generated template for the AllTransactionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content padding>\n    <!-- <ion-fab bottom right>\n        <button ion-fab color="primary" item-right><ion-icon name="calculator"></ion-icon></button>\n      </ion-fab> -->\n      <ion-card *ngIf="showSampleRec==false">\n        Please type the amount for the item multiplied by its quantity and press equal to add to the existing bill.\n\n        To add multiple blank items enter each price*qty and press the + sign to enter the next item\n      </ion-card>\n      \n  <ion-grid>\n    <ion-row>\n\n      <ion-col col-12 col-md-6>\n\n          <div class="calculator">\n            <div class="header">\n              <div class="window"></div>\n              <div class="input">\n                <ion-row>\n                  <ion-input type="text" placeholder="0" name="display" [(ngModel)]="result">\n                  </ion-input>\n                  <ion-icon name="backspace" (click)="btnClicked(\'b\')"></ion-icon>\n                  \n                </ion-row> \n               \n                    \n                \n              </div>\n             \n              \n            </div>\n            <div class="keys">\n              <div class="row">\n                <div class="number">\n                  <span (click)="btnClicked(\'7\')">7</span>\n                  <span (click)="btnClicked(\'8\')">8</span>\n                  <span (click)="btnClicked(\'9\')">9</span>\n                </div>\n                <div class="symbol">\n                  <span (click)="btnClicked(\'*\')">×</span>\n\n                </div>\n              </div>\n\n              <div class="row">\n                <div class="number">\n                  <span (click)="btnClicked(\'4\')">4</span>\n                  <span (click)="btnClicked(\'5\')">5</span>\n                  <span (click)="btnClicked(\'6\')">6</span>\n                </div>\n\n                <div class="symbol">\n                  <span (click)="btnClicked(\'+\')">+</span>\n           </div>\n              </div>\n\n              <div class="row">\n                <div class="number">\n                  <span (click)="btnClicked(\'1\')">1</span>\n                  <span (click)="btnClicked(\'2\')">2</span>\n                  <span (click)="btnClicked(\'3\')">3</span>\n                </div>\n\n                <div class="symbol">\n                  <span (click)="btnClicked(\'/\')">÷</span>\n                  <span (click)="btnClicked(\'squareroot\')">√x</span>\n                </div>\n\n\n              </div>\n\n\n              <div class="row">\n                <div class="number">\n                  <span class=dull (click)="btnClicked(\'C\')">C</span>\n                  <span (click)="btnClicked(\'0\')">0</span>\n                  <span (click)="btnClicked(\'-\')">-</span>\n\n\n\n                </div>\n\n                <div class="symbol action">\n                  <span (click)="btnClicked(\'=\')">=</span>\n                </div>\n\n              </div>\n            </div>\n          </div>\n\n    \n\n      </ion-col>\n\n      <ion-col col-12 col-md-6>\n\n\n        <ion-card *ngIf="showSampleRec==true">\n\n       \n\n          <ion-list>\n            <ion-item>\n\n                <button ion-button clear> SAMPLE RECIEPT </button>\n            </ion-item>\n            <ion-item>\n\n              <button ion-button clear>Sl no. </button>\n              <button ion-button clear>Item Name</button>\n              <button ion-button clear>Price</button>\n\n            </ion-item>\n          </ion-list>\n\n          <ion-list *ngFor="let item of itemsprice; let i = index" no-lines>\n\n            <ion-item>\n\n\n\n              <button ion-button clear>{{i+1}}. </button>\n              <button ion-button clear>ထုတ်ကုန်ကိုရှေးခယျြ</button> <button ion-button clear>{{item}}</button>\n         \n\n            </ion-item>\n\n\n\n          </ion-list>\n\n          <ion-list>\n            <ion-item>\n\n\n              <button ion-button clear><b>စုစုပေါင်းဥပဒေကြမ်း </b></button>\n              <button ion-button clear>{{lastsum}}</button>\n\n\n            </ion-item>\n          </ion-list>\n\n\n        </ion-card>\n\n      </ion-col>\n\n\n\n    </ion-row>\n\n\n  </ion-grid>\n\n\n\n  <!-- Dynamically Generate All transactions from backend - see feed from prev -->\n\n</ion-content>\n\n<ion-footer>\n\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n            <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n   \n</ion-footer>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\all-transaction\all-transaction.html"*/,
+            selector: 'page-all-transaction',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\all-transaction\all-transaction.html"*/'<!--\n  Generated template for the AllTransactionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content padding>\n    <!-- <ion-fab bottom right>\n        <button ion-fab color="primary" item-right><ion-icon name="calculator"></ion-icon></button>\n      </ion-fab> -->\n      <ion-card *ngIf="showSampleRec==false">\n        Please type the amount for the item multiplied by its quantity and press equal to add to the existing bill.\n\n        To add multiple blank items enter each price*qty and press the + sign to enter the next item\n      </ion-card>\n      \n  <ion-grid>\n    <ion-row>\n\n      <ion-col col-12 col-md-6>\n\n          <div class="calculator">\n            <div class="header">\n              <div class="window"></div>\n              <div class="input">\n                <ion-row>\n                  <ion-input type="text" placeholder="0" name="display" [(ngModel)]="result">\n                  </ion-input>\n                  <ion-icon name="backspace" (click)="btnClicked(\'b\')"></ion-icon>\n                  \n                </ion-row> \n               \n                    \n                \n              </div>\n             \n              \n            </div>\n            <div class="keys">\n              <div class="row">\n                <div class="number">\n                  <span (click)="btnClicked(\'7\')">7</span>\n                  <span (click)="btnClicked(\'8\')">8</span>\n                  <span (click)="btnClicked(\'9\')">9</span>\n                </div>\n                <div class="symbol">\n                  <span (click)="btnClicked(\'*\')">×</span>\n\n                </div>\n              </div>\n\n              <div class="row">\n                <div class="number">\n                  <span (click)="btnClicked(\'4\')">4</span>\n                  <span (click)="btnClicked(\'5\')">5</span>\n                  <span (click)="btnClicked(\'6\')">6</span>\n                </div>\n\n                <div class="symbol">\n                  <span (click)="btnClicked(\'+\')">+</span>\n           </div>\n              </div>\n\n              <div class="row">\n                <div class="number">\n                  <span (click)="btnClicked(\'1\')">1</span>\n                  <span (click)="btnClicked(\'2\')">2</span>\n                  <span (click)="btnClicked(\'3\')">3</span>\n                </div>\n\n                <div class="symbol">\n                  <span (click)="btnClicked(\'/\')">÷</span>\n                  <span (click)="btnClicked(\'squareroot\')">√x</span>\n                </div>\n\n\n              </div>\n\n\n              <div class="row">\n                <div class="number">\n                  <span class=dull (click)="btnClicked(\'C\')">C</span>\n                  <span (click)="btnClicked(\'0\')">0</span>\n                  <span (click)="btnClicked(\'-\')">-</span>\n\n\n\n                </div>\n\n                <div class="symbol action">\n                  <span (click)="btnClicked(\'=\')">=</span>\n                </div>\n\n              </div>\n            </div>\n          </div>\n\n    \n\n      </ion-col>\n\n      <ion-col col-12 col-md-6>\n\n\n        <ion-card *ngIf="showSampleRec==true">\n\n       \n\n           \n\n                <ion-grid>\n          \n                  <ion-row> <ion-col style="text-align: center; padding-top: 5px;">Mingalabar Noodles </ion-col> </ion-row>\n          \n                  <ion-row>\n                      <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> 139, Yaw Kyaw Main Road, Yangon City, Myanmar.</ion-col>\n                  </ion-row>\n                  <ion-row>\n                      <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> Ph: 59297492 mglnoodle@gmail.com</ion-col>\n                  </ion-row>\n          \n                  <ion-row style="padding-top: 5px;">\n                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><b>Sl</b></ion-col>\n                      <ion-col col-4 style="color: black; font-size: 10px; text-align: center"><b>Item</b></ion-col>\n                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Price</b></ion-col>\n                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Qty</b></ion-col>\n                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>\n                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>\n                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>\n                  </ion-row>\n          \n                 \n          \n                  <ion-list *ngFor="let item of itemsprice; let i = index" no-lines>\n          \n              \n                    <ion-row>\n                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center">{{i+1}}.</ion-col>\n                        <ion-col col-4 style="color: black; font-size: 10px; text-align: center">\n                         Item {{i+1}}</ion-col>   \n                        <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item}}</ion-col>\n                        <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item}}</ion-col>\n                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>\n                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>\n                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>\n          \n                    </ion-row>\n                \n          \n                  </ion-list>\n          \n                  <ion-row padding>\n                      <ion-col col-1></ion-col>  \n                    <ion-col col-4 style="text-align: center;font-size: 10px;"><b>စုစုပေါင်းဥပဒေကြမ်း</b> </ion-col>\n                      <ion-col col-2 style="text-align: center;font-size: 10px;"><b>{{lastsum}}</b> </ion-col>\n                      <ion-col col-5></ion-col>\n                    </ion-row>\n          \n          \n                   \n          \n          \n                </ion-grid>\n          \n          \n          \n\n        </ion-card>\n\n      </ion-col>\n\n\n\n    </ion-row>\n\n\n  </ion-grid>\n\n\n\n  <!-- Dynamically Generate All transactions from backend - see feed from prev -->\n\n</ion-content>\n\n<ion-footer>\n\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n            <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n   \n</ion-footer>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\all-transaction\all-transaction.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
     ], AllTransactionPage);
@@ -175,51 +220,6 @@ var AllTransactionPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=all-transaction.js.map
-
-/***/ }),
-
-/***/ 112:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoachBusinesstipsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the CoachBusinesstipsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CoachBusinesstipsPage = /** @class */ (function () {
-    function CoachBusinesstipsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    CoachBusinesstipsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CoachBusinesstipsPage');
-    };
-    CoachBusinesstipsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-coach-businesstips',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/'<!--\n  Generated template for the CoachBusinesstipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>coach-businesstips</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n  \n  <ion-card>\n    <ion-grid line>\n        <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n          <ion-col col-10 style="color: grey; font-size: 10px;"> Wed, 10th October 2018 </ion-col>\n          <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n        </ion-row>\n        <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n          <ion-col><h2><b>You\'ve got a winner!</b></h2></ion-col>\n        </ion-row>\n\n      <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n        Your item XYZ sells 50% higher than any other product in its category. Item ABC sells only 2% the volume of XYZ. You should stock more XYZ and less ABC.\n      </ion-row>\n      <ion-row  style="background-color: #f0f0f0">\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-up" ></ion-icon>\n        </ion-col>\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-down"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card> \n\n  \n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], CoachBusinesstipsPage);
-    return CoachBusinesstipsPage;
-}());
-
-//# sourceMappingURL=coach-businesstips.js.map
 
 /***/ }),
 
@@ -272,7 +272,7 @@ var CoachGoalsPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoachCoachPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoachBusinesstipsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -287,29 +287,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the CoachCoachPage page.
+ * Generated class for the CoachBusinesstipsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var CoachCoachPage = /** @class */ (function () {
-    function CoachCoachPage(navCtrl, navParams) {
+var CoachBusinesstipsPage = /** @class */ (function () {
+    function CoachBusinesstipsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    CoachCoachPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CoachCoachPage');
+    CoachBusinesstipsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CoachBusinesstipsPage');
     };
-    CoachCoachPage = __decorate([
+    CoachBusinesstipsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-coach-coach',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-coach\coach-coach.html"*/'<!--\n  Generated template for the CoachCoachPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>coach-coach</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n    <ion-card>\n        <ion-grid line>\n            <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n              <ion-col col-10 style="color: grey; font-size: 10px;"> Thus, 12th October 2018 </ion-col>\n              <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n            </ion-row>\n            <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n              <ion-col><h2><b>EC Coach Tip</b></h2></ion-col>\n            </ion-row>\n    \n          <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n              Want to look professional? Provide your customers a receipt with their purchases.\n          </ion-row>\n          <ion-row  style="background-color: #f0f0f0">\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-up" ></ion-icon>\n            </ion-col>\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-down"></ion-icon>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card> \n\n      \n    <ion-card>\n        <ion-grid line>\n            <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n              <ion-col col-10 style="color: grey; font-size: 10px;"> Thus, 12th October 2018 </ion-col>\n              <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n            </ion-row>\n            <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n              <ion-col><h2><b>EC Coach Tip</b></h2></ion-col>\n            </ion-row>\n    \n          <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n              Let your customers know that you are listening. Tell them, "I hear what you are saying" and ask "Tell me more about that". This way you indicate that you are paying attention without agreeing or disagreeing with them.\n          </ion-row>\n          <ion-row  style="background-color: #f0f0f0">\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-up" ></ion-icon>\n            </ion-col>\n            <ion-col col-6 style="text-align: center ">\n                <ion-icon name="thumbs-down"></ion-icon>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-card> \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-coach\coach-coach.html"*/,
+            selector: 'page-coach-businesstips',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/'<!--\n  Generated template for the CoachBusinesstipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>coach-businesstips</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n  \n  <ion-card>\n    <ion-grid line>\n        <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n          <ion-col col-10 style="color: grey; font-size: 10px;"> Wed, 10th October 2018 </ion-col>\n          <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n        </ion-row>\n        <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n          <ion-col><h2><b>You\'ve got a winner!</b></h2></ion-col>\n        </ion-row>\n\n      <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n        Your item XYZ sells 50% higher than any other product in its category. Item ABC sells only 2% the volume of XYZ. You should stock more XYZ and less ABC.\n      </ion-row>\n      <ion-row  style="background-color: #f0f0f0">\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-up" ></ion-icon>\n        </ion-col>\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-down"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card> \n\n  \n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], CoachCoachPage);
-    return CoachCoachPage;
+    ], CoachBusinesstipsPage);
+    return CoachBusinesstipsPage;
 }());
 
-//# sourceMappingURL=coach-coach.js.map
+//# sourceMappingURL=coach-businesstips.js.map
 
 /***/ }),
 
@@ -321,8 +321,8 @@ var CoachCoachPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coach_goals_coach_goals__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coach_coach_coach_coach__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__coach_businesstips_coach_businesstips__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coach_coach_coach_coach__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__coach_businesstips_coach_businesstips__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_us_contact_us__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -478,7 +478,7 @@ var IncomeTransactionPage = /** @class */ (function () {
     };
     IncomeTransactionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-income-transaction',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\income-transaction\income-transaction.html"*/'<!--\n  Generated template for the IncomeTransactionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n\n\n    <ion-card >\n\n      <ion-grid>\n\n        <ion-row> <ion-col style="text-align: center; padding-top: 5px;">Mingalabar Noodles </ion-col> </ion-row>\n\n        <ion-row>\n            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> 139, Yaw Kyaw Main Road, Yangon City, Myanmar.</ion-col>\n        </ion-row>\n        <ion-row>\n            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> Ph: 59297492 mglnoodle@gmail.com</ion-col>\n        </ion-row>\n\n        <ion-row style="padding-top: 5px;">\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><b>Sl</b></ion-col>\n            <ion-col col-4 style="color: black; font-size: 10px; text-align: center"><b>Item</b></ion-col>\n            <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Price</b></ion-col>\n            <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Qty</b></ion-col>\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>\n        </ion-row>\n\n        \n\n\n      </ion-grid>\n\n     \n\n       \n\n        <ion-list>\n       \n\n          <ion-item>\n              <button ion-button color="secondary" round> Add from Calc </button>\n              <button ion-button color="secondary" round> Add from Product List </button>\n          </ion-item>\n        </ion-list>\n\n\n        \n        <ion-list *ngFor="let item of datastore.itemslist; let i = index" no-lines>\n\n          <ion-item>\n\n\n\n            <button ion-button clear>{{i+1}}. </button>\n            <button ion-button clear>{{item.name}}</button> <button ion-button clear>{{item.price}}</button>\n            <button ion-button round color="danger">\n              <ion-icon name="close"></ion-icon>\n            </button>\n\n          </ion-item>\n\n         \n\n\n\n        </ion-list>\n\n        <ion-list>\n          <ion-item>\n\n\n            <button ion-button clear><b>စုစုပေါင်းဥပဒေကြမ်း </b></button>\n            <button ion-button clear>{{lastsum}}</button>\n\n\n          </ion-item>\n        </ion-list>\n\n\n      </ion-card>\n  <!-- Dynamically Generate All expense from backend - see feed from prev -->\n\n</ion-content>\n<ion-footer>\n    <ion-grid>\n        <ion-row>\n          <ion-col col-4>\n            <button ion-button full color="dark"> <ion-icon name="checkmark"></ion-icon>\n            </button>\n          </ion-col>\n          <ion-col col-4>\n            <button ion-button full color="dark"> <ion-icon name="print"></ion-icon>\n            </button>\n          </ion-col>\n          <ion-col col-4>\n              <button ion-button full color="dark">  <ion-icon name="close"></ion-icon>\n              </button>\n            </ion-col>\n        </ion-row>\n      </ion-grid>\n</ion-footer>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\income-transaction\income-transaction.html"*/,
+            selector: 'page-income-transaction',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\income-transaction\income-transaction.html"*/'<!--\n  Generated template for the IncomeTransactionPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n<ion-content padding>\n\n\n    <ion-card >\n\n      <ion-grid>\n\n        <ion-row> <ion-col style="text-align: center; padding-top: 5px;">Mingalabar Noodles </ion-col> </ion-row>\n\n        <ion-row>\n            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> 139, Yaw Kyaw Main Road, Yangon City, Myanmar.</ion-col>\n        </ion-row>\n        <ion-row>\n            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> Ph: 59297492 mglnoodle@gmail.com</ion-col>\n        </ion-row>\n\n        <ion-row style="padding-top: 5px;">\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><b>Sl</b></ion-col>\n            <ion-col col-4 style="color: black; font-size: 10px; text-align: center"><b>Item</b></ion-col>\n            <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Price</b></ion-col>\n            <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Qty</b></ion-col>\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>\n            <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>\n        </ion-row>\n\n       \n\n        <ion-list *ngFor="let item of datastore.itemslist; let i = index" no-lines>\n\n    \n          <ion-row>\n              <ion-col col-1 style="color: black; font-size: 10px; text-align: center">{{i+1}}.</ion-col>\n              <ion-col col-4 style="color: black; font-size: 10px; text-align: center">\n                <div *ngIf="item.name==\'Blank_Item\'; else itemexist">\n                  <button ion-button full style="font-size: 10px; height: 15px;">Add</button>\n                </div>\n                <ng-template #itemexist>{{item.name}}</ng-template>\n              </ion-col>\n              <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item.price}}</ion-col>\n              <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item.qty}}</ion-col>\n              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>\n              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>\n              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>\n\n          </ion-row>\n      \n\n        </ion-list>\n\n        <ion-row padding>\n            <ion-col col-1></ion-col>  \n          <ion-col col-4 style="text-align: center;font-size: 10px;"><b>စုစုပေါင်းဥပဒေကြမ်း</b> </ion-col>\n            <ion-col col-2 style="text-align: center;font-size: 10px;"><b>{{lastsum}}</b> </ion-col>\n            <ion-col col-5></ion-col>\n          </ion-row>\n\n\n         \n\n\n      </ion-grid>\n\n\n      </ion-card>\n  <!-- Dynamically Generate All expense from backend - see feed from prev -->\n  <ion-grid>\n      <ion-row>\n         \n          <ion-col col-6 style="text-align: center;"> <button ion-button> Add from Calc</button></ion-col>\n          <ion-col col-6 style="text-align: center;"> <button ion-button> Add from Calc</button></ion-col>\n\n   \n        </ion-row>\n      \n  </ion-grid>\n\n</ion-content>\n\n\n<ion-footer>\n    <ion-grid>\n        <ion-row>\n          <ion-col col-4>\n            <button ion-button full color="dark"> <ion-icon name="checkmark"></ion-icon>\n            </button>\n          </ion-col>\n          <ion-col col-4>\n            <button ion-button full color="dark"> <ion-icon name="print"></ion-icon>\n            </button>\n          </ion-col>\n          <ion-col col-4>\n              <button ion-button full color="dark">  <ion-icon name="close"></ion-icon>\n              </button>\n            </ion-col>\n        </ion-row>\n      </ion-grid>\n</ion-footer>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\income-transaction\income-transaction.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
     ], IncomeTransactionPage);
@@ -490,6 +490,82 @@ var IncomeTransactionPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 117:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sign_up_sign_up__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transaction_home_transaction_home__ = __webpack_require__(59);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var LoginPage = /** @class */ (function () {
+    function LoginPage(navCtrl, navParams, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.toastCtrl = toastCtrl;
+        this.email = "";
+        this.password = "";
+    }
+    LoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LoginPage');
+    };
+    LoginPage.prototype.login = function () {
+        var _this = this;
+        __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().signInWithEmailAndPassword(this.email, this.password)
+            .then(function (user) {
+            console.log(user);
+            _this.toastCtrl.create({
+                message: "Welcome " + user.user.displayName,
+                duration: 3000
+            }).present();
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__transaction_home_transaction_home__["a" /* TransactionHomePage */]);
+        }).catch(function (err) {
+            console.log(err);
+            _this.toastCtrl.create({
+                message: err.message,
+                duration: 3000
+            }).present();
+        });
+    };
+    LoginPage.prototype.gotoSignUp = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__sign_up_sign_up__["a" /* SignUpPage */]);
+    };
+    LoginPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\login\login.html"*/'\n<ion-content padding>\n\n\n\n  <button ion-button block clear color="light" class="nametop">EasyCredit</button> \n\n\n\n  <ion-grid style="width: 75%;">\n\n    \n    <ion-row class="row-style">\n      \n      <ion-icon name="mail" color="semi-light" class="icon"></ion-icon>\n      <ion-input type="email" placeholder="Email" [(ngModel)]="email" ></ion-input>\n    </ion-row>\n    <ion-row class="row-style">\n      <ion-icon name="key" color="semi-light" class="icon"></ion-icon>\n      <ion-input type="password" placeholder="Password" [(ngModel)]="password" ></ion-input>\n    </ion-row>\n    <ion-row>\n      <button ion-button block round outline color="light" style="margin-top: 20px;" (click)="login()">Login</button>\n    </ion-row>\n    <div class="btn_container">\n        <button ion-button full (click)="loginAction();">Login with Facebook</button>\n    </div>\n  \n  </ion-grid>\n\n\n  <button ion-button block clear color="light" style="margin-top: 10px;" (click)="gotoSignUp()">Don\'t have an account? Sign Up</button> \n  \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\login\login.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+    ], LoginPage);
+    return LoginPage;
+}());
+
+//# sourceMappingURL=login.js.map
+
+/***/ }),
+
+/***/ 118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -577,82 +653,6 @@ var SignUpPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 118:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sign_up_sign_up__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transaction_home_transaction_home__ = __webpack_require__(59);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.toastCtrl = toastCtrl;
-        this.email = "";
-        this.password = "";
-    }
-    LoginPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad LoginPage');
-    };
-    LoginPage.prototype.login = function () {
-        var _this = this;
-        __WEBPACK_IMPORTED_MODULE_2_firebase___default.a.auth().signInWithEmailAndPassword(this.email, this.password)
-            .then(function (user) {
-            console.log(user);
-            _this.toastCtrl.create({
-                message: "Welcome " + user.user.displayName,
-                duration: 3000
-            }).present();
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__transaction_home_transaction_home__["a" /* TransactionHomePage */]);
-        }).catch(function (err) {
-            console.log(err);
-            _this.toastCtrl.create({
-                message: err.message,
-                duration: 3000
-            }).present();
-        });
-    };
-    LoginPage.prototype.gotoSignUp = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__sign_up_sign_up__["a" /* SignUpPage */]);
-    };
-    LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\login\login.html"*/'\n<ion-content padding>\n\n\n\n  <button ion-button block clear color="light" class="nametop">EasyCredit</button> \n\n\n\n  <ion-grid style="width: 75%;">\n\n    \n    <ion-row class="row-style">\n      \n      <ion-icon name="mail" color="semi-light" class="icon"></ion-icon>\n      <ion-input type="email" placeholder="Email" [(ngModel)]="email" ></ion-input>\n    </ion-row>\n    <ion-row class="row-style">\n      <ion-icon name="key" color="semi-light" class="icon"></ion-icon>\n      <ion-input type="password" placeholder="Password" [(ngModel)]="password" ></ion-input>\n    </ion-row>\n    <ion-row>\n      <button ion-button block round outline color="light" style="margin-top: 20px;" (click)="login()">Login</button>\n    </ion-row>\n    <div class="btn_container">\n        <button ion-button full (click)="loginAction();">Login with Facebook</button>\n    </div>\n  \n  </ion-grid>\n\n\n  <button ion-button block clear color="light" style="margin-top: 10px;" (click)="gotoSignUp()">Don\'t have an account? Sign Up</button> \n  \n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\login\login.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
-    ], LoginPage);
-    return LoginPage;
-}());
-
-//# sourceMappingURL=login.js.map
-
-/***/ }),
-
 /***/ 119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -687,7 +687,7 @@ var TransactionProductPage = /** @class */ (function () {
     };
     TransactionProductPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-transaction-product',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\transaction-product\transaction-product.html"*/'<!--\n  Generated template for the TransactionProductPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>transaction-product</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n    <ion-searchbar showCancelButton="always"></ion-searchbar>\n\n    <ion-item>\n        <ion-label>Categories</ion-label>\n        <ion-select [(ngModel)]="toppings" multiple="true">\n          <ion-option>Noodle</ion-option>\n          <ion-option>Snack</ion-option>\n          <ion-option>Main Course</ion-option>\n          <ion-option>Dessert</ion-option>\n          <ion-option>Drinks</ion-option>\n         \n        </ion-select>\n      </ion-item>\n\n    \n    <ion-card>\n        <ion-grid line>\n          <ion-row>\n          <ion-col col-2>\n            <ion-row>\n              <ion-avatar>\n                  <img src="https://i0.wp.com/mainlymiles.com/wp-content/uploads/2019/04/Yew-Mee.jpg?w=256&h=256&crop=1&ssl=1">\n                </ion-avatar>\n              </ion-row>\n          </ion-col>\n          <ion-col col-10>\n              <ion-row>\n                  <ion-col col-7>\n                    Shan Noodle\n                  </ion-col>\n                  <ion-col col-3>\n                    1\n                    </ion-col>\n                    <ion-col col-1>\n                        <ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon>\n                    </ion-col>\n                    <ion-col col-1>\n                        <ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon>\n                    </ion-col>\n                </ion-row>\n                <ion-row>\n                  <ion-col col-6 style="color: grey; font-size: 10px;"> Price 3500 MMK </ion-col>\n                  <ion-col col-6 style="color: grey; font-size: 10px; text-align: end;"> Category: Noodle </ion-col>\n                </ion-row>\n\n          </ion-col>\n        </ion-row>\n        </ion-grid>\n      </ion-card> \n\n      <ion-list inset>\n          <ion-item *ngFor="let product of listProducts">\n            <h2>{{product.name}}</h2>\n            <p>Price: {{product.price}} USD</p>\n            <button ion-button clear item-end (click)="singleProduct(product)">View</button>\n      \n          </ion-item>\n        </ion-list>\n  \n\n   \n</ion-content>\n\n<ion-footer>\n\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n            <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n   \n</ion-footer>\n\n\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\transaction-product\transaction-product.html"*/,
+            selector: 'page-transaction-product',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\transaction-product\transaction-product.html"*/'<!--\n  Generated template for the TransactionProductPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>transaction-product</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n    <ion-searchbar showCancelButton="always"></ion-searchbar>\n\n    <ion-item>\n        <ion-label>Categories</ion-label>\n        <ion-select [(ngModel)]="toppings" multiple="true">\n          <ion-option>Noodle</ion-option>\n          <ion-option>Snack</ion-option>\n          <ion-option>Main Course</ion-option>\n          <ion-option>Dessert</ion-option>\n          <ion-option>Drinks</ion-option>\n          <ion-option>Currently Selected</ion-option>\n         \n        </ion-select>\n      </ion-item>\n\n    \n    <ion-card>\n        <ion-grid line>\n          <ion-row>\n          <ion-col col-2>\n            <ion-row>\n              <ion-avatar>\n                  <img src="https://i0.wp.com/mainlymiles.com/wp-content/uploads/2019/04/Yew-Mee.jpg?w=256&h=256&crop=1&ssl=1">\n                </ion-avatar>\n              </ion-row>\n          </ion-col>\n          <ion-col col-10>\n              <ion-row>\n                  <ion-col col-7>\n                    Shan Noodle\n                  </ion-col>\n                  <ion-col col-3>\n                    1\n                    </ion-col>\n                    <ion-col col-1>\n                        <ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon>\n                    </ion-col>\n                    <ion-col col-1>\n                        <ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon>\n                    </ion-col>\n                </ion-row>\n                <ion-row>\n                  <ion-col col-6 style="color: grey; font-size: 10px;"> Price 3500 MMK </ion-col>\n                  <ion-col col-6 style="color: grey; font-size: 10px; text-align: end;"> Category: Noodle </ion-col>\n                </ion-row>\n\n          </ion-col>\n        </ion-row>\n        </ion-grid>\n      </ion-card> \n\n      <ion-list inset>\n          <ion-item *ngFor="let product of listProducts">\n            <h2>{{product.name}}</h2>\n            <p>Price: {{product.price}} USD</p>\n            <button ion-button clear item-end (click)="singleProduct(product)">View</button>\n      \n          </ion-item>\n        </ion-list>\n  \n\n   \n</ion-content>\n\n<ion-footer>\n\n    <ion-grid>\n      <ion-row>\n        <ion-col>\n            <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n   \n</ion-footer>\n\n\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\transaction-product\transaction-product.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], TransactionProductPage);
@@ -765,47 +765,47 @@ webpackEmptyAsyncContext.id = 129;
 
 var map = {
 	"../pages/all-transaction/all-transaction.module": [
-		306,
+		307,
 		13
 	],
 	"../pages/calculator/calculator.module": [
-		309,
+		308,
 		12
 	],
 	"../pages/coach-businesstips/coach-businesstips.module": [
-		307,
+		311,
 		11
 	],
 	"../pages/coach-coach/coach-coach.module": [
-		310,
+		306,
 		10
 	],
 	"../pages/coach-goals/coach-goals.module": [
-		308,
+		309,
 		9
 	],
 	"../pages/coach-home/coach-home.module": [
-		311,
+		312,
 		8
 	],
 	"../pages/contact-us/contact-us.module": [
-		312,
+		310,
 		7
 	],
 	"../pages/expense-transaction/expense-transaction.module": [
-		313,
+		314,
 		6
 	],
 	"../pages/income-transaction/income-transaction.module": [
-		314,
+		313,
 		5
 	],
 	"../pages/login/login.module": [
-		316,
+		315,
 		4
 	],
 	"../pages/sign-up/sign-up.module": [
-		315,
+		316,
 		3
 	],
 	"../pages/summary-home/summary-home.module": [
@@ -813,11 +813,11 @@ var map = {
 		2
 	],
 	"../pages/transaction-home/transaction-home.module": [
-		319,
+		318,
 		1
 	],
 	"../pages/transaction-product/transaction-product.module": [
-		318,
+		319,
 		0
 	]
 };
@@ -1216,8 +1216,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_addproduct_addproduct__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_singleproduct_singleproduct__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_sign_up_sign_up__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_sign_up_sign_up__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_barcode_scanner__ = __webpack_require__(52);
@@ -1227,15 +1227,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_firebase__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_transaction_home_transaction_home__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_all_transaction_all_transaction__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_all_transaction_all_transaction__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_expense_transaction_expense_transaction__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_income_transaction_income_transaction__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_calculator_calculator__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_summary_home_summary_home__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_coach_home_coach_home__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_coach_goals_coach_goals__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_coach_coach_coach_coach__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_coach_businesstips_coach_businesstips__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_coach_coach_coach_coach__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_coach_businesstips_coach_businesstips__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_contact_us_contact_us__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_transaction_product_transaction_product__ = __webpack_require__(119);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1313,20 +1313,20 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/all-transaction/all-transaction.module#AllTransactionPageModule', name: 'AllTransactionPage', segment: 'all-transaction', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/coach-businesstips/coach-businesstips.module#CoachBusinesstipsPageModule', name: 'CoachBusinesstipsPage', segment: 'coach-businesstips', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/coach-goals/coach-goals.module#CoachGoalsPageModule', name: 'CoachGoalsPage', segment: 'coach-goals', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/calculator/calculator.module#CalculatorPageModule', name: 'CalculatorPage', segment: 'calculator', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-coach/coach-coach.module#CoachCoachPageModule', name: 'CoachCoachPage', segment: 'coach-coach', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/coach-home/coach-home.module#CoachHomePageModule', name: 'CoachHomePage', segment: 'coach-home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/all-transaction/all-transaction.module#AllTransactionPageModule', name: 'AllTransactionPage', segment: 'all-transaction', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/calculator/calculator.module#CalculatorPageModule', name: 'CalculatorPage', segment: 'calculator', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/coach-goals/coach-goals.module#CoachGoalsPageModule', name: 'CoachGoalsPage', segment: 'coach-goals', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact-us/contact-us.module#ContactUsPageModule', name: 'ContactUsPage', segment: 'contact-us', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/expense-transaction/expense-transaction.module#ExpenseTransactionPageModule', name: 'ExpenseTransactionPage', segment: 'expense-transaction', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/coach-businesstips/coach-businesstips.module#CoachBusinesstipsPageModule', name: 'CoachBusinesstipsPage', segment: 'coach-businesstips', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/coach-home/coach-home.module#CoachHomePageModule', name: 'CoachHomePage', segment: 'coach-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/income-transaction/income-transaction.module#IncomeTransactionPageModule', name: 'IncomeTransactionPage', segment: 'income-transaction', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/expense-transaction/expense-transaction.module#ExpenseTransactionPageModule', name: 'ExpenseTransactionPage', segment: 'expense-transaction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/summary-home/summary-home.module#SummaryHomePageModule', name: 'SummaryHomePage', segment: 'summary-home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/transaction-product/transaction-product.module#TransactionProductPageModule', name: 'TransactionProductPage', segment: 'transaction-product', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/transaction-home/transaction-home.module#TransactionHomePageModule', name: 'TransactionHomePage', segment: 'transaction-home', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/transaction-home/transaction-home.module#TransactionHomePageModule', name: 'TransactionHomePage', segment: 'transaction-home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/transaction-product/transaction-product.module#TransactionProductPageModule', name: 'TransactionProductPage', segment: 'transaction-product', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_14__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -1382,7 +1382,7 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_dashboard_dashboard__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_transaction_home_transaction_home__ = __webpack_require__(59);
@@ -1418,7 +1418,7 @@ var MyApp = /** @class */ (function () {
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_login_login__["a" /* LoginPage */];
         this.initializeApp();
         this.pages = [
-            { title: 'Transactions', component: __WEBPACK_IMPORTED_MODULE_7__pages_transaction_home_transaction_home__["a" /* TransactionHomePage */] },
+            { title: 'Sales', component: __WEBPACK_IMPORTED_MODULE_7__pages_transaction_home_transaction_home__["a" /* TransactionHomePage */] },
             { title: 'Products', component: __WEBPACK_IMPORTED_MODULE_4__pages_dashboard_dashboard__["a" /* DashboardPage */] },
             { title: 'Coach', component: __WEBPACK_IMPORTED_MODULE_9__pages_coach_home_coach_home__["a" /* CoachHomePage */] },
             { title: 'Summary', component: __WEBPACK_IMPORTED_MODULE_8__pages_summary_home_summary_home__["a" /* SummaryHomePage */] },
@@ -1703,7 +1703,7 @@ var ContactUsPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransactionHomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__all_transaction_all_transaction__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__all_transaction_all_transaction__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__income_transaction_income_transaction__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transaction_product_transaction_product__ = __webpack_require__(119);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1749,6 +1749,12 @@ var TransactionHomePage = /** @class */ (function () {
         this.toastCtrl.create({
             message: "Online back-up completed!",
             duration: 2000
+        }).present();
+    };
+    TransactionHomePage.prototype.cashbtn = function () {
+        this.toastCtrl.create({
+            message: "Cash Balance: 29000 MMK!",
+            duration: 3000
         }).present();
     };
     __decorate([

@@ -108,47 +108,64 @@
 
        
 
-          <ion-list>
-            <ion-item>
+           
 
-                <button ion-button clear> SAMPLE RECIEPT </button>
-            </ion-item>
-            <ion-item>
-
-              <button ion-button clear>Sl no. </button>
-              <button ion-button clear>Item Name</button>
-              <button ion-button clear>Price</button>
-
-            </ion-item>
-          </ion-list>
-
-          <ion-list *ngFor="let item of itemsprice; let i = index" no-lines>
-
-            <ion-item>
-
-
-
-              <button ion-button clear>{{i+1}}. </button>
-              <button ion-button clear>ထုတ်ကုန်ကိုရှေးခယျြ</button> <button ion-button clear>{{item}}</button>
-         
-
-            </ion-item>
-
-
-
-          </ion-list>
-
-          <ion-list>
-            <ion-item>
-
-
-              <button ion-button clear><b>စုစုပေါင်းဥပဒေကြမ်း </b></button>
-              <button ion-button clear>{{lastsum}}</button>
-
-
-            </ion-item>
-          </ion-list>
-
+                <ion-grid>
+          
+                  <ion-row> <ion-col style="text-align: center; padding-top: 5px;">Mingalabar Noodles </ion-col> </ion-row>
+          
+                  <ion-row>
+                      <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> 139, Yaw Kyaw Main Road, Yangon City, Myanmar.</ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> Ph: 59297492 mglnoodle@gmail.com</ion-col>
+                  </ion-row>
+          
+                  <ion-row style="padding-top: 5px;">
+                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><b>Sl</b></ion-col>
+                      <ion-col col-4 style="color: black; font-size: 10px; text-align: center"><b>Item</b></ion-col>
+                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Price</b></ion-col>
+                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Qty</b></ion-col>
+                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>
+                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>
+                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>
+                  </ion-row>
+          
+                 
+          
+                  <ion-list *ngFor="let item of itemsprice; let i = index" no-lines>
+          
+              
+                    <ion-row>
+                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center">{{i+1}}.</ion-col>
+                        <ion-col col-4 style="color: black; font-size: 10px; text-align: center">
+                         Item {{i+1}}</ion-col>   
+                        <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item}}</ion-col>
+                        <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item}}</ion-col>
+                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>
+                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>
+                        <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>
+          
+                    </ion-row>
+                
+          
+                  </ion-list>
+          
+                  <ion-row padding>
+                      <ion-col col-1></ion-col>  
+                    <ion-col col-4 style="text-align: center;font-size: 10px;"><b>စုစုပေါင်းဥပဒေကြမ်း</b> </ion-col>
+                      <ion-col col-2 style="text-align: center;font-size: 10px;"><b>{{lastsum}}</b> </ion-col>
+                      <ion-col col-5></ion-col>
+                    </ion-row>
+          
+          
+                   
+          
+          
+                </ion-grid>
+          
+          
+          
 
         </ion-card>
 

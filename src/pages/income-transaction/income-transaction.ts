@@ -38,6 +38,9 @@ export class IncomeTransactionPage {
       console.log("Received 0 " + data);
       var JSONitems=JSON.parse(data);
       this.datastore=JSONitems;
+      for(let i = 0; i < this.datastore.itemslist.length; i++){
+        this.lastsum  = this.lastsum + this.datastore.itemslist[i].price;
+      } 
     });
   
 }
