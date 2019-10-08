@@ -28,12 +28,10 @@ export class MyApp {
 
     this.pages = [
       { title: 'Sales', component: TransactionHomePage },
+      { title: 'Business', component: SummaryHomePage },
       { title: 'Products', component: DashboardPage },
       { title: 'Coach', component: CoachHomePage },
-      { title: 'Summary', component: SummaryHomePage },
-      { title: 'Contact Us', component: ContactUsPage },
-      
-
+      { title: 'Help', component: ContactUsPage },
     ];
 
   }

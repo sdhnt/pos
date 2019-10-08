@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Tabs, Events } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { StorageProvider} from '../../providers/storage/storage';
 import { ListPage } from '../list/list';
 import { ToastController } from 'ionic-angular';
+import { ProductListPage } from '../product-list/product-list';
 
 @Component({
   selector: 'page-add-product',
@@ -14,15 +15,27 @@ export class AddProductPage {
   prodCode: any = "";
   prodName: any = "";
   prodPrice: number = 0;
+  prodCost: number = 0;
+  prodCat: any = "";
+  newprodCat : any = "";
   listProduct: any;
 
   constructor(public navCtrl: NavController,
               public barcodeScanner: BarcodeScanner,
               public navParams: NavParams,
               public sp: StorageProvider,
-              public toastCtrl: ToastController
+              public toastCtrl: ToastController,
+              public events: Events
               ) {
                 this.prodCode = this.navParams.get("code");
+  }
+  addCat(){
+    
+
+  }
+
+  addProdPic(){
+    
   }
 
   scanQR(){
@@ -38,8 +51,12 @@ export class AddProductPage {
     const data = {
       "code": this.prodCode,
       "name": this.prodName,
-      "price": this.prodPrice
+      "price": this.prodPrice,
+      "cost": this.prodCost,
+      "cat": this.prodCat,
     };
+  
+   
 
     this.sp.storageReady().then(() => {
       this.sp.addProduct(data);
@@ -48,9 +65,14 @@ export class AddProductPage {
           message: 'Added new Product',
           duration: 3000
         });
+        this.prodCode="";
+        this.prodName="";
+        this.prodPrice=0;        
+        //this.navCtrl.push(ProductListPage);
+        this.events.publish('prodAdd:created',0);
+        (this.navCtrl.parent as Tabs).select(0);
         toast.present();
-        this.navCtrl.push(ListPage);
-      },1000)
+      },1000)        
     })
   }
 }

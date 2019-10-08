@@ -4,6 +4,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { StorageProvider} from '../../providers/storage/storage';
 import { ListPage } from '../list/list';
 import { ToastController } from 'ionic-angular';
+import { ProductListPage } from '../product-list/product-list';
 
 @Component({
   selector: 'page-single-product',
@@ -47,7 +48,7 @@ export class SingleProductPage {
           duration: 2000
         });
         toast.present();
-        this.navCtrl.setRoot(ListPage);
+        this.navCtrl.setRoot(ProductListPage);
       }, 1000)
     })
   }
@@ -61,7 +62,7 @@ export class SingleProductPage {
           duration: 2000
         });
         toast.present();
-        this.navCtrl.setRoot(ListPage);
+        this.navCtrl.setRoot(ProductListPage);
       }, 1000)
     }).catch(err => {
       console.log(err)

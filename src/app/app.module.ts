@@ -32,6 +32,8 @@ import { CoachCoachPage } from '../pages/coach-coach/coach-coach';
 import { CoachBusinesstipsPage } from '../pages/coach-businesstips/coach-businesstips';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { TransactionProductPage } from '../pages/transaction-product/transaction-product';
+import { ProductListPage } from '../pages/product-list/product-list';
+import { AddProductCategoryPage } from '../pages/add-product-category/add-product-category';
 
 
 var config = {
@@ -67,6 +69,8 @@ firebase.initializeApp(config);
     CoachBusinesstipsPage,
     ContactUsPage,
     TransactionProductPage,
+    ProductListPage,
+    AddProductCategoryPage,
   ],
   imports: [
     BrowserModule,
@@ -94,6 +98,8 @@ firebase.initializeApp(config);
     CoachBusinesstipsPage,
     ContactUsPage,
     TransactionProductPage,
+    ProductListPage,
+    AddProductCategoryPage,
   ],
   providers: [
     StatusBar,

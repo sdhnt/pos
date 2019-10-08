@@ -3,15 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Product-Dashboard</ion-title>
-
-    
-   
+    <ion-title>Product ကုန်ပစ္စည်း</ion-title>
   </ion-navbar>
  
 </ion-header>
-
 <ion-content>
+
+    <ion-tabs tabsPlacement="top" #myTabs>
+        <ion-tab [root]="ViewList" tabTitle="Products List" tabIcon="calculator"></ion-tab>
+        <ion-tab [root]="AddProd" tabTitle="Add Product" tabIcon="list-box"></ion-tab>
+        <ion-tab [root]="AddCat" tabTitle="View/Add Categories" tabIcon="albums"></ion-tab>
+  
+    
+       </ion-tabs>
+
+<!-- <ion-content>
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -79,6 +85,8 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+ -->
+
 
   
 
@@ -88,10 +96,10 @@
     <ion-tab [root]="ListRoot" tabTitle="List" tabIcon="chat"></ion-tab>
     <ion-tab [root]="AddRoot" tabTitle="Add" tabIcon="add"></ion-tab>
    </ion-tabs> -->
-
+<!-- 
   <ion-footer>
     <ion-toolbar>
       <ion-title>Track💰2Make💰</ion-title>
     </ion-toolbar>
-  </ion-footer>
-</ion-content>
+  </ion-footer> -->
+

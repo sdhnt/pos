@@ -1,29 +1,63 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Add Product</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content padding>
   <ion-list inset>
+      <button ion-button full color="dark" (click)="getProdPic()">Upload Picture</button>
 
     <ion-item>
-      <ion-label>Code</ion-label>
+      
+      <ion-label>Code:</ion-label>
       <ion-input type="text" [(ngModel)]='prodCode'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Name</ion-label>
+      <ion-label>Name:</ion-label>
       <ion-input type="text" [(ngModel)]='prodName'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Price</ion-label>
+      <ion-label>Price:</ion-label>
       <ion-input type="number" [(ngModel)]='prodPrice'></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label>Cost</ion-label>
+        <ion-input type="number" [(ngModel)]='prodCost'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Select Category</ion-label>
+      <ion-select multiple="false" [(ngModel)]='prodCat'>
+            <ion-option>New</ion-option>
+            <ion-option>Snacks</ion-option>
+            <ion-option>Drinks</ion-option>
+            <ion-option>Noodles</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+        <ion-item *ngIf="prodCat=='New'">
+          <ion-label >Enter New Category:</ion-label>
+          <ion-input type="text" placeholder="Enter Category Here"  [(ngModel)]='newprodCat'></ion-input>
+        </ion-item>
+        
+  
+    <!-- <ion-item>
+      
+        <ion-label>Category</ion-label>
+        <ion-input type="text" [(ngModel)]='prodCat'></ion-input>
+        
+      </ion-item> -->
+    
   
   </ion-list>
-  <button ion-button block color="primary" (click)="addproduct()">Add Product</button>
-  <button ion-button block color="primary" (click)="scanQR()">Scan Code</button>
+  <button ion-button block color="primary" (click)="addproduct()"  color="dark">Add Product</button>
+  <button ion-button block color="primary" (click)="scanQR()"  color="dark">Scan Code</button>
+
+  <ion-card>
+    
+  </ion-card>
 </ion-content>

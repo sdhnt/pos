@@ -47,10 +47,19 @@ export class IncomeTransactionPage {
 
 
     
-  
+  dispM(){
+    console.log("DisM = "+ this.displayManual)
+    if(this.displayManual==0)
+    {this.displayManual=1;}
+    else
+    {this.displayManual=0;}
+  }
+
+
 
 
   result = "";
+  displayManual=0;
   datastore={'itemslist':[]};
   flag_mode=0;
   showSampleRec=true;

@@ -11,6 +11,10 @@
   <ion-list inset>
 
     <ion-item>
+      <ion-label>Photo</ion-label>
+          <ion-input type="number" [(ngModel)]='product.price'></ion-input>
+      </ion-item>
+    <ion-item>
       <ion-label>Code</ion-label>
       <ion-input type="text" [(ngModel)]='product.code'></ion-input>
     </ion-item>
@@ -19,9 +23,21 @@
       <ion-input type="text" [(ngModel)]='product.name'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Price</ion-label>
+      <ion-label>Sale Price</ion-label>
       <ion-input type="number" [(ngModel)]='product.price'></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label>Cost</ion-label>
+        <ion-input type="number" [(ngModel)]='product.price'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Category</ion-label>
+        <ion-input type="number" [(ngModel)]='product.price'></ion-input>
+        <!-- On click new generates a ion-input -->
+      </ion-item>
+    
+    
+
   
   </ion-list>
   <button ion-button block color="primary" (click)="updateProduct()">Update</button>

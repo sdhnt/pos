@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Tabs } from 'ionic-angular';
 import { AddProductPage } from '../addproduct/addproduct';
 import { ListPage } from '../list/list';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -9,6 +9,8 @@ import { GettersetterProvider} from '../../providers/gettersetter/gettersetter';
 import { ToastController } from 'ionic-angular';
 import firebase from 'firebase';
 import { LoginPage } from '../login/login';
+import { ProductListPage } from '../product-list/product-list';
+import { AddProductCategoryPage } from '../add-product-category/add-product-category';
 
 
 @Component({
@@ -24,6 +26,14 @@ export class DashboardPage {
   // tab1Root = DashboardPage;
   // tab2Root = LoginPage;
   // tab3Root = LoginPage;
+
+  @ViewChild('myTabs') tabRef: Tabs;
+
+  
+
+  ViewList=ProductListPage;
+  AddProd= AddProductPage;
+  AddCat = AddProductCategoryPage;
   
 
 
