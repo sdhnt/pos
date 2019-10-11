@@ -31,7 +31,7 @@
     "@ionic/storage": "^2.2.0",
     "cordova-android": "7.0.0",
     "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-firebase": "2.0.5",
+    "cordova-plugin-firebasex": "^6.1.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^4.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
@@ -69,7 +69,7 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-sqlite-storage": {},
       "cordova-plugin-x-toast": {},
-      "cordova-plugin-firebase": {}
+      "cordova-plugin-firebasex": {}
     },
     "platforms": [
       "android"

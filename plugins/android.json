@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-firebase": {
-      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
-    },
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"

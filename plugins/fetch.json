@@ -1,8 +1,8 @@
 {
-  "cordova-plugin-firebase": {
+  "cordova-plugin-firebasex": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase"
+      "id": "cordova-plugin-firebasex"
     },
     "is_top_level": true,
     "variables": {}
