@@ -182,51 +182,6 @@ var AllTransactionPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoachBusinesstipsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the CoachBusinesstipsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var CoachBusinesstipsPage = /** @class */ (function () {
-    function CoachBusinesstipsPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    CoachBusinesstipsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad CoachBusinesstipsPage');
-    };
-    CoachBusinesstipsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-coach-businesstips',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/'<!--\n  Generated template for the CoachBusinesstipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>coach-businesstips</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n  \n  <ion-card>\n    <ion-grid line>\n        <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n          <ion-col col-10 style="color: grey; font-size: 10px;"> Wed, 10th October 2018 </ion-col>\n          <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n        </ion-row>\n        <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n          <ion-col><h2><b>You\'ve got a winner!</b></h2></ion-col>\n        </ion-row>\n\n      <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n        Your item XYZ sells 50% higher than any other product in its category. Item ABC sells only 2% the volume of XYZ. You should stock more XYZ and less ABC.\n      </ion-row>\n      <ion-row  style="background-color: #f0f0f0">\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-up" ></ion-icon>\n        </ion-col>\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-down"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card> \n\n  \n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], CoachBusinesstipsPage);
-    return CoachBusinesstipsPage;
-}());
-
-//# sourceMappingURL=coach-businesstips.js.map
-
-/***/ }),
-
-/***/ 114:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddProductCategoryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
@@ -325,6 +280,51 @@ var AddProductCategoryPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=add-product-category.js.map
+
+/***/ }),
+
+/***/ 114:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoachBusinesstipsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the CoachBusinesstipsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var CoachBusinesstipsPage = /** @class */ (function () {
+    function CoachBusinesstipsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    CoachBusinesstipsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad CoachBusinesstipsPage');
+    };
+    CoachBusinesstipsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-coach-businesstips',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/'<!--\n  Generated template for the CoachBusinesstipsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>coach-businesstips</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n  \n  <ion-card>\n    <ion-grid line>\n        <ion-row style="padding-left: 10px; padding-bottom: 5px; ">\n          <ion-col col-10 style="color: grey; font-size: 10px;"> Wed, 10th October 2018 </ion-col>\n          <ion-col col-2 style="text-align: center "><ion-icon name="bulb" style="color: green"></ion-icon> </ion-col>\n        </ion-row>\n        <ion-row style="padding-left: 10px; padding-bottom: 10px;">\n          <ion-col><h2><b>You\'ve got a winner!</b></h2></ion-col>\n        </ion-row>\n\n      <ion-row style="padding-left: 15px; padding-bottom: 10px;">\n        Your item XYZ sells 50% higher than any other product in its category. Item ABC sells only 2% the volume of XYZ. You should stock more XYZ and less ABC.\n      </ion-row>\n      <ion-row  style="background-color: #f0f0f0">\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-up" ></ion-icon>\n        </ion-col>\n        <ion-col col-6 style="text-align: center ">\n            <ion-icon name="thumbs-down"></ion-icon>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </ion-card> \n\n  \n\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\coach-businesstips\coach-businesstips.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], CoachBusinesstipsPage);
+    return CoachBusinesstipsPage;
+}());
+
+//# sourceMappingURL=coach-businesstips.js.map
 
 /***/ }),
 
@@ -427,7 +427,7 @@ var CoachGoalsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coach_goals_coach_goals__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coach_coach_coach_coach__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__coach_businesstips_coach_businesstips__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__coach_businesstips_coach_businesstips__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_us_contact_us__ = __webpack_require__(57);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -883,7 +883,7 @@ webpackEmptyAsyncContext.id = 131;
 
 var map = {
 	"../pages/add-product-category/add-product-category.module": [
-		311,
+		309,
 		15
 	],
 	"../pages/all-transaction/all-transaction.module": [
@@ -891,11 +891,11 @@ var map = {
 		14
 	],
 	"../pages/calculator/calculator.module": [
-		309,
+		310,
 		13
 	],
 	"../pages/coach-businesstips/coach-businesstips.module": [
-		310,
+		311,
 		12
 	],
 	"../pages/coach-coach/coach-coach.module": [
@@ -927,15 +927,15 @@ var map = {
 		5
 	],
 	"../pages/product-list/product-list.module": [
-		319,
+		321,
 		4
 	],
 	"../pages/sign-up/sign-up.module": [
-		320,
+		319,
 		3
 	],
 	"../pages/summary-home/summary-home.module": [
-		321,
+		320,
 		2
 	],
 	"../pages/transaction-home/transaction-home.module": [
@@ -1091,10 +1091,15 @@ var AddProductPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-add-product',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\addproduct\addproduct.html"*/'<!-- <ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Add Product</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n  <ion-list inset>\n      <!-- <button ion-button full color="dark" (click)="getProdPic()">Upload Picture</button> -->\n\n    <ion-item>\n      \n      <ion-label>Code:</ion-label>\n      <ion-input type="text" [(ngModel)]=\'prodCode\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Name:</ion-label>\n      <ion-input type="text" [(ngModel)]=\'prodName\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Sell Price:</ion-label>\n      <ion-input type="number" [(ngModel)]=\'prodPrice\'></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label>Cost Price: </ion-label>\n        <ion-input type="number" [(ngModel)]=\'prodCost\'></ion-input>\n    </ion-item>\n    <ion-item>\n\n        <ion-label>Select Category</ion-label>\n        <ion-select multiple="false" [(ngModel)]=\'prodCat\'>\n\n            <!-- <ion-option>New</ion-option> -->\n            <ion-option>New</ion-option>\n            <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>\n          \n      </ion-select>\n\n      <!-- <ion-label>Select Category</ion-label>\n      <ion-select multiple="false" [(ngModel)]=\'prodCat\'>\n            <ion-option>New</ion-option>\n            <ion-option>Snacks</ion-option>\n            <ion-option>Drinks</ion-option>\n            <ion-option>Noodles</ion-option>\n      </ion-select> -->\n    </ion-item>\n\n    \n\n\n        <ion-item *ngIf="prodCat==\'New\'">\n          <ion-label >Enter New Category:</ion-label>\n          <ion-input type="text" placeholder="Enter Category Here"  [(ngModel)]=\'newprodCat\'></ion-input>\n        </ion-item>\n        \n  \n    <!-- <ion-item>\n      \n        <ion-label>Category</ion-label>\n        <ion-input type="text" [(ngModel)]=\'prodCat\'></ion-input>\n        \n      </ion-item> -->\n    \n  \n  </ion-list>\n  <button ion-button block color="primary" (click)="addproduct()"  color="dark">Add Product</button>\n  <button ion-button block color="primary" (click)="scanQR()"  color="dark">Scan Code</button>\n\n  <ion-card>\n    \n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\addproduct\addproduct.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_storage_storage__["a" /* StorageProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]])
     ], AddProductPage);
     return AddProductPage;
-    var AddProductPage_1, _a, _b, _c, _d, _e, _f;
+    var AddProductPage_1;
 }());
 
 //# sourceMappingURL=addproduct.js.map
@@ -1383,11 +1388,11 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_coach_home_coach_home__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_coach_goals_coach_goals__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_coach_coach_coach_coach__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_coach_businesstips_coach_businesstips__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_coach_businesstips_coach_businesstips__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_contact_us_contact_us__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_transaction_product_transaction_product__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_product_list_product_list__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_add_product_category_add_product_category__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_add_product_category_add_product_category__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1468,9 +1473,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/all-transaction/all-transaction.module#AllTransactionPageModule', name: 'AllTransactionPage', segment: 'all-transaction', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-product-category/add-product-category.module#AddProductCategoryPageModule', name: 'AddProductCategoryPage', segment: 'add-product-category', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/calculator/calculator.module#CalculatorPageModule', name: 'CalculatorPage', segment: 'calculator', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-businesstips/coach-businesstips.module#CoachBusinesstipsPageModule', name: 'CoachBusinesstipsPage', segment: 'coach-businesstips', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/add-product-category/add-product-category.module#AddProductCategoryPageModule', name: 'AddProductCategoryPage', segment: 'add-product-category', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-coach/coach-coach.module#CoachCoachPageModule', name: 'CoachCoachPage', segment: 'coach-coach', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-goals/coach-goals.module#CoachGoalsPageModule', name: 'CoachGoalsPage', segment: 'coach-goals', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-home/coach-home.module#CoachHomePageModule', name: 'CoachHomePage', segment: 'coach-home', priority: 'low', defaultHistory: [] },
@@ -1478,9 +1483,9 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/expense-transaction/expense-transaction.module#ExpenseTransactionPageModule', name: 'ExpenseTransactionPage', segment: 'expense-transaction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/income-transaction/income-transaction.module#IncomeTransactionPageModule', name: 'IncomeTransactionPage', segment: 'income-transaction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/product-list/product-list.module#ProductListPageModule', name: 'ProductListPage', segment: 'product-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/summary-home/summary-home.module#SummaryHomePageModule', name: 'SummaryHomePage', segment: 'summary-home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/product-list/product-list.module#ProductListPageModule', name: 'ProductListPage', segment: 'product-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/transaction-home/transaction-home.module#TransactionHomePageModule', name: 'TransactionHomePage', segment: 'transaction-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/transaction-product/transaction-product.module#TransactionProductPageModule', name: 'TransactionProductPage', segment: 'transaction-product', priority: 'low', defaultHistory: [] }
                     ]
@@ -2001,7 +2006,7 @@ var TransactionHomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_storage_storage__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_gettersetter_gettersetter__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__product_list_product_list__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__add_product_category_add_product_category__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__add_product_category_add_product_category__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2236,7 +2241,7 @@ var SingleProductPage = /** @class */ (function () {
     };
     SingleProductPage = SingleProductPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-single-product',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\singleproduct\singleproduct.html"*/'<!-- <ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Update Product</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n  <ion-list inset>\n\n    <!-- <ion-item>\n      <ion-label>Photo</ion-label>\n          <ion-input type="number" [(ngModel)]=\'product.price\'></ion-input>\n      </ion-item> -->\n    <ion-item>\n      <ion-label>Code</ion-label>\n      <ion-input type="text" [(ngModel)]=\'product.code\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Name</ion-label>\n      <ion-input type="text" [(ngModel)]=\'product.name\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Sale Price</ion-label>\n      <ion-input type="number" [(ngModel)]=\'product.price\'></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label>Cost</ion-label>\n        <ion-input type="number" [(ngModel)]=\'product.cost\'></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label>Category</ion-label>\n        <ion-input type="text" [(ngModel)]=\'product.cat\'></ion-input>\n        <!-- On click new generates a ion-input -->\n      </ion-item>\n    \n    \n\n  \n  </ion-list>\n  <button ion-button block color="primary" (click)="updateProduct()">Update</button>\n  <button ion-button block color="primary" (click)="scanQR()">Scan Code</button>\n  <button ion-button block color="danger" (click)="deleteproduct(product)">Delete</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\singleproduct\singleproduct.html"*/
+            selector: 'page-single-product',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\singleproduct\singleproduct.html"*/'<!-- <ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Update Product</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n  <ion-list inset>\n\n    <!-- <ion-item>\n      <ion-label>Photo</ion-label>\n          <ion-input type="number" [(ngModel)]=\'product.price\'></ion-input>\n      </ion-item> -->\n    <ion-item>\n      <ion-label>Code</ion-label>\n      <ion-input type="text" [(ngModel)]=\'product.code\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Name</ion-label>\n      <ion-input type="text" [(ngModel)]=\'product.name\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Sale Price</ion-label>\n      <ion-input type="number" [(ngModel)]=\'product.price\'></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label>Cost</ion-label>\n        <ion-input type="number" [(ngModel)]=\'product.cost\'></ion-input>\n    </ion-item>\n      <ion-item>\n          <ion-label>Select Category</ion-label>\n          <ion-select multiple="false" [(ngModel)]=\'product.cat\'>\n              <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    \n          </ion-select>\n      </ion-item>\n    \n    \n\n  \n  </ion-list>\n  <button ion-button block color="primary" (click)="updateProduct()">Update</button>\n  <button ion-button block color="primary" (click)="scanQR()">Scan Code</button>\n  <button ion-button block color="danger" (click)="deleteproduct(product)">Delete</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\singleproduct\singleproduct.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */],

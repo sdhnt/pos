@@ -30,10 +30,11 @@
         <ion-label>Cost</ion-label>
         <ion-input type="number" [(ngModel)]='product.cost'></ion-input>
     </ion-item>
-    <ion-item>
-        <ion-label>Category</ion-label>
-        <ion-input type="text" [(ngModel)]='product.cat'></ion-input>
-        <!-- On click new generates a ion-input -->
+      <ion-item>
+          <ion-label>Select Category</ion-label>
+          <ion-select multiple="false" [(ngModel)]='product.cat'>
+              <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    
+          </ion-select>
       </ion-item>
     
     
