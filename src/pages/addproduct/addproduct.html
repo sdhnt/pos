@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-list inset>
-      <button ion-button full color="dark" (click)="getProdPic()">Upload Picture</button>
+      <!-- <button ion-button full color="dark" (click)="getProdPic()">Upload Picture</button> -->
 
     <ion-item>
       
@@ -21,22 +21,34 @@
       <ion-input type="text" [(ngModel)]='prodName'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Price:</ion-label>
+      <ion-label>Sell Price:</ion-label>
       <ion-input type="number" [(ngModel)]='prodPrice'></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label>Cost</ion-label>
+        <ion-label>Cost Price: </ion-label>
         <ion-input type="number" [(ngModel)]='prodCost'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Select Category</ion-label>
+
+        <ion-label>Select Category</ion-label>
+        <ion-select multiple="false" [(ngModel)]='prodCat'>
+
+            <!-- <ion-option>New</ion-option> -->
+            <ion-option>New</ion-option>
+            <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>
+          
+      </ion-select>
+
+      <!-- <ion-label>Select Category</ion-label>
       <ion-select multiple="false" [(ngModel)]='prodCat'>
             <ion-option>New</ion-option>
             <ion-option>Snacks</ion-option>
             <ion-option>Drinks</ion-option>
             <ion-option>Noodles</ion-option>
-      </ion-select>
+      </ion-select> -->
     </ion-item>
+
+    
 
 
         <ion-item *ngIf="prodCat=='New'">

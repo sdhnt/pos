@@ -20,7 +20,7 @@
           </ion-item>
       </ion-col>
       <ion-col col-4>
-          <button ion-button full color="dark"> Add Category</button>
+          <button ion-button full color="dark" (click)="addCategory()"> Add Category</button>
 
       </ion-col>
     </ion-row>
@@ -30,18 +30,18 @@
     
 
   <ion-item>
-      View/Remove Categories:
+     <h2> <b>View/Remove Categories: </b> </h2>
   </ion-item>
-  <ion-item>
-      <ion-card>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-8>Drinks</ion-col>
-              <ion-col col-4 style="text-align: end"><ion-icon name="close-circle"></ion-icon></ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
-  </ion-item>
+ 
+  <ion-list  *ngFor="let element of listCat">
+
+      <ion-item>
+          {{element.name}}
+          <ion-icon item-end name="close-circle" (click)="delCat(element)" color="danger"></ion-icon> 
+      </ion-item>
+  </ion-list>
+ 
+
 
   
 

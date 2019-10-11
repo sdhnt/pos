@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-@Injectable()
+@Injectable() 
 export class StorageProvider {
 
   //
   products: any = [];
+  categories : any = [];
 
   static get parameters() {
     return [[Storage]];
@@ -16,6 +17,30 @@ export class StorageProvider {
     private storage: Storage,
               ) {
               }
+
+
+  addCategory(data){
+    this.storage.ready().then(() => {
+      this.storage.get('categories').then((val) => {
+        if(val === null){
+          this.storage.set('categories', "[]").then(() => {
+            this.storage.get('categories').then((valNull) => {
+              this.categories = JSON.parse(valNull);
+              this.categories.push(data);
+              this.storage.set('categories', JSON.stringify(this.categories));
+            })
+          })
+        }else{
+          this.categories = JSON.parse(val);
+          this.categories.push(data);
+          this.storage.set('categories', JSON.stringify(this.categories));
+        }
+        //this.products = JSON.stringify(this.products)
+      }).catch(err => {
+        alert(err);
+      })
+    })
+  }
 
   addProduct(data){
     this.storage.ready().then(() => {
@@ -42,6 +67,10 @@ export class StorageProvider {
 
   getProducts(){
     return this.storage.get('products');
+  }
+
+  getCategories(){ 
+    return this.storage.get('categories');
   }
 
   searchProduct(barcode){
@@ -93,6 +122,23 @@ export class StorageProvider {
           return (val.code != data.code && val.name != data.name);
         })
         this.storage.set('products', JSON.stringify(arr2));
+      }).catch(err => {
+        alert(err+1);
+      })
+    })
+  }
+
+  deleteCategory(data){
+    this.storage.ready().then(() => {
+      this.storage.get('categories').then((val) => {
+        this.categories = JSON.parse(val);
+        let arr = [];
+        let arr2 = [];
+        arr = this.categories;
+        arr2 = arr.filter((val) => {
+          return (val.name != data.name);
+        })
+        this.storage.set('categories', JSON.stringify(arr2));
       }).catch(err => {
         alert(err+1);
       })

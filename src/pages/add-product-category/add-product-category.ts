@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { StorageProvider } from '../../providers/storage/storage';
 
 /**
  * Generated class for the AddProductCategoryPage page.
@@ -15,11 +16,74 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AddProductCategoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public sp: StorageProvider, public toastCtrl : ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AddProductCategoryPage');
+    this.getCategories();
   }
 
+  newprodCat: any ="";
+  listCat : any;
+  getCategories(){
+    console.log(this.listCat + " and "+this.newprodCat);
+    this.sp.storageReady().then(() => {
+      this.sp.getCategories().then((val) => {
+        console.log("val = "+val);
+       this.listCat = JSON.parse(val);
+      
+        console.log(this.listCat)
+        this.getCategories();
+      }).catch(err => {
+        alert("Error: "+ err);
+      })
+    })
+  }
+
+  addCategory(){
+    console.log(this.listCat + " and "+this.newprodCat);
+    if(this.newprodCat!=""){
+    const data = {
+      "name": this.newprodCat,
+    };
+    this.sp.storageReady().then(() => {
+      this.sp.addCategory(data);
+      setTimeout(()=> {
+        let toast = this.toastCtrl.create({
+          message: 'Added new Category',
+          duration: 3000
+        });
+        this.newprodCat="";
+
+
+        //this.navCtrl.push(ProductListPage);
+        //this.events.publish('prodAdd:created',0);
+       // (this.navCtrl.parent as Tabs).select(0);
+        toast.present();
+      },1000)        
+    })
+  }
+  }
+
+  delCat(element){
+    this.sp.storageReady().then(() => {
+      this.sp.deleteCategory(element);
+      setTimeout(()=> {
+        let toast = this.toastCtrl.create({
+          message: 'Deleted Category',
+          duration: 3000
+        });
+        this.getCategories();
+
+
+        //this.navCtrl.push(ProductListPage);
+        //this.events.publish('prodAdd:created',0);
+       // (this.navCtrl.parent as Tabs).select(0);
+        toast.present();
+      },1000)        
+    })
+    
+
+  }
 }

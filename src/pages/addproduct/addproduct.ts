@@ -17,7 +17,6 @@ export class AddProductPage {
   prodPrice: number = 0;
   prodCost: number = 0;
   prodCat: any = "";
-  newprodCat : any = "";
   listProduct: any;
 
   constructor(public navCtrl: NavController,
@@ -28,11 +27,55 @@ export class AddProductPage {
               public events: Events
               ) {
                 this.prodCode = this.navParams.get("code");
+                
   }
-  addCat(){
-    
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad AddProductCategoryPage');
+    this.getCategories();
   }
+
+  newprodCat: any ="";
+  listCat : any;
+  getCategories(){
+    //console.log(this.listCat + " and "+this.newprodCat);
+    this.sp.storageReady().then(() => {
+      this.sp.getCategories().then((val) => {
+       this.listCat = JSON.parse(val);
+        //console.log("Addprodpg: "+this.listCat)
+        this.getCategories();
+      }).catch(err => {
+        alert("Error: "+ err);
+      })
+    })
+  }
+
+  addCategory(){
+    //console.log(this.listCat + " and "+this.newprodCat);
+    if(this.newprodCat!=""){
+    const data = {
+      "name": this.newprodCat,
+    };
+    this.sp.storageReady().then(() => {
+      this.sp.addCategory(data);
+      setTimeout(()=> {
+        let toast = this.toastCtrl.create({
+          message: 'Added new Category',
+          duration: 3000
+        });
+        this.newprodCat="";
+
+
+        //this.navCtrl.push(ProductListPage);
+        //this.events.publish('prodAdd:created',0);
+       // (this.navCtrl.parent as Tabs).select(0);
+        toast.present();
+      },1000)        
+    })
+  }
+  }
+
+ 
 
   addProdPic(){
     
@@ -48,6 +91,11 @@ export class AddProductPage {
   }
 
   addproduct(){
+
+    if(this.newprodCat!=""){
+      this.addCategory();
+      this.prodCat=this.newprodCat;
+    }
     const data = {
       "code": this.prodCode,
       "name": this.prodName,
@@ -55,6 +103,8 @@ export class AddProductPage {
       "cost": this.prodCost,
       "cat": this.prodCat,
     };
+
+    console.log(data);
   
    
 
@@ -67,7 +117,10 @@ export class AddProductPage {
         });
         this.prodCode="";
         this.prodName="";
-        this.prodPrice=0;        
+        this.prodPrice=0;   
+        this.prodCat="";
+        this.prodCost=0;
+
         //this.navCtrl.push(ProductListPage);
         this.events.publish('prodAdd:created',0);
         (this.navCtrl.parent as Tabs).select(0);

@@ -27,7 +27,7 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Sales', component: TransactionHomePage },
+      { title: 'Income', component: TransactionHomePage },
       { title: 'Business', component: SummaryHomePage },
       { title: 'Products', component: DashboardPage },
       { title: 'Coach', component: CoachHomePage },

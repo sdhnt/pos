@@ -43,7 +43,7 @@ export class ProductListPage {
       this.navCtrl.pop();
     
   }
-
+ 
   getProducts(){
     this.sp.storageReady().then(() => {
       this.sp.getProducts().then((val) => {
