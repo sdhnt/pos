@@ -4,11 +4,12 @@ page-login {
         
     
         .scroll-content{
-        background-image: url("…/../../../assets/imgs/bckground.jpg") ;
-        -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
+        // background-image: url("…/../../../assets/imgs/bckground.jpg") ;
+        // -webkit-background-size: cover;
+        //   -moz-background-size: cover;
+        //   -o-background-size: cover;
+        //   background-size: cover;
+        background-image:linear-gradient(#301924,#000000) ;
         }	
     }
     
@@ -37,7 +38,9 @@ page-login {
     .nametop{
         margin-top: 6rem;
         margin-bottom:2rem;
-        font-size: 2em;
+        font-size: 3em;
+        font-family: 'Megrim';
+        color: orange;
     }
     h1,h6 {
         

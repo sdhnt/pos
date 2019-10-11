@@ -42,6 +42,11 @@ $colors: (
 );
 
 
+@font-face {
+  font-family: 'Megrim';
+  src: url('../assets/fonts/Megrim-Regular.ttf');//mine
+  //src: url('path/to/your/font/file');//path to your font file
+}
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

@@ -11,7 +11,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Income ကိစ္စ</ion-title>
+    <ion-title>Income</ion-title>
     <ion-buttons end><button ion-button (click)="uploadbtn()"><ion-icon name="cloud-upload" style="align-self: center; color: white;" padding></ion-icon></button></ion-buttons>
     <ion-buttons end><button ion-button (click)="cashbtn()"><ion-icon name="logo-usd" style="align-self: center; color: white;" padding></ion-icon></button></ion-buttons>
   </ion-navbar>
@@ -22,9 +22,9 @@
 <ion-content padding>
   
   <ion-tabs tabsPlacement="top" #myTabs>
-    <ion-tab [root]="AllTransactions" tabTitle="အားလုံး" tabIcon="calculator"></ion-tab>
-    <ion-tab [root]="ExpenseTransactions" tabTitle="ကုန်ကျစရိတ်" tabIcon="apps"></ion-tab>
-    <ion-tab [root]="IncomeTransactions" tabTitle="ဝငျငှေ" tabIcon="list-box"></ion-tab>
+    <ion-tab [root]="AllTransactions" tabTitle="Calculator" tabIcon="calculator"></ion-tab>
+    <ion-tab [root]="ExpenseTransactions" tabTitle="Products" tabIcon="apps"></ion-tab>
+    <ion-tab [root]="IncomeTransactions" tabTitle="Receipt" tabIcon="list-box"></ion-tab>
 
    </ion-tabs>
 

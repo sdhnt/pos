@@ -1,4 +1,8 @@
-@charset "UTF-8";
+@font-face {
+  font-family: 'Megrim';
+  src: url("../assets/fonts/Megrim-Regular.ttf");
+}
+
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -26099,8 +26103,8 @@ page-dashboard ion-title {
 }
 
 page-login ion-content .scroll-content {
-  background-image: url("…/../../../assets/imgs/bckground.jpg");
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#301924), to(#000000));
+  background-image: linear-gradient(#301924, #000000);
 }
 
 page-login ion-input {
@@ -26128,7 +26132,9 @@ page-login .btn_container button {
 page-login .nametop {
   margin-top: 6rem;
   margin-bottom: 2rem;
-  font-size: 2em;
+  font-size: 3em;
+  font-family: 'Megrim';
+  color: orange;
 }
 
 page-login h1, page-login h6 {
@@ -26157,8 +26163,8 @@ page-login .row-style {
 }
 
 page-sign-up ion-content .scroll-content {
-  background-image: url("…/../../../assets/imgs/bckground.jpg");
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#301924), to(#000000));
+  background-image: linear-gradient(#301924, #000000);
 }
 
 page-sign-up ion-icon {
@@ -26168,7 +26174,9 @@ page-sign-up ion-icon {
 page-sign-up .nametop {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 2em;
+  font-size: 3em;
+  font-family: 'Megrim';
+  color: orange;
 }
 
 page-sign-up .row-style {
@@ -26200,6 +26208,11 @@ page-sign-up .icon {
   -webkit-align-items: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
+}
+
+page-sign-up .item-cover {
+  width: 0;
+  height: 0;
 }
 
 page-summary-home ion-title {

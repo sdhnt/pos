@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import { DashboardPage } from '../dashboard/dashboard';
 
 
+
 /**
  * Generated class for the SignUpPage page.
  *
@@ -21,8 +22,13 @@ export class SignUpPage {
   
 	name: string="";
 	email: string="";
-	password: string="";
-
+  password: string="";
+  businessname: string="";
+  businessaddress: string="";
+  phno: string="";
+  language: string="";
+  currency: string="";
+  cb: number;
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public alertCtrl: AlertController) {
   }
 
@@ -30,17 +36,39 @@ export class SignUpPage {
     console.log('ionViewDidLoad SignUpPage');
   }
 
+
   
   signup(){
+
+    this.toastCtrl.create({
+      message: "Please wait while your profile is being created..",
+      duration: 3000
+      
+    }).present();
   	firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
   	(data) 	=> {
 
   		let newUser: firebase.User = data.user;
   		newUser.updateProfile({
   		displayName: this.name,
-  		photoURL: ""
   		}).then( (res) =>{
-  		console.log("Profile Updated")
+      console.log("Profile Updated")
+
+
+
+      firebase.firestore().collection("users").add({
+        // file_name: this.text,
+        created: firebase.firestore.FieldValue.serverTimestamp(),
+        owner: firebase.auth().currentUser.uid,
+        owner_name: firebase.auth().currentUser.displayName,
+        business_name: this.businessname,
+        business_address: this.businessaddress,
+        ph_no: this.phno,
+        language: this.language,
+        currency: this.currency,
+        cash_balance: this.cb,
+      }).then(async (doc) => {
+        console.log(doc);
       this.alertCtrl.create({
       title: "Account Created",
       message: "Your account has been created successfully.",
@@ -68,7 +96,8 @@ export class SignUpPage {
 
   	});
 
-  }
+  });
+}
 
   goBack(){
   this.navCtrl.pop();
