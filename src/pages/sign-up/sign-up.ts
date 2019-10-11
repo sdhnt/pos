@@ -54,8 +54,6 @@ export class SignUpPage {
   		}).then( (res) =>{
       console.log("Profile Updated")
 
-
-
       firebase.firestore().collection("users").add({
         // file_name: this.text,
         created: firebase.firestore.FieldValue.serverTimestamp(),
