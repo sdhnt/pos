@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events, ToastController } from 'ionic-angular';
 import { StorageProvider } from '../../providers/storage/storage';
 import { SingleProductPage } from '../singleproduct/singleproduct';
 import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
@@ -29,7 +29,7 @@ export class ProductListPage {
   filteredList: any;
   listArray: any =[];
   listCat : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public sp: StorageProvider, public events: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public sp: StorageProvider, public events: Events, public toastCtrl: ToastController) {
 
     this.events.subscribe('prodAdd:created',(data) => {
       console.log("ENTERED!");
@@ -116,6 +116,24 @@ export class ProductListPage {
 
     
     //console.log("FilteredProd: "+this.filteredList)
+  }
+
+  swapUp(prodCodeOld: string){
+    this.sp.storageReady().then(() => {
+      this.sp.swapProductUp(prodCodeOld).then(()=>{
+        this.getProducts();
+      })
+    })
+
+  }
+
+  swapDown(prodCodeOld: string){
+    this.sp.storageReady().then(() => {
+      this.sp.swapProductDown(prodCodeOld).then(()=>{
+        this.getProducts();
+      })
+    })
+
   }
 
 

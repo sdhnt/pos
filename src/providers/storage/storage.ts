@@ -111,6 +111,58 @@ export class StorageProvider {
     })
   }
 
+  swapProductUp(old_code){
+    let except = null;
+    return new Promise ((resolve, reject) => {
+      this.storage.get('products').then((val) => {
+        if(val != null){
+          this.products = JSON.parse(val);
+
+
+          for(var i=0;i<this.products.length;i++){
+
+            if(this.products[i].code==old_code && i!=0)
+            {
+              var temp=this.products[i];
+              this.products[i]=this.products[i-1];
+              this.products[i-1]=temp;
+            }
+          }
+          //except.push(data);
+          this.storage.set('products', JSON.stringify(this.products));
+          resolve();
+        }
+      })
+
+    })
+  }
+
+  swapProductDown(old_code){
+    let except = null;
+    return new Promise ((resolve, reject) => {
+      this.storage.get('products').then((val) => {
+        if(val != null){
+          this.products = JSON.parse(val);
+
+
+          for(var i=0;i<this.products.length;i++){
+
+            if(this.products[i].code==old_code && i<(this.products.length-1))
+            {
+              var temp=this.products[i];
+              this.products[i]=this.products[i+1];
+              this.products[i+1]=temp;
+            }
+          }
+          //except.push(data);
+          this.storage.set('products', JSON.stringify(this.products));
+          resolve();
+        }
+      })
+
+    })
+  }
+
   deleteProduct(data){
     this.storage.ready().then(() => {
       this.storage.get('products').then((val) => {
