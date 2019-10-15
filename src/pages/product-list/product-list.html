@@ -12,16 +12,24 @@
 
 
 <ion-content padding>
-<ion-searchbar showCancelButton="always"></ion-searchbar>
+<ion-searchbar showCancelButton="always" [(ngModel)]="searchterm" (ionChange)="filteredProduct()"></ion-searchbar>
 
-<ion-item>
+<!-- <ion-item>
     <ion-label>Categories</ion-label>
-    <ion-select [(ngModel)]="toppings" multiple="true">
+    <ion-select [(ngModel)]="cat" multiple="true">
       <ion-option>Noodle</ion-option>
       <ion-option>Snack</ion-option>
       <ion-option>Main Course</ion-option>
       <ion-option>Dessert</ion-option>
       <ion-option>Drinks</ion-option>
+    </ion-select>
+  </ion-item> -->
+
+
+  <ion-item>
+    <ion-label>Select Category</ion-label>
+    <ion-select multiple="true" [(ngModel)]='selectedCat' (ionChange)="filteredProduct()">
+        <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    
     </ion-select>
   </ion-item>
 
@@ -67,7 +75,7 @@
 
 
 
-  <ion-list inset  *ngFor="let product of listProducts">
+  <ion-list inset  *ngFor="let product of filteredList">
     
       <ion-card>
           <ion-grid> 

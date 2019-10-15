@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import { StorageProvider } from '../../providers/storage/storage';
 import { SingleProductPage } from '../singleproduct/singleproduct';
+import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
 
 /**
  * Generated class for the ProductListPage page.
@@ -20,10 +21,14 @@ export class ProductListPage {
   
 
   selectedItem: any;
+  searchterm: any ="";
+  selectedCat: any=[];
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
   listProducts: any;
-
+  filteredList: any;
+  listArray: any =[];
+  listCat : any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public sp: StorageProvider, public events: Events) {
 
     this.events.subscribe('prodAdd:created',(data) => {
@@ -33,10 +38,25 @@ export class ProductListPage {
     
     });
     this.ionViewDidLoad();
+    this.getCategories();
   }
 
   ionViewDidLoad() {
     this.getProducts();
+    
+  }
+
+  getCategories(){
+    //console.log(this.listCat + " and "+this.newprodCat);
+    this.sp.storageReady().then(() => {
+      this.sp.getCategories().then((val) => {
+       this.listCat = JSON.parse(val);
+        //console.log("Addprodpg: "+this.listCat)
+        this.getCategories();
+      }).catch(err => {
+        alert("Error: "+ err);
+      })
+    })
   }
   backBtn(){
       //Hide back btn if src is tab
@@ -47,8 +67,11 @@ export class ProductListPage {
   getProducts(){
     this.sp.storageReady().then(() => {
       this.sp.getProducts().then((val) => {
-        //alert(val);
+
         this.listProducts = JSON.parse(val);
+
+        this.filteredProduct();
+
       }).catch(err => {
         alert("Error: "+ err);
       })
@@ -58,5 +81,43 @@ export class ProductListPage {
   singleProduct(data){
     this.navCtrl.setRoot(SingleProductPage, {'data': data});
   }
+
+  filteredProduct(){
+
+    // this.filteredList=this.listProducts.filter((item)=>{
+    //   for(var i=0;i<this.selectedCat.length;i++){
+    //     //console.log(this.selectedCat)
+    //     if(item.cat.includes(this.selectedCat[i])){
+    //       return true;
+    //     }
+    //   }
+    // });
+
+    this.filteredList = this.listProducts.filter(
+      (item) => { 
+        //console.log(this.searchterm);
+        console.log(item);
+        if(item.name.toLowerCase().includes(this.searchterm.toLowerCase())){
+
+          if(this.selectedCat.length>0){
+            for(var i=0;i<this.selectedCat.length;i++){
+              if(this.selectedCat==null ||  item.cat.includes(this.selectedCat[i]))
+              {return true}
+            }
+          }
+          else{
+            return true;
+          }
+
+       
+         
+        }
+    });   
+
+    
+    //console.log("FilteredProd: "+this.filteredList)
+  }
+
+
 
 }
