@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Tabs, ToastController } from 'ionic-angular';
 import { ListPage } from '../list/list';
+import firebase from 'firebase';
 import { AddProductPage } from '../addproduct/addproduct';
 import { AllTransactionPage } from '../all-transaction/all-transaction'
 import { IncomeTransactionPage } from '../income-transaction/income-transaction';
@@ -28,17 +29,41 @@ export class TransactionHomePage {
   IncomeTransactions = IncomeTransactionPage;
   //ExpenseTransactions = ExpenseTransactionPage;
   ExpenseTransactions = TransactionProductPage;
+  
   //Calculator = CalculatorPage;
 
   //@ViewChild('transactionTabs') tabRef: Tabs;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,) {
+    this.getUserData();
     
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TransactionHomePage');
   }
+
+  userdata: any;
+  async getUserData(){
+    console.log(firebase.auth().currentUser.uid);
+    var ud;
+    const snapshot = await firebase.firestore().collection('users').where("owner","==",firebase.auth().currentUser.uid).get()
+    .then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+          // doc.data() is never undefined for query doc snapshots
+          //console.log(doc.id, " => ", doc.data());
+          ud=doc.data();
+          //this.userdata=doc.data();
+          
+      });
+  })
+  .catch(function(error) {
+      console.log("Error getting documents: ", error);
+  });
+  this.userdata=ud;
+  console.log(this.userdata);
+    
+ }
 
 
   openCalc(){
@@ -57,7 +82,7 @@ export class TransactionHomePage {
   cashbtn(){
     this.toastCtrl.create({
   
-      message: "Cash Balance: 29000 MMK!",
+      message: "Cash Balance: " + this.userdata.cash_balance,
       duration: 3000
     }).present();
   }

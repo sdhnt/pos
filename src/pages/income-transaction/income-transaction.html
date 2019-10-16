@@ -12,13 +12,13 @@
 
       <ion-grid>
 
-        <ion-row> <ion-col style="text-align: center; padding-top: 5px;">Mingalabar Noodles </ion-col> </ion-row>
+        <ion-row> <ion-col style="text-align: center; padding-top: 5px;"> {{userdata.business_name}}  </ion-col> </ion-row>
 
         <ion-row>
-            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> 139, Yaw Kyaw Main Road, Yangon City, Myanmar.</ion-col>
+            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> {{userdata.business_address}}</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center"> Ph: 59297492 mglnoodle@gmail.com</ion-col>
+            <ion-col col-12 style="color: grey; font-size: 10px; text-align: center">  Ph: {{userdata.ph_no}}</ion-col>
         </ion-row>
 
         <ion-row style="padding-top: 5px;">
@@ -46,9 +46,9 @@
               </ion-col>
               <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item.price}}</ion-col>
               <ion-col col-2 style="color: black; font-size: 10px; text-align: center">{{item.qty}}</ion-col>
-              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>
-              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>
-              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>
+              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green" (click)="addQty(i)"></ion-icon></ion-col>
+              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red" (click)="removeQty(i)"></ion-icon></ion-col>
+              <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red" (click)="removeItem(i)"></ion-icon></ion-col>
 
           </ion-row>
       

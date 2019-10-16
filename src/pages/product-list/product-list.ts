@@ -29,7 +29,8 @@ export class ProductListPage {
   filteredList: any;
   listArray: any =[];
   listCat : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public sp: StorageProvider, public events: Events, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public sp: StorageProvider, public events: Events, 
+    public toastCtrl: ToastController) {
 
     this.events.subscribe('prodAdd:created',(data) => {
       console.log("ENTERED!");
@@ -69,8 +70,10 @@ export class ProductListPage {
       this.sp.getProducts().then((val) => {
 
         this.listProducts = JSON.parse(val);
-
-        this.filteredProduct();
+        if(this.listProducts!=null){
+          this.filteredProduct();
+        }
+      
 
       }).catch(err => {
         alert("Error: "+ err);
@@ -83,15 +86,6 @@ export class ProductListPage {
   }
 
   filteredProduct(){
-
-    // this.filteredList=this.listProducts.filter((item)=>{
-    //   for(var i=0;i<this.selectedCat.length;i++){
-    //     //console.log(this.selectedCat)
-    //     if(item.cat.includes(this.selectedCat[i])){
-    //       return true;
-    //     }
-    //   }
-    // });
 
     this.filteredList = this.listProducts.filter(
       (item) => { 
