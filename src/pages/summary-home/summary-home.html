@@ -13,6 +13,50 @@
     </ion-navbar>
   </ion-header>
 
-<ion-content padding>
+  <ion-content>
+<!-- 
+  <ion-content padding>
+    <ion-searchbar showCancelButton="always" [(ngModel)]="searchterm" (ionChange)="filteredProduct()"></ion-searchbar>
+      <ion-item>
+        <ion-label>Select Category</ion-label>
+        <ion-select multiple="true" [(ngModel)]='selectedCat' (ionChange)="filteredProduct()">
+            <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    
+        </ion-select>
+      </ion-item>
+     -->
+      <ion-list inset  *ngFor="let transac of listtransac">
+        
+          <ion-card>
+              <ion-grid> 
+                <ion-row>
+                <ion-col col-12>
+                    <ion-row>
+                        <ion-col col-8>
+                            <ion-list *ngFor="let item of transac.itemslist">
+                              <ion-item>
+                                {{item.name}},{{item.price}},{{item.qty}}
+                              </ion-item>
+                            </ion-list>
+                        </ion-col>
+                        <ion-col col-4>
+                          {{transac.totalsum}}
+                        </ion-col>
+                         
+                      </ion-row>
+                     
+                </ion-col>
+              </ion-row>
+              </ion-grid>
+            </ion-card> 
+         
+        </ion-list>
+      
+    
+      
+    
+    
+    
+    
+    </ion-content>
 
-</ion-content>
+

@@ -76,7 +76,7 @@
    
           <ion-item>
           <span style="vertical-align: middle; display: inline-block; color: black; font-size: 14px;" item-start>
-              Add Item Manually
+              Add Temporary Item
             </span>
              <ion-toggle color="dark" style="vertical-align: middle; display: inline-block" item-end (ionChange)="dispM()"></ion-toggle>
           
@@ -89,32 +89,29 @@
      
         <ion-item>
             <ion-label style="font-size: 1.0rem;">Item Name</ion-label>
-            <ion-input placeholder="Enter Item Name" style="font-size: 1.0rem;"></ion-input>
+            <ion-input type="text" placeholder="Enter Item Name" style="font-size: 1.0rem;" [(ngModel)]="newItemName" ngDefaultControl></ion-input>
           </ion-item>
           <ion-item>
               <ion-label style="font-size: 1.0rem;">Unit Price</ion-label>
-              <ion-input  placeholder="Enter Unit Price" style="font-size: 1.0rem;"></ion-input>
+              <ion-input  type="number" placeholder="Enter Unit Price" style="font-size: 1.0rem;" [(ngModel)]="newUnitPrice" ngDefaultControl></ion-input>
             </ion-item>
             <ion-item>
                 <ion-label style="font-size: 1.0rem;">Qty</ion-label>
-                <ion-input  placeholder="Enter Quantity" style="font-size: 1.0rem;"></ion-input>
+                <ion-input type="number" placeholder="Enter Quantity" style="font-size: 1.0rem;" [(ngModel)]="newUnitQty" ngDefaultControl></ion-input>
               </ion-item>
-              <ion-item>
-                  <ion-label style="font-size: 1.0rem;">Select Category</ion-label>
-                  <ion-select multiple="false" style="font-size: 1.0rem;">
-                      <ion-option>Snacks</ion-option>
-                      <ion-option>Drinks</ion-option>
-                      <ion-option>Noodles</ion-option>
-                      <!-- New Category Option -->
+              <!-- <ion-item>
+                  <ion-label style="font-size: 1.0rem;" >Select Category</ion-label>
+                  <ion-select multiple="false" [(ngModel)]='newItemCat'>
+                      <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    
                   </ion-select>
-                </ion-item>
-                <button ion-button style="font-size: 10px;" full> Add Manual</button>
+                </ion-item> -->
+                <button ion-button style="font-size: 10px;" full (click)="addNewItem()"> Add New Item </button>
               </div>
   </ion-card>
   <ion-grid>
       <ion-row>
          
-          <ion-col col-6 style="text-align: center;"> <button ion-button style="font-size: 10px;"> Add from Calc</button></ion-col>
+          <ion-col col-6 style="text-align: center;"> <button ion-button style="font-size: 10px;" (click)="addCalc()"> Add from Calc</button></ion-col>
           <ion-col col-6 style="text-align: center;"> <button ion-button style="font-size: 10px;"> Add from List</button></ion-col>
         
 
@@ -130,7 +127,7 @@
     <ion-grid>
         <ion-row>
           <ion-col col-4>
-            <button ion-button full color="dark"> <ion-icon name="checkmark"></ion-icon>
+            <button ion-button full color="dark" (click)="saveRec()"> <ion-icon name="checkmark"></ion-icon>
             </button>
           </ion-col>
           <ion-col col-4>
@@ -138,7 +135,7 @@
             </button>
           </ion-col>
           <ion-col col-4>
-              <button ion-button full color="dark">  <ion-icon name="close"></ion-icon>
+              <button ion-button full color="dark" (click)="cancelRec()">  <ion-icon name="close"></ion-icon>
               </button>
             </ion-col>
         </ion-row>

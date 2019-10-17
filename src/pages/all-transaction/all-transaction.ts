@@ -20,7 +20,6 @@ export class AllTransactionPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
 
     this.getUserData();
-
   }
 
   ionViewDidLoad() {
@@ -92,10 +91,6 @@ export class AllTransactionPage {
     var myJsonString = JSON.stringify(this.itemsprice);
 
     var tempJSON={"itemslist":[],};
-
-    
-
-    
 
     this.itemsprice.forEach((element, index) => {
 
@@ -225,6 +220,8 @@ export class AllTransactionPage {
     catch(err) {
 
       this.result="Input Error!"
+      this.itemsprice=[];this.lastsum=0;
+      this.itemsqty=[];
       
     }
     finally {

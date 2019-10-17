@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import { DashboardPage } from '../dashboard/dashboard';
 import {SignUpPage} from '../sign-up/sign-up';
 import { TransactionHomePage } from '../transaction-home/transaction-home';
+import { StorageProvider } from '../../providers/storage/storage';
 
 /**
  * Generated class for the LoginPage page.
@@ -22,7 +23,7 @@ export class LoginPage {
   email: string="";
   password: string="";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public sp: StorageProvider,) {
   }
 
   ionViewDidLoad() {
@@ -44,8 +45,11 @@ export class LoginPage {
       message: "Welcome " + user.user.displayName,
       duration: 3000
     }).present();
+
+    this.sp.clearMem();
+    this.sp.setMem();
   
-        this.navCtrl.setRoot(TransactionHomePage);
+    this.navCtrl.setRoot(TransactionHomePage);
     
   
   

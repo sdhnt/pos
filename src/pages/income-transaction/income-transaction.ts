@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events, Tabs} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Events, Tabs, ToastController, DateTime} from 'ionic-angular';
 import { AllTransactionPage } from '../all-transaction/all-transaction';
 import firebase from 'firebase';
 import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
+import { StorageProvider } from '../../providers/storage/storage';
 
 /**
  * Generated class for the IncomeTransactionPage page.
@@ -19,7 +20,8 @@ import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-busines
 export class IncomeTransactionPage {
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, 
+    public sp: StorageProvider, public toastCtrl: ToastController) {
     
     //console.log("Recieved -1" + this.navParams.get('itemslist'));
     this.getUserData();
@@ -64,6 +66,7 @@ userdata: any = {business_address: "",
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad IncomeTransactionPage');
+    this.getCategories();
     
       this.events.subscribe('genRec:created',(data) => {
       console.log("ENTERED!");
@@ -149,6 +152,130 @@ userdata: any = {business_address: "",
     for(let i = 0; i < this.datastore.itemslist.length; i++){
       this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
     }
+  }
+
+  newItemName: string="";
+  newUnitPrice: number=null;
+  newUnitQty: number=null;
+  newItemCat: string="";
+
+  addNewItem(){
+
+    if(this.newItemName!="" && this.newUnitPrice!=null && this.newUnitQty!=null){
+
+    var newitem={
+      name: this.newItemName,
+      price: this.newUnitPrice,
+      qty: this.newUnitQty,
+    }
+
+    this.datastore.itemslist.push(newitem);
+    this.newItemCat="";
+    this.newItemName="";
+    this.newUnitPrice=null;
+    this.newUnitQty=null;
+
+    this.lastsum=0;
+    for(let i = 0; i < this.datastore.itemslist.length; i++){
+      this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
+    }
+  }
+
+
+  }
+
+
+  listProducts: any;
+  filteredList: any;
+  listArray: any =[];
+  listCat : any;
+  
+  getCategories(){
+    //console.log(this.listCat + " and "+this.newprodCat);
+    this.sp.storageReady().then(() => {
+      this.sp.getCategories().then((val) => {
+       this.listCat = JSON.parse(val);
+        //console.log("Addprodpg: "+this.listCat)
+        this.getCategories();
+      }).catch(err => {
+        alert("Error: "+ err);
+      })
+    })
+  }
+
+  cancelRec(){
+    this.datastore.itemslist=[];
+    this.lastsum=0;
+    
+    this.toastCtrl.create({
+  
+      message: "Receipt Cancelled",
+      duration: 2000,
+    }).present();
+    
+  }
+
+  prodidlist: any=[];
+  pnllist: any=[];
+  datetime = Date.now();
+  tax_vat: any = [];
+  discountlist: any=[];
+
+  saveRec(){
+    if(this.datastore.itemslist.length==0){     
+    }
+    else{
+      const data = {
+        "itemslist": this.datastore.itemslist,
+        "totalsum": this.lastsum,
+        "prodidlist": this.prodidlist,
+        "pnllist": this.pnllist,
+        "datetime": this.datetime,
+        "tax_vat": this.tax_vat,
+        "discountlist": this.discountlist,
+      };
+      this.sp.storageReady().then(() => {
+        this.sp.addTransactions(data);
+   
+          let toast = this.toastCtrl.create({
+            message: 'Added new Transaction',
+            duration: 3000
+          });
+
+      //REFLECT CHANGE ON CASH BALANCE HERE
+      
+      this.datastore.itemslist=[];
+      this.lastsum=0;
+
+      
+
+          toast.present();
+      
+      })
+    }
+  }
+
+  addCalc(){
+
+  }
+
+  addSingleProd(){
+
+  }
+
+  addProdList(){
+
+
+  }
+
+  printRec(){
+
+    this.toastCtrl.create({
+  
+      message: "This feature will be enabled soon",
+      duration: 2000,
+    }).present();
+
   }
 
 }

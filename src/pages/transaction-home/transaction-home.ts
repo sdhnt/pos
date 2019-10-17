@@ -8,6 +8,7 @@ import { IncomeTransactionPage } from '../income-transaction/income-transaction'
 import { ExpenseTransactionPage } from '../expense-transaction/expense-transaction';
 import { CalculatorPage } from '../calculator/calculator';
 import { TransactionProductPage } from '../transaction-product/transaction-product';
+import { StorageProvider } from '../../providers/storage/storage';
 
 /**
  * Generated class for the TransactionHomePage page.
@@ -34,7 +35,7 @@ export class TransactionHomePage {
 
   //@ViewChild('transactionTabs') tabRef: Tabs;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,public sp: StorageProvider) {
     this.getUserData();
     
   }
@@ -72,6 +73,8 @@ export class TransactionHomePage {
   }
 
   uploadbtn(){
+
+    this.sp.backupStorage();
     this.toastCtrl.create({
   
       message: "Online back-up completed!",

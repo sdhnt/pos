@@ -12,6 +12,7 @@ import { SummaryHomePage } from '../pages/summary-home/summary-home';
 import { CoachHomePage } from '../pages/coach-home/coach-home';
 import { ContactUsPageModule } from '../pages/contact-us/contact-us.module';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
+import { StorageProvider } from '../providers/storage/storage';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,8 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public toastCtrl: ToastController) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
+    public sp: StorageProvider, public toastCtrl: ToastController) {
     this.initializeApp();
 
     this.pages = [
@@ -39,15 +41,16 @@ export class MyApp {
   
   logout(){
 
+    this.sp.backupStorage();
+
     firebase.auth().signOut().then(()=>{
       this.toastCtrl.create({
         message: "You have been logged out",
         duration: 3000
       }).present()
       this.nav.setRoot(LoginPage);
-    });
-
-  }
+  });
+}
   
   initializeApp() {
     this.platform.ready().then(() => {
