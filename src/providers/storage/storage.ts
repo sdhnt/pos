@@ -168,7 +168,7 @@ export class StorageProvider {
             });
           
           }).catch(err => {
-            alert("lol");
+            alert("lol  "+err);
           })
         }).catch(err => {
           alert("lmao!");

@@ -133,7 +133,7 @@ userdata: any = {business_address: "",
 
   addQty(index){
     //this.lastsum=this.lastsum+this.datastore.itemslist[index].price;
-    this.datastore.itemslist[index].qty=this.datastore.itemslist[index].qty+1;
+    this.datastore.itemslist[index].qty=parseInt(this.datastore.itemslist[index].qty)+1;  
 
     this.lastsum=0;
     for(let i = 0; i < this.datastore.itemslist.length; i++){
@@ -257,14 +257,43 @@ userdata: any = {business_address: "",
 
   addCalc(){
 
+    (this.navCtrl.parent as Tabs).select(0);
+    this.delay(300).then(any=>{
+      this.events.publish('addRecCalc:created', JSON.stringify(this.datastore.itemslist));//SEND ITEMS PRICE
+    
+    console.log("Sent: 1332 ");
+    
+      //your task after delay.
+    });
+
+
   }
 
-  addSingleProd(){
+  addSingleProd(item, index){
 
+      
+    (this.navCtrl.parent as Tabs).select(1);
+    this.delay(300).then(any=>{
+      this.events.publish('addSingleProd:created', JSON.stringify(item), JSON.stringify(index),JSON.stringify(this.datastore.itemslist));
+    
+    console.log("Sent: 1330 ");
+    
+      //your task after delay.
+    });
+
+   
   }
 
   addProdList(){
-
+    
+    (this.navCtrl.parent as Tabs).select(1);
+    this.delay(300).then(any=>{
+      this.events.publish('addRecProd:created', JSON.stringify(this.datastore.itemslist));
+    
+    console.log("Sent: 1331 ");
+    
+      //your task after delay.
+    });
 
   }
 

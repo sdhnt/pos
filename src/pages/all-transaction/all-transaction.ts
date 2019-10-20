@@ -19,8 +19,31 @@ export class AllTransactionPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events) {
 
+
+    this.events.subscribe('addRecCalc:created',(data) => {
+      console.log("ENTERED!");
+      console.log("Received 0 " + data);
+      //SET itemsprice here? - make new addgen - diff button calls diff event that pushes rather than replaces
+      //Same for Product Transaction Page
+      //console.log(this.showSampleRec);
+      var tempdat= JSON.parse(data); 
+      // this.itemsname=null;
+      // this.itemsprice=null;
+      // this.itemsqty=null;
+      tempdat.forEach(element => {
+
+        this.itemsname.push(element.name)
+        this.itemsprice.push(element.price);
+        this.itemsqty.push(element.qty)
+        
+      });
+      console.log(this.itemsprice)
+    });
+    
+
     this.getUserData();
   }
+  itemsname: string[] = [];
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AllTransactionPage');
@@ -80,29 +103,31 @@ export class AllTransactionPage {
  }
 
   createRec(){
-    //Nav to Rec Page
-    //Build Expand Feature on REC Page
-    //this.events.publish('genRec:created', this.itemsprice);
-    //this.navCtrl.push(CalculatorPage);
-
-    //(this.navCtrl.parent as Tabs).select(1);
-
-    
-    var myJsonString = JSON.stringify(this.itemsprice);
-
     var tempJSON={"itemslist":[],};
 
     this.itemsprice.forEach((element, index) => {
 
-      tempJSON.itemslist.push(
-        {'name': "Blank_Item",
-        'price': parseInt(element),
-        'qty': this.itemsqty[index],
-        })      
+      if(this.itemsname.length>0 && index<this.itemsname.length){
+        tempJSON.itemslist.push(
+          {'name': this.itemsname[index],
+          'price': parseInt(element),
+          'qty': this.itemsqty[index],
+          }) 
+
+      }
+      else{
+        tempJSON.itemslist.push(
+          {'name': "Blank_Item",
+          'price': parseInt(element),
+          'qty': this.itemsqty[index],
+          }) 
+      }
+
+          
     });
 
 
-    var sampledat={ 'itemslist': myJsonString,};
+    //var sampledat={ 'itemslist': myJsonString,};
 
     const myObjStr = JSON.stringify(tempJSON);
     
@@ -117,14 +142,9 @@ export class AllTransactionPage {
     });
 
     this.result = "";
+    this.itemsname=[];
     this.itemsprice=[];this.lastsum=0;
     this.itemsqty=[];
-
-    //this.navCtrl.push(IncomeTransactionPage , myObjStr);
-    
-    
-    //this.events.publish('genRec:created', myObjStr);
-    //console.log("Sent1: "+ myObjStr);
   
   }
   

@@ -41,7 +41,7 @@ export class MyApp {
   
   logout(){
 
-    this.sp.backupStorage();
+    this.sp.backupStorageLogout().then();
 
     firebase.auth().signOut().then(()=>{
       this.toastCtrl.create({

@@ -73,7 +73,7 @@
   
   
   
-    <ion-list inset  *ngFor="let product of filteredList">
+    <ion-list inset  *ngFor="let product of filteredList; let i=index">
       
         <ion-card>
             <ion-grid> 
@@ -91,13 +91,13 @@
                           {{product.name}} 
                       </ion-col>
                       <ion-col col-2>
-                        {{0}}
+                        {{product.qty}}
                       </ion-col>
                         <ion-col col-2>
-                            <ion-icon name="arrow-dropup-circle" style=" color: green" (click)="addUp(product.code)"></ion-icon>
+                            <ion-icon name="arrow-dropup-circle" style=" color: green" (click)="addUp(i)"></ion-icon>
                         </ion-col>
                         <ion-col col-2>
-                            <ion-icon name="arrow-dropdown-circle" style=" color: red" (click)="addDown(product.code)"></ion-icon>
+                            <ion-icon name="arrow-dropdown-circle" style=" color: red" (click)="addDown(i)"></ion-icon>
                         </ion-col>
                     </ion-row>
                     <ion-row>
@@ -106,9 +106,9 @@
                     </ion-row>
               </ion-col>
             </ion-row>
-            <!-- <ion-row>
+            <ion-row *ngIf="event1==true">
               <ion-col col-12> <button ion-button full end color="dark" (click)="singleProduct(product)">Add</button> </ion-col>
-            </ion-row> -->
+            </ion-row>
             </ion-grid>
           </ion-card> 
        
