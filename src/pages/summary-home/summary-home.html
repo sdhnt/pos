@@ -25,29 +25,40 @@
       </ion-item>
      -->
       <ion-list inset  *ngFor="let transac of listtransac">
+
         
+
           <ion-card>
-              <ion-grid> 
-                <ion-row>
-                <ion-col col-12>
-                    <ion-row>
-                        <ion-col col-8>
-                            <ion-list *ngFor="let item of transac.itemslist">
-                              <ion-item>
-                                {{item.name}},{{item.price}},{{item.qty}}
-                              </ion-item>
-                            </ion-list>
-                        </ion-col>
-                        <ion-col col-4>
-                          {{transac.totalsum}}
-                        </ion-col>
-                         
-                      </ion-row>
-                     
-                </ion-col>
-              </ion-row>
+              <ion-grid line>
+                  <ion-row style="padding-left: 10px; padding-bottom: 5px; ">
+                    <ion-col col-10 style="color: grey; font-size: 10px;"> {{getDateTime(transac.datetime)}} </ion-col>
+                    <ion-col col-2 style="text-align: center "><ion-icon name="cash" style="color: green"></ion-icon> </ion-col>
+                  </ion-row>
+                  <ion-row style="padding-left: 10px; padding-bottom: 10px;">
+                    <ion-col><h2><b>စုစုပေါင်း: {{transac.totalsum}}</b></h2></ion-col>
+                  </ion-row>
+
+                  <ion-list *ngFor="let item of transac.itemslist">
+                      <ion-item>
+                          <ion-row  style="background-color: #f0f0f0">
+                              <ion-col col-8 style="text-align: center ; background-color: indigo; color: palevioletred;">
+                                {{item.name}}
+                              </ion-col>
+                              <ion-col col-2 style="text-align: center ; background-color: indigo; color: palevioletred;">
+                                  {{item.price}}
+                              </ion-col>
+                              <ion-col col-2 style="text-align: center ; background-color: indigo; color: palevioletred;">
+                                  {{item.qty}}
+                              </ion-col>
+                   
+                            </ion-row>
+                      </ion-item>
+                  </ion-list>  
+               
               </ion-grid>
             </ion-card> 
+        
+         
          
         </ion-list>
       

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, Events } from 'ionic-angular';
 import { StorageProvider } from '../../providers/storage/storage';
-
+import Moment from 'moment';
 /**
  * Generated class for the SummaryHomePage page.
  *
@@ -37,6 +37,15 @@ export class SummaryHomePage {
       })
     })
     
+  }
+
+  getDateTime(datetime){
+    //return (datetime.getDate() + "/" + (datetime.getMonth() + 1) + "/" + datetime. getFullYear())
+    var temp= new Date(datetime);
+    var temp1=temp;
+    var t=temp.getDate()+"/"+temp.getMonth()+ "/"+temp.getFullYear()+" at "+temp.getHours()+":"+temp.getMinutes();
+    return (t);
+
   }
 
 }
