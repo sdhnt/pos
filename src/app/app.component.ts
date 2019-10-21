@@ -29,11 +29,11 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'Income', component: TransactionHomePage },
-      { title: 'Business', component: SummaryHomePage },
-      { title: 'Products', component: DashboardPage },
-      { title: 'Coach', component: CoachHomePage },
-      { title: 'Help', component: ContactUsPage },
+      { title: 'ဝင်ငွေ', component: TransactionHomePage },
+      { title: 'စီးပွားရေး', component: SummaryHomePage },
+      { title: 'ထုတ်ကုန်များ', component: DashboardPage },
+      { title: 'ဆရာ', component: CoachHomePage },
+      { title: 'ကူညီပါ', component: ContactUsPage },
     ];
 
   }
@@ -45,7 +45,7 @@ export class MyApp {
 
     firebase.auth().signOut().then(()=>{
       this.toastCtrl.create({
-        message: "You have been logged out",
+        message: "ဆိုင်းအောက်",
         duration: 3000
       }).present()
       this.nav.setRoot(LoginPage);

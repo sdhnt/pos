@@ -63,7 +63,7 @@ export class SingleProductPage {
       this.sp.addCategory(data);
       setTimeout(()=> {
         let toast = this.toastCtrl.create({
-          message: 'Added new Category',
+          message: 'ပြီးပြီ',
           duration: 3000
         });
         this.newprodCat="";
@@ -104,7 +104,7 @@ export class SingleProductPage {
     this.sp.updateProduct(data, this.prodCodeOld).then(()=>{
       setTimeout(() => {
         let toast = this.toastCtrl.create({
-          message: "Product Updated !!",
+          message: "ပြီးပြီ",
           duration: 2000
         });
         toast.present();
@@ -119,7 +119,7 @@ export class SingleProductPage {
       this.sp.deleteProduct(data);
       setTimeout(() => {
         let toast = this.toastCtrl.create({
-          message: "Product Deleted !!",
+          message: "ပြီးပြီ",
           duration: 2000
         });
         toast.present();

@@ -73,7 +73,7 @@ export class DashboardPage {
           this.getset.setVat(this.vat);
         }else{
           let toast = this.toastCtrl.create({
-            message: "Product Not Found!!!",
+            message: "ကုန်ပစ္စည်းမရှိပါ!!!",
             duration: 2000
           });
           toast.present();
@@ -124,7 +124,7 @@ export class DashboardPage {
                 this.getset.setVat(this.vat);
               }else{
                 let toast = this.toastCtrl.create({
-                  message: "Product Not Found!!!",
+                  message: "ကုန်ပစ္စည်းမရှိပါ!!!",
                   duration: 2000
                 });
                 toast.present();

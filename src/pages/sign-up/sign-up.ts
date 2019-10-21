@@ -69,7 +69,7 @@ export class SignUpPage {
         console.log(doc);
       this.alertCtrl.create({
       title: "Account Created",
-      message: "Your account has been created successfully.",
+      message: "သင်၏အကောင့်ကိုအောင်မြင်စွာဖန်တီးလိုက်ပြီ.",
       buttons:[{
 
       text: "OK",

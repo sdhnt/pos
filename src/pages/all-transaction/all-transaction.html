@@ -11,9 +11,9 @@
         <button ion-fab color="primary" item-right><ion-icon name="calculator"></ion-icon></button>
       </ion-fab> -->
       <ion-card *ngIf="showSampleRec==false">
-        Please type the amount for the item multiplied by its quantity and press equal to add to the existing bill.
+        ကျေးဇူးပြုပြီးပစ္စည်းအတွက်ပမာဏကိုမြှောက်ပါ၊ ရှိပြီးသားငွေတောင်းခံလွှာကိုထည့်ရန်တူညီသောစာလုံးကိုနှိပ်ပါ။
 
-        To add multiple blank items enter each price*qty and press the + sign to enter the next item
+        အလွတ်ပစ္စည်းပေါင်းများစွာကိုထည့်သွင်းလိုပါက * qty တစ်ခုချင်းစီကိုရိုက်ထည့်ပြီးနောက်တစ်ခုကိုရိုက်ထည့်ရန် + သင်္ကေတကိုနှိပ်ပါ
       </ion-card>
       
   <ion-grid>
@@ -118,10 +118,10 @@
                   </ion-row>
           
                   <ion-row style="padding-top: 5px;">
-                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><b>Sl</b></ion-col>
-                      <ion-col col-4 style="color: black; font-size: 10px; text-align: center"><b>Item</b></ion-col>
-                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Price</b></ion-col>
-                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>Qty</b></ion-col>
+                      <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><b>နံပါတ်</b></ion-col>
+                      <ion-col col-4 style="color: black; font-size: 10px; text-align: center"><b>ပစ္စည်း</b></ion-col>
+                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>စျေးနှုန်း</b></ion-col>
+                      <ion-col col-2 style="color: black; font-size: 10px; text-align: center"><b>ပမာဏ</b></ion-col>
                       <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon></ion-col>
                       <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon></ion-col>
                       <ion-col col-1 style="color: black; font-size: 10px; text-align: center"><ion-icon name="close" style=" color: red"></ion-icon></ion-col>
@@ -148,7 +148,7 @@
           
                   <ion-row padding>
                       <ion-col col-1></ion-col>  
-                    <ion-col col-4 style="text-align: center;font-size: 10px;"><b>Total</b> </ion-col>
+                    <ion-col col-4 style="text-align: center;font-size: 10px;"><b>စုစုပေါင်း</b> </ion-col>
                       <ion-col col-2 style="text-align: center;font-size: 10px;"><b>{{lastsum}}</b> </ion-col>
                       <ion-col col-5></ion-col>
                     </ion-row>
@@ -184,7 +184,7 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-            <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>
+            <button ion-button (click)="createRec()" full style="background-color: #222">ငွေလက်ခံဖြတ်ပိုင်းကိုဖန်တီးပါ</button>
         </ion-col>
       </ion-row>
     </ion-grid>

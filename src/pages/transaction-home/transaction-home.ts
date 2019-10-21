@@ -77,7 +77,7 @@ export class TransactionHomePage {
     this.sp.backupStorage();
     this.toastCtrl.create({
   
-      message: "Online back-up completed!",
+      message: "အွန်လိုင်းအရန်သင့်သိမ်းဆည်းပြီးပါပြီ",
       duration: 2000
     }).present();
   }
@@ -85,7 +85,7 @@ export class TransactionHomePage {
   cashbtn(){
     this.toastCtrl.create({
   
-      message: "Cash Balance: " + this.userdata.cash_balance,
+      message: "ငွေလက်ကျန်: " + this.userdata.cash_balance,
       duration: 3000
     }).present();
   }

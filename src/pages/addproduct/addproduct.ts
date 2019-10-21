@@ -60,7 +60,7 @@ export class AddProductPage {
       this.sp.addCategory(data);
       setTimeout(()=> {
         let toast = this.toastCtrl.create({
-          message: 'Added new Category',
+          message: 'ပြီးပြီ',
           duration: 3000
         });
         this.newprodCat="";
@@ -112,7 +112,7 @@ export class AddProductPage {
       this.sp.addProduct(data);
       setTimeout(()=> {
         let toast = this.toastCtrl.create({
-          message: 'Added new Product',
+          message: 'ပြီးပြီ',
           duration: 3000
         });
         this.prodCode="";

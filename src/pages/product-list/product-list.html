@@ -26,7 +26,7 @@
   </ion-item> -->
 
   <ion-item>
-    <ion-label>Select Category</ion-label>
+    <ion-label>အမျိုးအစားကိုရွေးပါ</ion-label>
     <ion-select multiple="true" [(ngModel)]='selectedCat' (ionChange)="filteredProduct()">
         <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    
     </ion-select>
@@ -99,13 +99,13 @@
                       </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col col-6 style="color: grey; font-size: 10px;"> Price {{product.price}} MMK </ion-col>
-                    <ion-col col-6 style="color: grey; font-size: 10px; text-align: end;"> Category: {{product.cat}} </ion-col>
+                    <ion-col col-6 style="color: grey; font-size: 10px;"> စျေးနှုန်း {{product.price}} MMK </ion-col>
+                    <ion-col col-6 style="color: grey; font-size: 10px; text-align: end;"> အမျိုးအစား: {{product.cat}} </ion-col>
                   </ion-row>
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col col-12> <button ion-button full end color="dark" (click)="singleProduct(product)">View/Edit</button> </ion-col>
+            <ion-col col-12> <button ion-button full end color="dark" (click)="singleProduct(product)">ကြည့်ရှု / တည်းဖြတ်</button> </ion-col>
           </ion-row>
           </ion-grid>
         </ion-card> 

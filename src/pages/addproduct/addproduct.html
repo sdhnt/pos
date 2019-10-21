@@ -9,7 +9,7 @@
 
 <ion-content padding>
     <ion-item>
-        <b>Enter Details of New Product:</b>
+        <b>အချက်အလက်ထည့်ပါ:</b>
     </ion-item>
   
   <ion-list inset>
@@ -18,28 +18,28 @@
   
 
     <ion-item>
-      <ion-label>Code:</ion-label>
+      <ion-label>ထုတ်ကုန်ကုဒ်:</ion-label>
       <ion-input type="text" [(ngModel)]='prodCode'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Name:</ion-label>
+      <ion-label>နာမည်:</ion-label>
       <ion-input type="text" [(ngModel)]='prodName'></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Sell Price:</ion-label>
+      <ion-label>ရောင်းစျေး:</ion-label>
       <ion-input type="number" [(ngModel)]='prodPrice'></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label>Cost Price: </ion-label>
+        <ion-label>ကုန်ကျစရိတ်: </ion-label>
         <ion-input type="number" [(ngModel)]='prodCost'></ion-input>
     </ion-item>
     <ion-item>
 
-        <ion-label>Select Category</ion-label>
+        <ion-label>အမျိုးအစားကိုရွေးပါ</ion-label>
         <ion-select multiple="false" [(ngModel)]='prodCat'>
 
             <!-- <ion-option>New</ion-option> -->
-            <ion-option>New</ion-option>
+            <ion-option>အသစ်</ion-option>
             <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>
           
       </ion-select>
@@ -57,7 +57,7 @@
 
 
         <ion-item *ngIf="prodCat=='New'">
-          <ion-label >Enter New Category:</ion-label>
+          <ion-label >အမျိုးအစားအသစ်ထည့်ပါ: </ion-label>
           <ion-input type="text" placeholder="Enter Category Here"  [(ngModel)]='newprodCat'></ion-input>
         </ion-item>
         
@@ -71,8 +71,8 @@
     
   
   </ion-list>
-  <button ion-button block color="primary" (click)="addproduct()"  color="dark">Add Product</button>
-  <button ion-button block color="primary" (click)="scanQR()"  color="dark">Scan Code</button>
+  <button ion-button block color="primary" (click)="addproduct()"  color="dark">ထုတ်ကုန်ထည့်ပါ</button>
+  <button ion-button block color="primary" (click)="scanQR()"  color="dark">ကုဒ် scan ကို</button>
 
   <ion-card>
     

@@ -209,7 +209,7 @@ userdata: any = {business_address: "",
     
     this.toastCtrl.create({
   
-      message: "Receipt Cancelled",
+      message: "ငွေလက်ခံဖြတ်ပိုင်းဖျက်သိမ်းခဲ့သည်",
       duration: 2000,
     }).present();
     
@@ -238,7 +238,7 @@ userdata: any = {business_address: "",
         this.sp.addTransactions(data);
    
           let toast = this.toastCtrl.create({
-            message: 'Added new Transaction',
+            message: 'ပြီးပြီ',
             duration: 3000
           });
 
@@ -301,7 +301,7 @@ userdata: any = {business_address: "",
 
     this.toastCtrl.create({
   
-      message: "This feature will be enabled soon",
+      message: "ဒီအင်္ဂါရပ်မကြာမီဖွင့်ပါလိမ့်မည်",
       duration: 2000,
     }).present();
 

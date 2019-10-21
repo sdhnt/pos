@@ -42,7 +42,7 @@ export class LoginPage {
       console.log(user)
     this.toastCtrl.create({
   
-      message: "Welcome " + user.user.displayName,
+      message: "ကြိုဆိုပါတယ် " + user.user.displayName,
       duration: 3000
     }).present();
 
@@ -68,7 +68,7 @@ export class LoginPage {
 
     loginAction(){
       this.toastCtrl.create({
-        message: "Feature will be available soon",
+        message: "အင်္ဂါရပ်မကြာမီဖွင့်ပါလိမ့်မည်",
         duration: 2000,
       }).present();
     }
