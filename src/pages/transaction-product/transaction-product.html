@@ -126,9 +126,14 @@
 <ion-footer>
 
     <ion-grid>
-      <ion-row>
+      <ion-row *ngIf="event1==false">
         <ion-col>
             <button ion-button (click)="createRec()" full style="background-color: #222">Generate Receipt</button>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="event1==true">
+        <ion-col>
+            <button ion-button (click)="reset()" full style="background-color: #222">Reset</button>
         </ion-col>
       </ion-row>
     </ion-grid>

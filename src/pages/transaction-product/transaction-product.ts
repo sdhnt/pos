@@ -63,6 +63,14 @@ export class TransactionProductPage {
       });
   }
 
+  reset(){
+   
+    this.event1=false;
+    this.event=false;
+    this.ionViewDidLoad();
+
+  }
+
 
 
   selectedItem: any;

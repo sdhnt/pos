@@ -65,7 +65,14 @@ export class LoginPage {
   
     })
     }
-  
+
+    loginAction(){
+      this.toastCtrl.create({
+        message: "Feature will be available soon",
+        duration: 2000,
+      }).present();
+    }
+    
     gotoSignUp(){
   
     this.navCtrl.push(SignUpPage)
