@@ -4,24 +4,24 @@
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\12290740075e2a7eff2884779ae37721\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_screen.png.flat",
-        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
-    },
-    {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_launcher_icon.png.flat",
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner-release-2.1.5.aar\\8fceaf9a41b5ffe91b60914f5b6991f6\\res\\drawable-xxhdpi\\launcher_icon.png"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_toggle_torch.png.flat",
-        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner-release-2.1.5.aar\\8fceaf9a41b5ffe91b60914f5b6991f6\\res\\drawable\\toggle_torch.png"
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_screen.png.flat",
+        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
+        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\12290740075e2a7eff2884779ae37721\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
-        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_toggle_torch.png.flat",
+        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner-release-2.1.5.aar\\8fceaf9a41b5ffe91b60914f5b6991f6\\res\\drawable\\toggle_torch.png"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -126,6 +126,10 @@
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_history_list_item.xml.flat",
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner-release-2.1.5.aar\\8fceaf9a41b5ffe91b60914f5b6991f6\\res\\layout\\history_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_camera_provider_paths.xml.flat",
+        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\src\\main\\res\\xml\\camera_provider_paths.xml"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_icon_group.xml.flat",

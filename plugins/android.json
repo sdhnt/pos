@@ -35,6 +35,10 @@
     },
     "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
     }
   },
   "dependent_plugins": {}

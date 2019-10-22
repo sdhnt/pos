@@ -43,7 +43,7 @@ export class SummaryHomePage {
     //return (datetime.getDate() + "/" + (datetime.getMonth() + 1) + "/" + datetime. getFullYear())
     var temp= new Date(datetime);
     var temp1=temp;
-    var t=temp.getDate()+"/"+temp.getMonth()+ "/"+temp.getFullYear()+" at "+temp.getHours()+":"+temp.getMinutes();
+    var t=temp.getDate()+"/"+temp.getMonth()+ "/"+temp.getFullYear()+" "+temp.getHours()+":"+temp.getMinutes();
     return (t);
 
   }

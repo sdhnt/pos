@@ -4,16 +4,22 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Update Product</ion-title>
-  </ion-navbar>
+  </ion-navbar> 
 </ion-header> -->
 
 <ion-content padding>
   <ion-list inset>
 
     <!-- <ion-item>
-      <ion-label>Photo</ion-label>
+      <ion-label>Photo</ion-label>  
           <ion-input type="number" [(ngModel)]='product.price'></ion-input>
       </ion-item> -->
+
+      <ion-item>
+          <button ion-button (click)="launchCamera()">Take Picture</button>
+          <img *ngIf="image!=null" [src]="image" style="width: 100px;">  
+      </ion-item>
+    
     <ion-item>
       <ion-label>ထုတ်ကုန်ကုဒ်</ion-label>
       <ion-input type="text" [(ngModel)]='product.code'></ion-input>

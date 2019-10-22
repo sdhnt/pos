@@ -117,7 +117,7 @@ export class AllTransactionPage {
       }
       else{
         tempJSON.itemslist.push(
-          {'name': "Blank_Item",
+          {'name': "ထုတ်ကုန်",
           'price': parseInt(element),
           'qty': this.itemsqty[index],
           }) 

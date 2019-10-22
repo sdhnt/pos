@@ -17,6 +17,7 @@ import { StorageProvider } from '../providers/storage/storage';
 import { IonicStorageModule } from '@ionic/storage';
 import { ToastController } from 'ionic-angular';
 import { GettersetterProvider } from '../providers/gettersetter/gettersetter';
+import { Camera, CameraOptions } from '@ionic-native/camera'; 
 
 
 import * as firebase from 'firebase';
@@ -34,6 +35,7 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { TransactionProductPage } from '../pages/transaction-product/transaction-product';
 import { ProductListPage } from '../pages/product-list/product-list';
 import { AddProductCategoryPage } from '../pages/add-product-category/add-product-category';
+
 
 
 var config = {
@@ -71,6 +73,7 @@ firebase.initializeApp(config);
     TransactionProductPage,
     ProductListPage,
     AddProductCategoryPage,
+    
   ],
   imports: [
     BrowserModule,
@@ -110,7 +113,7 @@ firebase.initializeApp(config);
     IonicStorageModule,
     ToastController,
     GettersetterProvider,
-
+    Camera,
   ]
 })
 export class AppModule {}

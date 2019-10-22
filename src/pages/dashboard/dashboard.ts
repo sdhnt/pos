@@ -43,8 +43,32 @@ export class DashboardPage {
       public sp: StorageProvider,
       public getset: GettersetterProvider,
       private toastCtrl: ToastController) {
+
+        this.getUserData();
         
   }
+
+  userdata: any;
+  async getUserData(){
+    console.log(firebase.auth().currentUser.uid);
+    var ud;
+    const snapshot = await firebase.firestore().collection('users').where("owner","==",firebase.auth().currentUser.uid).get()
+    .then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+          // doc.data() is never undefined for query doc snapshots
+          //console.log(doc.id, " => ", doc.data());
+          ud=doc.data();
+          //this.userdata=doc.data();
+          
+      });
+  })
+  .catch(function(error) {
+      console.log("Error getting documents: ", error);
+  });
+  this.userdata=ud;
+  console.log(this.userdata);
+    
+ }
 
   ionViewDidLoad(){
     this.total = this.getset.getTotal();
@@ -52,6 +76,24 @@ export class DashboardPage {
     this.vat = this.getset.getVat();
   }
 
+  
+  uploadbtn(){
+
+    this.sp.backupStorage();
+    this.toastCtrl.create({
+  
+      message: "အွန်လိုင်းအရန်သင့်သိမ်းဆည်းပြီးပါပြီ",
+      duration: 2000
+    }).present();
+  }
+
+  cashbtn(){
+    this.toastCtrl.create({
+  
+      message: "ငွေလက်ကျန်: " + this.userdata.cash_balance,
+      duration: 3000
+    }).present();
+  }
   
 
   

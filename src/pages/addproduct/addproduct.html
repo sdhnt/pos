@@ -10,12 +10,15 @@
 <ion-content padding>
     <ion-item>
         <b>အချက်အလက်ထည့်ပါ:</b>
+    
     </ion-item>
   
   <ion-list inset>
       <!-- <button ion-button full color="dark" (click)="getProdPic()">Upload Picture</button> -->
-
-  
+      <ion-item>
+          <button ion-button (click)="launchCamera()">Take Picture</button>
+          <img *ngIf="image!=null" [src]="image" style="width: 100px;">  
+      </ion-item>
 
     <ion-item>
       <ion-label>ထုတ်ကုန်ကုဒ်:</ion-label>
@@ -39,7 +42,7 @@
         <ion-select multiple="false" [(ngModel)]='prodCat'>
 
             <!-- <ion-option>New</ion-option> -->
-            <ion-option>အသစ်</ion-option>
+            <ion-option>New</ion-option>
             <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>
           
       </ion-select>
