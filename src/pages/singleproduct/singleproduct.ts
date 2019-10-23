@@ -34,6 +34,7 @@ export class SingleProductPage {
               ) {
     this.product = this.navParams.get("data");
     this.prodCodeOld = this.product.code;
+    this.image=this.product.url;
     this.getUserData();
   }
 

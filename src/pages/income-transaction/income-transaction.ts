@@ -4,6 +4,7 @@ import { AllTransactionPage } from '../all-transaction/all-transaction';
 import firebase from 'firebase';
 import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
 import { StorageProvider } from '../../providers/storage/storage';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 /**
  * Generated class for the IncomeTransactionPage page.
@@ -21,7 +22,8 @@ export class IncomeTransactionPage {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, 
-    public sp: StorageProvider, public toastCtrl: ToastController) {
+    public sp: StorageProvider, public toastCtrl: ToastController,
+    private barcodeScanner: BarcodeScanner) {
     
     //console.log("Recieved -1" + this.navParams.get('itemslist'));
     this.getUserData();
@@ -80,6 +82,51 @@ userdata: any = {business_address: "",
       } 
     });
   
+}
+temp;
+
+qrscan(){
+  var curprod;
+  this.barcodeScanner.scan().then(barcodeData => {
+    this.sp.searchProduct(barcodeData.text).then(val => {
+      if(val[0] != null){
+        curprod=val[0];
+        let toast = this.toastCtrl.create({
+          message: "Found Product "+ val[0].name,
+          duration: 2000
+        });
+        toast.present();
+        curprod.qty=1;
+        this.temp=curprod;
+
+        // addQty(index){
+        //   //this.lastsum=this.lastsum+this.datastore.itemslist[index].price;
+        //   this.datastore.itemslist[index].qty=parseInt(this.datastore.itemslist[index].qty)+1;  
+      
+        //   this.lastsum=0;
+        //   for(let i = 0; i < this.datastore.itemslist.length; i++){
+        //     this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
+        //   }
+        // }
+        this.datastore.itemslist.push(curprod)
+        //this.lastsum=this.lastsum+curprod.price;
+        this.lastsum=0;
+        for(let i = 0; i < this.datastore.itemslist.length; i++){
+               this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
+           }
+
+      
+      }else{
+        let toast = this.toastCtrl.create({
+          message: "ကုန်ပစ္စည်းမရှိပါ!!!",
+          duration: 2000
+        });
+        toast.present();
+      }
+    })
+  }).catch(err => {
+      console.log('Error', err);
+  });
 }
 
 
