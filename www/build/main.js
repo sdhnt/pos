@@ -2778,7 +2778,6 @@ var config = {
     projectId: "open-fintech",
     storageBucket: "open-fintech.appspot.com",
     messagingSenderId: "1001643033524",
-    appId: "1:1001643033524:web:f0fafa6564e26bb41368e1",
     measurementId: "G-CECMRG504L"
 };
 __WEBPACK_IMPORTED_MODULE_17_firebase__["initializeApp"](config);
