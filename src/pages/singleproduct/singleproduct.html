@@ -14,7 +14,7 @@
       <ion-label>Photo</ion-label>  
           <ion-input type="number" [(ngModel)]='product.price'></ion-input>
       </ion-item> -->
-
+ 
       <ion-item>
           <button ion-button (click)="launchCamera()">Take Picture</button>
           <img *ngIf="image!=null" [src]="image" style="width: 100px;">  
@@ -36,6 +36,10 @@
         <ion-label>ကုန်ကျစရိတ်</ion-label>
         <ion-input type="number" [(ngModel)]='product.cost'></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label>QTY</ion-label>
+      <ion-input type="number" [(ngModel)]='product.stock_qty'></ion-input>
+  </ion-item>
       <ion-item>
           <ion-label>အမျိုးအစားရွေးပါ</ion-label>
           <ion-select multiple="false" [(ngModel)]='product.cat'>

@@ -86,15 +86,15 @@ export class SingleProductPage {
   image: any="";
   launchCamera(){
     let options: CameraOptions = {
-      quality: 50,
+      quality: 20,
       //sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.PNG,
+      encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       correctOrientation: true,
-        // targetHeight: 1080,
-        // targetWidth: 2220,
-       allowEdit: true,
+      targetHeight: 300,
+      targetWidth: 300,
+      allowEdit: true,
     }
     this.camera.getPicture(options).then((base64Image)=>{
       this.image = "data:image/png;base64," + base64Image;
@@ -187,6 +187,7 @@ export class SingleProductPage {
         "cost": this.product.cost,
         "cat": this.product.cat,
         "url": this.product.url,
+        "stock_qty":this.product.stock_qty,
       };
   
       this.sp.updateProduct(data, this.prodCodeOld).then(()=>{
@@ -213,13 +214,14 @@ export class SingleProductPage {
   deleteproduct(data){
     this.sp.storageReady().then(() => {
       this.sp.deleteProduct(data);
-      this.sp.backupStorage();
+      
       setTimeout(() => {
         let toast = this.toastCtrl.create({
           message: "ပြီးပြီ",
           duration: 2000
         });
         toast.present();
+        this.sp.backupStorage();
         this.navCtrl.setRoot(ProductListPage);
       }, 1000)
     }).catch(err => {

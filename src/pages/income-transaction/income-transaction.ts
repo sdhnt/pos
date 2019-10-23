@@ -50,7 +50,6 @@ userdata: any = {business_address: "",
   businesstype: "",
   taxrate: 0.0,
   discount: 0.0,
- 
 }
 
 discount:number=0.0;
@@ -345,8 +344,9 @@ qrscan(){
         "totalatax":this.lastsumtax,
       };
       this.sp.storageReady().then(() => {
+        console.log(data)
         this.sp.addTransactions(data);
-   
+        
           let toast = this.toastCtrl.create({
             message: 'ပြီးပြီ',
             duration: 3000
@@ -365,7 +365,7 @@ qrscan(){
       this.sp.backupStorage();
       toast.present();
       
-      })
+      });
     }
   }
 

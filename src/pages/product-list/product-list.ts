@@ -84,7 +84,7 @@ export class ProductListPage {
   singleProduct(data){
     this.navCtrl.setRoot(SingleProductPage, {'data': data});
   }
-
+ 
   filteredProduct(){
 
     this.filteredList = this.listProducts.filter(

@@ -101,7 +101,8 @@ export class StorageProvider {
       this.storage.get('products').then((val) => {
         parseprod = JSON.parse(val);
         this.storage.get('transactions').then((val) => {
-          parsetransac = JSON.parse(val);
+          if(val!=null)
+          {parsetransac = JSON.parse(val);}
           this.storage.get('categories').then((val) => {
             parsecat = JSON.parse(val);
             const snapshot = firebase.firestore().collection('users').where("owner", "==", firebase.auth().currentUser.uid).get()
@@ -182,7 +183,7 @@ export class StorageProvider {
   addCategory(data) {
     this.storage.ready().then(() => {
       this.storage.get('categories').then((val) => {
-        if (val === null) {
+        if (val === null || val=="null") {
           this.storage.set('categories', "[]").then(() => {
             this.storage.get('categories').then((valNull) => {
               this.categories = JSON.parse(valNull);
@@ -233,16 +234,19 @@ export class StorageProvider {
   addTransactions(data) {
     this.storage.ready().then(() => {
       this.storage.get('transactions').then((val) => {
+        console.log(val);
         if (val === null) {
           this.storage.set('transactions', "[]").then(() => {
             this.storage.get('transactions').then((valNull) => {
               this.transactions = JSON.parse(valNull);
+              console.log("val "+valNull)
               this.transactions.push(data);
               this.storage.set('transactions', JSON.stringify(this.transactions));
             })
           })
         } else {
           this.transactions = JSON.parse(val);
+          console.log("val yada");
           this.transactions.push(data);
           this.storage.set('transactions', JSON.stringify(this.transactions));
         }
