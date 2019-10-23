@@ -55,6 +55,7 @@ export class AddProductCategoryPage {
           duration: 3000
         });
         this.newprodCat="";
+        this.sp.backupStorage();
 
 
         //this.navCtrl.push(ProductListPage);
@@ -69,6 +70,7 @@ export class AddProductCategoryPage {
   delCat(element){
     this.sp.storageReady().then(() => {
       this.sp.deleteCategory(element);
+      this.sp.backupStorage();
       setTimeout(()=> {
         let toast = this.toastCtrl.create({
           message: 'ပြီးပြီ',

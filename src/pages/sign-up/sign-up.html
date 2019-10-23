@@ -14,7 +14,7 @@
 
 <ion-grid style="width: 75%;">
 
-	<div *ngIf="nextbtn==0">
+	<div *ngIf="nextbtn!=1">
 	<ion-row class="row-style1" justify-content-center align-items-center style="height: 100%">စီးပွားရေးလုပ်ငန်းတစ်ခုမှတ်ပုံတင်ပါ</ion-row>
 	<ion-row class="row-style"> 
 		<ion-icon name="person" color="semi-light" class="icon"></ion-icon>
@@ -40,10 +40,10 @@
 		<ion-icon name="call" color="semi-light" class="icon"></ion-icon>
 		<ion-input type="text" placeholder="ဖုန်းနံပါတ်"  [(ngModel)]="phno"></ion-input>
 	</ion-row>
-<button ion-button block round outline color="light" style="margin-top: 10px;" (click)="nextPg()">Next</button>
+<button ion-button block round outline color="light" style="margin-top: 10px;" (click)="nextPg()">နောက်တစ်ခု</button>
 </div>
 <div *ngIf="nextbtn==1">
-		<button ion-button block round outline color="light" style="margin-bottom: 10px;" (click)="prevPg()">Prev</button>
+		<button ion-button block round outline color="light" style="margin-bottom: 10px;" (click)="prevPg()">ယခင်</button>
 	<ion-row class="row-style">
 			<ion-icon name="globe" color="semi-light" class="icon"></ion-icon>
 			<ion-label>လုပ်ငန်းအမျိုးအစား</ion-label>
@@ -97,9 +97,6 @@
 				<ion-icon name="cash" color="semi-light" class="icon"></ion-icon>
 				<ion-input type="number" placeholder="အခွန်နှုန်း %"  [(ngModel)]="taxrate"></ion-input>
 			</ion-row>
-
-
-
 	<ion-row>
 		<button ion-button block round outline color="light" style="margin-top: 20px;" (click)="signup()">ဆိုင်းအပ်</button>
 	</ion-row>

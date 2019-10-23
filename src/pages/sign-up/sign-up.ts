@@ -34,6 +34,7 @@ export class SignUpPage {
   taxrate: number;
   nextbtn=0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public alertCtrl: AlertController) {
+    this.nextbtn=0;
   }
 
   ionViewDidLoad() {

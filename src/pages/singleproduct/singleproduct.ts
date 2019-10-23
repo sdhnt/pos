@@ -190,6 +190,7 @@ export class SingleProductPage {
       };
   
       this.sp.updateProduct(data, this.prodCodeOld).then(()=>{
+        this.sp.backupStorage();
         setTimeout(() => {
           let toast = this.toastCtrl.create({
             message: "ပြီးပြီ",
@@ -212,6 +213,7 @@ export class SingleProductPage {
   deleteproduct(data){
     this.sp.storageReady().then(() => {
       this.sp.deleteProduct(data);
+      this.sp.backupStorage();
       setTimeout(() => {
         let toast = this.toastCtrl.create({
           message: "ပြီးပြီ",

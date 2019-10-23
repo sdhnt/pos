@@ -17,8 +17,8 @@ export class AddProductPage {
 
   prodCode: any = "";
   prodName: any = "";
-  prodPrice: number = 0;
-  prodCost: number = 0;
+  prodPrice: number = null;
+  prodCost: number = null;
   prodCat: any = "";
   listProduct: any;
 
@@ -85,15 +85,15 @@ export class AddProductPage {
 
   launchCamera(){
     let options: CameraOptions = {
-      quality: 50,
+      quality: 20,
       //sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
       destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.PNG,
+      encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      correctOrientation: true,
-        // targetHeight: 1080,
-        // targetWidth: 2220,
-       allowEdit: true,
+       correctOrientation: true,
+       targetHeight: 300,
+       targetWidth: 300,
+        allowEdit: true,
     }
     this.camera.getPicture(options).then((base64Image)=>{
       this.image = "data:image/png;base64," + base64Image;
@@ -126,25 +126,7 @@ export class AddProductPage {
         });
       
       })
-      // uploadTask.on("state_changed", function(taskSnapshot){
-      //   console.log(taskSnapshot);
-      //   this.temp="Yaar";
-      // }, function(err){
-      //   console.log(err);
-      //   this.temp=err;
-      // }, function(){
-      //   console.log("Upload Complete");
-      //   this.temp="Upload Complete"
-      //   uploadTask.snapshot.ref.getDownloadURL().then(function(url){
-      //     this.produrl= url;
-      //     this.temp=url;
-      //     resolve()
-      //   }).catch((err)=>{
-      //     this.temp=err;
-      //     reject
-      //   })
-        
-      // })
+    
     })
   }
   
@@ -184,7 +166,8 @@ export class AddProductPage {
   scanQR(){
     this.barcodeScanner.scan().then(barcodeData => {
         //this.prodCode = barcodeData.text;
-        this.navCtrl.setRoot(AddProductPage,{code: barcodeData.text})
+        //this.navCtrl.setRoot(AddProductPage,{code: barcodeData.text})
+        this.prodCode=barcodeData.text;
     }).catch(err => {
         console.log('Error', err);
     });
@@ -197,9 +180,22 @@ export class AddProductPage {
       this.addCategory();
       this.prodCat=this.newprodCat;
     }
+    if(this.image==""){
+      this.toastCtrl.create({
+        message: "ကျေးဇူးပြုပြီးထုတ်ကုန်၏ပုံကိုယူပါ",
+        duration: 2000,
+      });
+      this.launchCamera();
+    }
+    else{
     this.temp=this.prodName;
+    this.toastCtrl.create({
+      message: "ပစ္စည်းဖန်တီးလျက်ရှိသည်။ ကျေးဇူးပြုပြီးခဏစောင့်ပါ။",
+      duration: 2000,
+    });
     this.upload_new(this.prodName).then(()=>{
 
+      
       const data = {
         "code": this.prodCode,
         "name": this.prodName,
@@ -228,7 +224,8 @@ export class AddProductPage {
           this.prodCost=0;
           this.produrl="";
           this.image="";
-  
+
+          this.sp.backupStorage();
   
           //this.navCtrl.push(ProductListPage);
           this.events.publish('prodAdd:created',0);
@@ -238,6 +235,7 @@ export class AddProductPage {
       })
       
     });
+  }
 
   }
 }

@@ -362,7 +362,8 @@ qrscan(){
       this.taxrate=0;
       this.taxbtn=0;
       this.discbtn=0;
-          toast.present();
+      this.sp.backupStorage();
+      toast.present();
       
       })
     }

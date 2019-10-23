@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import firebase from 'firebase';
 import { DashboardPage } from '../dashboard/dashboard';
 import {SignUpPage} from '../sign-up/sign-up';
@@ -23,7 +23,9 @@ export class LoginPage {
   email: string="";
   password: string="";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public sp: StorageProvider,) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, public toastCtrl: ToastController, 
+    public sp: StorageProvider, public alertCtrl: AlertController,) {
   }
 
   ionViewDidLoad() {
@@ -39,11 +41,17 @@ export class LoginPage {
  
     firebase.auth().signInWithEmailAndPassword(this.email, this.password)
     .then( (user) => {
-      console.log(user)
-    this.toastCtrl.create({
-  
-      message: "ကြိုဆိုပါတယ် " + user.user.displayName,
-      duration: 3000
+      //firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+      //console.log(user)
+    this.alertCtrl.create({
+
+      subTitle:"ကြိုဆိုပါတယ် " + user.user.displayName,
+      buttons: [
+        {
+          text: 'Okay!',
+          role: 'cancel',
+        }
+        ],
     }).present();
 
     this.sp.clearMem();
@@ -55,7 +63,6 @@ export class LoginPage {
   
     }).catch( (err) => {console.log(err)
       this.toastCtrl.create({
-  
       message: err.message,
       duration: 3000
     }).present();
