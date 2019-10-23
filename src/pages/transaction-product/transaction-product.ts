@@ -35,12 +35,16 @@ export class TransactionProductPage {
           // this.itemsname.push(element.name)
           // this.itemsprice.push(element.price);
           // this.itemsqty.push(element.qty)
-          this.listProducts.forEach(element1 => {
-            if(element1.name==element.name)
-            {
-              element1.qty=element.qty;
-            }
-          });
+
+          if(this.listProducts.length!=0){
+            this.listProducts.forEach(element1 => {
+              if(element1.name==element.name)
+              {
+                element1.qty=element.qty;
+              }
+            });
+          }
+        
           
         });
         //console.log(this.listProducts)
@@ -114,7 +118,7 @@ export class TransactionProductPage {
 
   // }
 
-  tempprodlist: any = [];
+  tempprodlist: any = [{}];
 
   addUp(index) {
 
@@ -131,29 +135,24 @@ export class TransactionProductPage {
     this.sp.storageReady().then(() => {
       this.sp.getProducts().then((val) => {
 
-        console.log(this.listProducts)
+    
 
         if(this.event!=true){
           this.listProducts = JSON.parse(val);
-
-          this.listProducts.forEach(element => {
-            element.qty = 0;
-          });
+          console.log(this.listProducts+ "yo")
+          if(this.listProducts !=null){
+            this.listProducts.forEach(element => {
+              element.qty = 0;
+            });
+          }
+          
         }
-
-      
-
-        
-        
+ 
         if(this.event1!=true){
           if (this.listProducts != null) {
             this.filteredProduct();
           }
         }
-  
-
-
-
       }).catch(err => {
         alert("Error: " + err);
       })

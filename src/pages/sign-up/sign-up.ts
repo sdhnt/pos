@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import firebase from 'firebase';
 import { DashboardPage } from '../dashboard/dashboard';
+import { AllTransactionPage } from '../all-transaction/all-transaction';
 
 
 
@@ -90,7 +91,7 @@ export class SignUpPage {
 
       text: "OK",
       handler: () => {
-        this.navCtrl.setRoot(DashboardPage)//navigate to feeds page
+        this.navCtrl.setRoot(AllTransactionPage)//navigate to feeds page
       }//end handler
       }]//end button
 

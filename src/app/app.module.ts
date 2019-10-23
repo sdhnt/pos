@@ -38,13 +38,23 @@ import { AddProductCategoryPage } from '../pages/add-product-category/add-produc
 
 
 
+// var config = {
+//   apiKey: "AIzaSyADjIbI3_GRS4eRHGVGFsT2hrkKvH9K06M",
+//   authDomain: "trialapp-1cb3d.firebaseapp.com",
+//   databaseURL: "https://trialapp-1cb3d.firebaseio.com",
+//   projectId: "trialapp-1cb3d",
+//   storageBucket: "trialapp-1cb3d.appspot.com",
+//   messagingSenderId: "591467524421"
+// };
 var config = {
-  apiKey: "AIzaSyADjIbI3_GRS4eRHGVGFsT2hrkKvH9K06M",
-  authDomain: "trialapp-1cb3d.firebaseapp.com",
-  databaseURL: "https://trialapp-1cb3d.firebaseio.com",
-  projectId: "trialapp-1cb3d",
-  storageBucket: "trialapp-1cb3d.appspot.com",
-  messagingSenderId: "591467524421"
+  apiKey: "AIzaSyBlxUkCX8OPsb9QL2p_jN8vaHdb5LhsS7A",
+  authDomain: "open-fintech.firebaseapp.com",
+  databaseURL: "https://open-fintech.firebaseio.com",
+  projectId: "open-fintech",
+  storageBucket: "open-fintech.appspot.com",
+  messagingSenderId: "1001643033524",
+  appId: "1:1001643033524:web:f0fafa6564e26bb41368e1",
+  measurementId: "G-CECMRG504L"
 };
 
 firebase.initializeApp(config);

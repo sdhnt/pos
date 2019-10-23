@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "trialapp-1cb3d"
+    "default": "open-fintech",
+    "open-fintech": "open-fintech"
   }
 }

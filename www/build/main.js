@@ -1115,7 +1115,7 @@ var LoginPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__all_transaction_all_transaction__ = __webpack_require__(114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1234,7 +1234,7 @@ var SignUpPage = /** @class */ (function () {
                             buttons: [{
                                     text: "OK",
                                     handler: function () {
-                                        _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard__["a" /* DashboardPage */]); //navigate to feeds page
+                                        _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__all_transaction_all_transaction__["a" /* AllTransactionPage */]); //navigate to feeds page
                                     } //end handler
                                 }] //end button
                         }).present();
@@ -1259,9 +1259,10 @@ var SignUpPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-sign-up',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\sign-up\sign-up.html"*/'<ion-header>\n  <ion-navbar transparent>\n   <!--  <ion-title>\n     AdMonkey\n    </ion-title> -->\n \n\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	\n		<button ion-button block clear color="light" class="nametop"><b>Open</b></button> \n\n<ion-grid style="width: 75%;">\n\n	<div *ngIf="nextbtn!=1">\n	<ion-row class="row-style1" justify-content-center align-items-center style="height: 100%">စီးပွားရေးလုပ်ငန်းတစ်ခုမှတ်ပုံတင်ပါ</ion-row>\n	<ion-row class="row-style"> \n		<ion-icon name="person" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="text" placeholder="နာမည်" [(ngModel)]="name"></ion-input>\n	</ion-row>\n	<ion-row class="row-style">\n		<ion-icon name="mail" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="email" placeholder="အီးမေးလ်" [(ngModel)]="email"> </ion-input>\n	</ion-row>\n	<ion-row class="row-style">\n		<ion-icon name="key" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="password" placeholder="စကားဝှက်"  [(ngModel)]="password"></ion-input>\n	</ion-row>\n	<ion-row class="row-style">\n		<ion-icon name="home" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="text" placeholder="စီးပွားရေးအမည် "  [(ngModel)]="businessname"></ion-input>\n	</ion-row>\n	<ion-row class="row-style">\n		<ion-icon name="pin" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="text" placeholder="စီးပွားရေးလိပ်စာ"  [(ngModel)]="businessaddress"></ion-input>\n	</ion-row>\n	<ion-row class="row-style">\n		<ion-icon name="call" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="text" placeholder="ဖုန်းနံပါတ်"  [(ngModel)]="phno"></ion-input>\n	</ion-row>\n<button ion-button block round outline color="light" style="margin-top: 10px;" (click)="nextPg()">နောက်တစ်ခု</button>\n</div>\n<div *ngIf="nextbtn==1">\n		<button ion-button block round outline color="light" style="margin-bottom: 10px;" (click)="prevPg()">ယခင်</button>\n	<ion-row class="row-style">\n			<ion-icon name="globe" color="semi-light" class="icon"></ion-icon>\n			<ion-label>လုပ်ငန်းအမျိုးအစား</ion-label>\n			<ion-select [(ngModel)]="businesstype">\n					<ion-option>Pharmaceuticals</ion-option>\n					<ion-option>Tailor</ion-option>\n					<ion-option>KTV</ion-option>\n					<ion-option>Fashion</ion-option>\n					<ion-option>Retail</ion-option>\n					<ion-option>Wholesale</ion-option>\n					<ion-option>Food</ion-option>\n			</ion-select>\n			<!-- <ion-input type="text" placeholder="Language"  [(ngModel)]="businessname"></ion-input> -->\n   </ion-row>\n\n\n	<ion-row class="row-style">\n		<ion-icon name="chatboxes" color="semi-light" class="icon"></ion-icon>\n		<ion-label>ဘာသာစကား</ion-label>\n		<ion-select [(ngModel)]="language">\n				<ion-option>English</ion-option>\n				<ion-option>Filipino</ion-option>\n				<ion-option>ဗမာ</ion-option>\n		</ion-select>\n		<!-- <ion-input type="text" placeholder="Language"  [(ngModel)]="businessname"></ion-input> -->\n	</ion-row>\n\n	<ion-row class="row-style">\n			<ion-icon name="logo-usd" color="semi-light" class="icon"></ion-icon>\n			<ion-label>ငွေကြေး</ion-label>\n			<ion-select [(ngModel)]="currency">\n					<ion-option>USD</ion-option>\n					<ion-option>PHP</ion-option>\n					<ion-option>MMK</ion-option>\n			</ion-select>\n			<!-- <ion-input type="text" placeholder="Language"  [(ngModel)]="businessname"></ion-input> -->\n		</ion-row>\n\n\n	<ion-row class="row-style">\n		<ion-icon name="cash" color="semi-light" class="icon"></ion-icon>\n		<ion-input type="number" placeholder="ငွေလက်ကျန်"  [(ngModel)]="cb"></ion-input>\n	</ion-row>\n\n	<ion-row class="row-style">\n			<ion-icon name="cash" color="semi-light" class="icon"></ion-icon>\n			<ion-input type="number" placeholder="လျှော့စျေးနှုန်း %"  [(ngModel)]="discount"></ion-input>\n		</ion-row>\n\n		<ion-row class="row-style">\n				<ion-icon name="cash" color="semi-light" class="icon"></ion-icon>\n				<ion-input type="number" placeholder="အခွန်နှုန်း %"  [(ngModel)]="taxrate"></ion-input>\n			</ion-row>\n	<ion-row>\n		<button ion-button block round outline color="light" style="margin-top: 20px;" (click)="signup()">ဆိုင်းအပ်</button>\n	</ion-row>\n</div>\n</ion-grid>\n<button ion-button block clear color="light" style="margin-top: 10px;" (click)="goBack()">အကောင့်ရှိပြီးသားလား? လော့ဂ်အင်</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\sign-up\sign-up.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object])
     ], SignUpPage);
     return SignUpPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=sign-up.js.map
@@ -1347,7 +1348,7 @@ var TransactionProductPage = /** @class */ (function () {
         //     //Hide back btn if src is tab
         //     this.navCtrl.pop();
         // }
-        this.tempprodlist = [];
+        this.tempprodlist = [{}];
         this.datlist = [];
         this.event = false;
         this.events.subscribe('addRecProd:created', function (data) {
@@ -1360,11 +1361,13 @@ var TransactionProductPage = /** @class */ (function () {
                 // this.itemsname.push(element.name)
                 // this.itemsprice.push(element.price);
                 // this.itemsqty.push(element.qty)
-                _this.listProducts.forEach(function (element1) {
-                    if (element1.name == element.name) {
-                        element1.qty = element.qty;
-                    }
-                });
+                if (_this.listProducts.length != 0) {
+                    _this.listProducts.forEach(function (element1) {
+                        if (element1.name == element.name) {
+                            element1.qty = element.qty;
+                        }
+                    });
+                }
             });
             //console.log(this.listProducts)
         });
@@ -1415,12 +1418,14 @@ var TransactionProductPage = /** @class */ (function () {
         var _this = this;
         this.sp.storageReady().then(function () {
             _this.sp.getProducts().then(function (val) {
-                console.log(_this.listProducts);
                 if (_this.event != true) {
                     _this.listProducts = JSON.parse(val);
-                    _this.listProducts.forEach(function (element) {
-                        element.qty = 0;
-                    });
+                    console.log(_this.listProducts + "yo");
+                    if (_this.listProducts != null) {
+                        _this.listProducts.forEach(function (element) {
+                            element.qty = 0;
+                        });
+                    }
                 }
                 if (_this.event1 != true) {
                     if (_this.listProducts != null) {
@@ -1530,10 +1535,10 @@ var TransactionProductPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-transaction-product',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\transaction-product\transaction-product.html"*/'<!--\n  Generated template for the TransactionProductPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>transaction-product</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n  <ion-searchbar showCancelButton="always" [(ngModel)]="searchterm" (ionChange)="filteredProduct()"></ion-searchbar>\n  \n  <!-- <ion-item>\n      <ion-label>Categories</ion-label>\n      <ion-select [(ngModel)]="cat" multiple="true">\n        <ion-option>Noodle</ion-option>\n        <ion-option>Snack</ion-option>\n        <ion-option>Main Course</ion-option>\n        <ion-option>Dessert</ion-option>\n        <ion-option>Drinks</ion-option>\n      </ion-select>\n    </ion-item> -->\n  \n    <ion-item>\n      <ion-label>အမျိုးအစားရွေးပါ</ion-label>\n      <ion-select multiple="true" [(ngModel)]=\'selectedCat\' (ionChange)="filteredProduct()">\n          <ion-option *ngFor="let element of listCat" value="{{element.name}}">{{element.name}}</ion-option>    \n      </ion-select>\n    </ion-item>\n  \n  \n  <!-- <ion-card>\n      <ion-grid line>\n        <ion-row>\n        <ion-col col-2>\n          <ion-row>\n            <ion-avatar>\n                <img src="https://i0.wp.com/mainlymiles.com/wp-content/uploads/2019/04/Yew-Mee.jpg?w=256&h=256&crop=1&ssl=1">\n              </ion-avatar>\n            </ion-row>\n        </ion-col>\n        <ion-col col-10>\n            <ion-row>\n                <ion-col col-7>\n                  Shan Noodle\n                </ion-col>\n                <ion-col col-3>\n                  568 - N/A?\n                  </ion-col>\n                  <ion-col col-1>\n                      <ion-icon name="arrow-dropup-circle" style=" color: green"></ion-icon>\n                  </ion-col>\n                  <ion-col col-1>\n                      <ion-icon name="arrow-dropdown-circle" style=" color: red"></ion-icon>\n                  </ion-col>\n              </ion-row>\n              <ion-row>\n                <ion-col col-6 style="color: grey; font-size: 10px;"> Price 3500 MMK </ion-col>\n                <ion-col col-6 style="color: grey; font-size: 10px; text-align: end;"> Category: Noodle </ion-col>\n              </ion-row>\n              <ion-row>\n                <ion-col col-6></ion-col>\n                <ion-col col-6> <button ion-button full end color="dark">View/Edit</button> </ion-col>\n              </ion-row>\n  \n        </ion-col>\n      </ion-row>\n      </ion-grid>\n    </ion-card>  -->\n  \n  \n  \n    <ion-list inset  *ngFor="let product of filteredList; let i=index">\n      \n        <ion-card>\n            <ion-grid> \n              <ion-row>\n              <ion-col col-2>\n                <ion-row> \n                  <ion-avatar>\n                      <img [src]="product.url">\n                    </ion-avatar>\n                  </ion-row>\n              </ion-col>\n              <ion-col col-10>\n                  <ion-row>\n                      <ion-col col-6>\n                          {{product.name}} \n                      </ion-col>\n                      <ion-col col-2>\n                        {{product.qty}}\n                      </ion-col>\n                        <ion-col col-2>\n                            <ion-icon name="arrow-dropup-circle" style=" color: green" (click)="addUp(i)"></ion-icon>\n                        </ion-col>\n                        <ion-col col-2>\n                            <ion-icon name="arrow-dropdown-circle" style=" color: red" (click)="addDown(i)"></ion-icon>\n                        </ion-col>\n                    </ion-row>\n                    <ion-row>\n                      <ion-col col-6 style="color: grey; font-size: 10px;"> စျေးနှုန်း {{product.price}} MMK </ion-col>\n                      <ion-col col-6 style="color: grey; font-size: 10px; text-align: end;"> အမျိုးအစား: {{product.cat}} </ion-col>\n                    </ion-row>\n              </ion-col>\n            </ion-row>\n            <ion-row *ngIf="event1==true">\n              <ion-col col-12> <button ion-button full end color="dark" (click)="singleProduct(product)">ထည့်ပါ</button> </ion-col>\n            </ion-row>\n            </ion-grid>\n          </ion-card> \n       \n      </ion-list>\n    \n  \n    \n  \n  \n  \n  \n  </ion-content>\n  \n  \n<ion-footer>\n\n    <ion-grid>\n      <ion-row *ngIf="event1==false">\n        <ion-col>\n            <button ion-button (click)="createRec()" full style="background-color: #222">လက်ခံဖြတ်ပိုင်းဖန်တီးပါ</button>\n        </ion-col>\n      </ion-row>\n      <ion-row *ngIf="event1==true">\n        <ion-col>\n            <button ion-button (click)="reset()" full style="background-color: #222">ပြန်လည်စတင်</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n   \n</ion-footer>\n\n\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\transaction-product\transaction-product.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* Events */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _e || Object])
     ], TransactionProductPage);
     return TransactionProductPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=transaction-product.js.map
@@ -2758,13 +2763,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+// var config = {
+//   apiKey: "AIzaSyADjIbI3_GRS4eRHGVGFsT2hrkKvH9K06M",
+//   authDomain: "trialapp-1cb3d.firebaseapp.com",
+//   databaseURL: "https://trialapp-1cb3d.firebaseio.com",
+//   projectId: "trialapp-1cb3d",
+//   storageBucket: "trialapp-1cb3d.appspot.com",
+//   messagingSenderId: "591467524421"
+// };
 var config = {
-    apiKey: "AIzaSyADjIbI3_GRS4eRHGVGFsT2hrkKvH9K06M",
-    authDomain: "trialapp-1cb3d.firebaseapp.com",
-    databaseURL: "https://trialapp-1cb3d.firebaseio.com",
-    projectId: "trialapp-1cb3d",
-    storageBucket: "trialapp-1cb3d.appspot.com",
-    messagingSenderId: "591467524421"
+    apiKey: "AIzaSyBlxUkCX8OPsb9QL2p_jN8vaHdb5LhsS7A",
+    authDomain: "open-fintech.firebaseapp.com",
+    databaseURL: "https://open-fintech.firebaseio.com",
+    projectId: "open-fintech",
+    storageBucket: "open-fintech.appspot.com",
+    messagingSenderId: "1001643033524",
+    appId: "1:1001643033524:web:f0fafa6564e26bb41368e1",
+    measurementId: "G-CECMRG504L"
 };
 __WEBPACK_IMPORTED_MODULE_17_firebase__["initializeApp"](config);
 var AppModule = /** @class */ (function () {
