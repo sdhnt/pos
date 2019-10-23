@@ -5,6 +5,7 @@ import firebase from 'firebase';
 import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
 import { StorageProvider } from '../../providers/storage/storage';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { ThrowStmt } from '@angular/compiler';
 
 /**
  * Generated class for the IncomeTransactionPage page.
@@ -34,7 +35,10 @@ export class IncomeTransactionPage {
     await new Promise(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
 }
 
+taxbtn=0;
+
 userdata: any = {business_address: "",
+
   business_name: "",
   cash_balance: "",
   currency: "",
@@ -43,7 +47,15 @@ userdata: any = {business_address: "",
   owner: "", 
   owner_name: "",
   ph_no: "",
+  businesstype: "",
+  taxrate: 0.0,
+  discount: 0.0,
+ 
 }
+
+discount:number=0.0;
+lastsumdisc=0.0;
+taxrate: number=0.0;
   async getUserData(){
     console.log(firebase.auth().currentUser.uid);
     var ud;
@@ -79,11 +91,44 @@ userdata: any = {business_address: "",
       for(let i = 0; i < this.datastore.itemslist.length; i++){
         this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
         console.log(this.lastsum)
-      } 
+      }
+      this.lastsumdisc=this.lastsum*(1.0-(this.discount/100));
+      this.lastsumtax=this.lastsumdisc*(1.0+(this.taxrate/100)); 
     });
   
 }
 temp;
+
+updateRec(){
+  this.lastsum=0;
+  for(let i = 0; i < this.datastore.itemslist.length; i++){
+         this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
+     }
+     this.lastsumdisc=this.lastsum*(1.0-(this.discount/100));
+     this.lastsumtax=this.lastsumdisc*(1.0+(this.taxrate/100));  
+}
+
+setTax(){
+  this.taxrate=this.userdata.taxrate;
+  this.taxbtn=1;
+  this.updateRec();
+}
+remTax(){
+  this.taxbtn=0;
+  this.taxrate=0.0;
+  this.updateRec();
+}
+discbtn=0;
+setDisc(){
+  this.discount=this.userdata.discount;
+  this.discbtn=1;
+  this.updateRec();
+}
+remDisc(){
+  this.discount=0.0;
+  this.discbtn=0; 
+  this.updateRec();
+}
 
 qrscan(){
   var curprod;
@@ -114,6 +159,8 @@ qrscan(){
         for(let i = 0; i < this.datastore.itemslist.length; i++){
                this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
            }
+           this.lastsumdisc=this.lastsum*(1.0-(this.discount/100));
+            this.lastsumtax=this.lastsumdisc*(1.0+(this.taxrate/100));  
 
       
       }else{
@@ -172,6 +219,8 @@ qrscan(){
     for(let i = 0; i < this.datastore.itemslist.length; i++){
       this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
     }
+    this.lastsumdisc=this.lastsum*(1.0-(this.discount/100)); 
+    this.lastsumtax=this.lastsumdisc*(1.0-(this.taxrate/100)); 
     console.log("I: "+ index)
     console.log(this.datastore.itemslist[index])
     
@@ -186,6 +235,8 @@ qrscan(){
     for(let i = 0; i < this.datastore.itemslist.length; i++){
       this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
     }
+    this.lastsumdisc=this.lastsum*(1.0-(this.discount/100)); 
+    this.lastsumtax=this.lastsumdisc*(1.0-(this.taxrate/100)); 
   }
 
   removeQty(index){
@@ -199,6 +250,8 @@ qrscan(){
     for(let i = 0; i < this.datastore.itemslist.length; i++){
       this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
     }
+    this.lastsumdisc=this.lastsum*(1.0-(this.discount/100)); 
+    this.lastsumtax=this.lastsumdisc*(1.0-(this.taxrate/100)); 
   }
 
   newItemName: string="";
@@ -226,6 +279,8 @@ qrscan(){
     for(let i = 0; i < this.datastore.itemslist.length; i++){
       this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
     }
+    this.lastsumdisc=this.lastsum*(1.0-(this.discount/100)); 
+    this.lastsumtax=this.lastsumdisc*(1.0-(this.taxrate/100)); 
   }
 
 
@@ -236,6 +291,7 @@ qrscan(){
   filteredList: any;
   listArray: any =[];
   listCat : any;
+  lastsumtax;
   
   getCategories(){
     //console.log(this.listCat + " and "+this.newprodCat);
@@ -253,9 +309,13 @@ qrscan(){
   cancelRec(){
     this.datastore.itemslist=[];
     this.lastsum=0;
-    
+    this.lastsumdisc=0;
+    this.lastsumtax=0;
+    this.discount=0;
+    this.taxrate=0;
+    this.taxbtn=0;
+    this.discbtn=0;
     this.toastCtrl.create({
-  
       message: "ငွေလက်ခံဖြတ်ပိုင်းဖျက်သိမ်းခဲ့သည်",
       duration: 2000,
     }).present();
@@ -278,8 +338,11 @@ qrscan(){
         "prodidlist": this.prodidlist,
         "pnllist": this.pnllist,
         "datetime": this.datetime,
-        "tax_vat": this.tax_vat,
+        "taxrate": this.taxrate,
         "discountlist": this.discountlist,
+        "discount": this.discount,
+        "totaldisc": this.lastsumdisc,
+        "totalatax":this.lastsumtax,
       };
       this.sp.storageReady().then(() => {
         this.sp.addTransactions(data);
@@ -289,13 +352,16 @@ qrscan(){
             duration: 3000
           });
 
-      //REFLECT CHANGE ON CASH BALANCE HERE
+      //REFLECT CHANGE ON CASH BALANCE HERE & Reflect change in inventory here as well 
       
       this.datastore.itemslist=[];
       this.lastsum=0;
-
-      
-
+      this.lastsumtax=0;
+      this.lastsumdisc=0;
+      this.discount=0;
+      this.taxrate=0;
+      this.taxbtn=0;
+      this.discbtn=0;
           toast.present();
       
       })

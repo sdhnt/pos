@@ -73,16 +73,21 @@ export class AllTransactionPage {
 
   
   userdata: any = {business_address: "",
+
   business_name: "",
   cash_balance: "",
   currency: "",
   created: "",
   language: "",
-  owner: "",
+  owner: "", 
   owner_name: "",
   ph_no: "",
+  businesstype: "",
+  taxrate: 0.0,
+  discount: 0.0,
+ 
 }
-  async getUserData(){
+async getUserData(){
     console.log(firebase.auth().currentUser.uid);
     var ud;
     const snapshot = await firebase.firestore().collection('users').where("owner","==",firebase.auth().currentUser.uid).get()

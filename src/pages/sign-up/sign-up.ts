@@ -25,15 +25,27 @@ export class SignUpPage {
   password: string="";
   businessname: string="";
   businessaddress: string="";
+  businesstype: string="";
   phno: string="";
   language: string="";
   currency: string="";
   cb: number;
+  discount: number;
+  taxrate: number;
+  nextbtn=0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignUpPage');
+    this.nextbtn=0;
+  }
+
+  nextPg(){
+    this.nextbtn=1;
+  }
+  prevPg(){
+    this.nextbtn=0;
   }
 
 
@@ -41,7 +53,7 @@ export class SignUpPage {
   signup(){
 
     this.toastCtrl.create({
-      message: "Please wait while your profile is being created..",
+      message: "သင်၏ပရိုဖိုင်းကိုဖန်တီးနေစဉ်ခဏစောင့်ပါ...",
       duration: 3000
       
     }).present();
@@ -60,11 +72,14 @@ export class SignUpPage {
         owner: firebase.auth().currentUser.uid,
         owner_name: firebase.auth().currentUser.displayName,
         business_name: this.businessname,
+        businesstype: this.businesstype,
         business_address: this.businessaddress,
         ph_no: this.phno,
         language: this.language,
         currency: this.currency,
         cash_balance: this.cb,
+        discount: this.discount,
+        taxrate: this.taxrate,
       }).then(async (doc) => {
         console.log(doc);
       this.alertCtrl.create({

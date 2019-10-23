@@ -44,7 +44,21 @@ export class TransactionHomePage {
     console.log('ionViewDidLoad TransactionHomePage');
   }
 
-  userdata: any;
+  userdata: any = {business_address: "",
+
+  business_name: "",
+  cash_balance: "",
+  currency: "",
+  created: "",
+  language: "",
+  owner: "", 
+  owner_name: "",
+  ph_no: "",
+  businesstype: "",
+  taxrate: 0.0,
+  discount: 0.0,
+ 
+}
   async getUserData(){
     console.log(firebase.auth().currentUser.uid);
     var ud;
