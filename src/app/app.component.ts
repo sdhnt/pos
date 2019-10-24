@@ -27,8 +27,8 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
     public sp: StorageProvider, public toastCtrl: ToastController) {
-    this.initializeApp();
 
+    this.initializeApp();
     this.pages = [
       { title: 'ဝင်ငွေ', component: TransactionHomePage },
       { title: 'ထုတ်ကုန်များ', component: DashboardPage },
@@ -36,11 +36,8 @@ export class MyApp {
       { title: 'စီးပွားရေး', component: SummaryHomePage },
       { title: 'ဆရာ', component: CoachHomePage },
       { title: 'ကူညီပါ', component: ContactUsPage },
-
     ];
-
   }
-
   
   logout(){
 

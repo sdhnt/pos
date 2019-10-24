@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Tabs } from 'ionic-angular';
+import { NavController, Tabs, Events } from 'ionic-angular';
 import { AddProductPage } from '../addproduct/addproduct';
 import { ListPage } from '../list/list';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -28,7 +28,7 @@ export class DashboardPage {
   // tab3Root = LoginPage;
 
   @ViewChild('myTabs') tabRef: Tabs;
-
+  
   
 
   ViewList=ProductListPage;
@@ -42,9 +42,15 @@ export class DashboardPage {
       public alertCtrl: AlertController,
       public sp: StorageProvider,
       public getset: GettersetterProvider,
-      private toastCtrl: ToastController) {
+      private toastCtrl: ToastController,
+      public events: Events,) {
 
         this.getUserData();
+
+        this.events.subscribe('cbUpdate:created',(data) => {
+          this.getUserData();
+        });
+       
         
   }
 

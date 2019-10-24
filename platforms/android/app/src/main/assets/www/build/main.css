@@ -26102,6 +26102,15 @@ page-dashboard ion-title {
   text-align: center;
 }
 
+page-expenses-home ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
 page-login ion-content .scroll-content {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#301924), to(#000000));
   background-image: linear-gradient(#301924, #000000);
