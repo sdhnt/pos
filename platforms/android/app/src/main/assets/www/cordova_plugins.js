@@ -95,6 +95,14 @@ module.exports = [
     "clobbers": [
       "CameraPopoverHandle"
     ]
+  },
+  {
+    "id": "cordova-plugin-datepicker.DatePicker",
+    "file": "plugins/cordova-plugin-datepicker/www/android/DatePicker.js",
+    "pluginId": "cordova-plugin-datepicker",
+    "clobbers": [
+      "datePicker"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -109,7 +117,8 @@ module.exports.metadata =
   "cordova-plugin-ionic-keyboard": "2.2.0",
   "cordova-sqlite-storage": "3.3.0",
   "cordova-plugin-x-toast": "2.7.2",
-  "cordova-plugin-camera": "4.1.0"
+  "cordova-plugin-camera": "4.1.0",
+  "cordova-plugin-datepicker": "0.9.3"
 };
 // BOTTOM OF METADATA
 });

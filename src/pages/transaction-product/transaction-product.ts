@@ -186,8 +186,9 @@ export class TransactionProductPage {
 
   singleProduct(product){
    
-
-    this.recitemslist[this.index].name=product.name;
+    var tempqty=this.recitemslist[this.index].qty;
+    this.recitemslist[this.index]=product;
+    this.recitemslist[this.index].qty=tempqty;
 
     var tempJSON = { "itemslist": this.recitemslist, };
 

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Tabs, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Tabs, ToastController, Events } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import firebase from 'firebase';
 import { AddProductPage } from '../addproduct/addproduct';
@@ -35,8 +35,14 @@ export class TransactionHomePage {
 
   //@ViewChild('transactionTabs') tabRef: Tabs;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController,public sp: StorageProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public toastCtrl: ToastController,public sp: StorageProvider,
+    public events: Events) {
     this.getUserData();
+
+    this.events.subscribe('cbUpdate:created',(data) => {
+      this.getUserData();
+    });
     
   }
 

@@ -13,6 +13,7 @@ import { CoachHomePage } from '../pages/coach-home/coach-home';
 import { ContactUsPageModule } from '../pages/contact-us/contact-us.module';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { StorageProvider } from '../providers/storage/storage';
+import { ExpensesHomePage } from '../pages/expenses-home/expenses-home';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,10 +31,12 @@ export class MyApp {
 
     this.pages = [
       { title: 'ဝင်ငွေ', component: TransactionHomePage },
-      { title: 'စီးပွားရေး', component: SummaryHomePage },
       { title: 'ထုတ်ကုန်များ', component: DashboardPage },
+      { title: 'စစရိတ်', component: ExpensesHomePage },
+      { title: 'စီးပွားရေး', component: SummaryHomePage },
       { title: 'ဆရာ', component: CoachHomePage },
       { title: 'ကူညီပါ', component: ContactUsPage },
+
     ];
 
   }

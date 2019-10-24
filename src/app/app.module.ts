@@ -35,6 +35,7 @@ import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { TransactionProductPage } from '../pages/transaction-product/transaction-product';
 import { ProductListPage } from '../pages/product-list/product-list';
 import { AddProductCategoryPage } from '../pages/add-product-category/add-product-category';
+import { ExpensesHomePage } from '../pages/expenses-home/expenses-home';
 
 
 
@@ -82,6 +83,7 @@ firebase.initializeApp(config);
     TransactionProductPage,
     ProductListPage,
     AddProductCategoryPage,
+    ExpensesHomePage,
     
   ],
   imports: [
@@ -112,6 +114,7 @@ firebase.initializeApp(config);
     TransactionProductPage,
     ProductListPage,
     AddProductCategoryPage,
+    ExpensesHomePage,
   ],
   providers: [
     StatusBar,

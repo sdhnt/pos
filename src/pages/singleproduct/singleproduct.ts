@@ -164,11 +164,11 @@ export class SingleProductPage {
   }
   }
 
-
   scanQR(){
     this.barcodeScanner.scan().then(barcodeData => {
         //this.prodCode = barcodeData.text;
-        this.navCtrl.setRoot(SingleProductPage,{code: barcodeData.text})
+        //this.navCtrl.setRoot(SingleProductPage,{code: barcodeData.text})
+        this.prodCode=barcodeData.text;
     }).catch(err => {
         console.log('Error', err);
     });

@@ -86,6 +86,7 @@ taxrate: number=0.0;
       console.log("Received 0 " + data);
       var JSONitems=JSON.parse(data);
       this.datastore=JSONitems;
+      console.log(this.datastore.itemslist)
       this.lastsum=0;
       for(let i = 0; i < this.datastore.itemslist.length; i++){
         this.lastsum  = this.lastsum + (this.datastore.itemslist[i].price*this.datastore.itemslist[i].qty);
@@ -222,8 +223,6 @@ qrscan(){
     this.lastsumtax=this.lastsumdisc*(1.0-(this.taxrate/100)); 
     console.log("I: "+ index)
     console.log(this.datastore.itemslist[index])
-    
-    
     }
 
   addQty(index){
@@ -263,6 +262,7 @@ qrscan(){
     if(this.newItemName!="" && this.newUnitPrice!=null && this.newUnitQty!=null){
 
     var newitem={
+      code: "000000",
       name: this.newItemName,
       price: this.newUnitPrice,
       qty: this.newUnitQty,
@@ -327,6 +327,38 @@ qrscan(){
   tax_vat: any = [];
   discountlist: any=[];
 
+
+  updateProduct(){
+    
+      
+  
+  
+    
+  }
+
+
+  async updateCb(positivetransacsum){
+    console.log(firebase.auth().currentUser.uid);
+    var ud;
+    const snapshot = await firebase.firestore().collection('users').where("owner","==",firebase.auth().currentUser.uid).get()
+    .then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+          // doc.data() is never undefined for query doc snapshots
+          //console.log(doc.id, " => ", doc.data());
+          ud=doc.data();
+          //this.userdata=doc.data();     
+          firebase.firestore().collection("users").doc(doc.id).update({cash_balance: (parseInt(ud.cash_balance)+positivetransacsum).toString()});  
+      });
+  })
+  .catch(function(error) {
+      console.log("Error getting documents: ", error);
+  });
+  this.userdata=ud;
+  console.log(this.userdata);
+    
+ }
+  
+
   saveRec(){
     if(this.datastore.itemslist.length==0){     
     }
@@ -343,10 +375,30 @@ qrscan(){
         "totaldisc": this.lastsumdisc,
         "totalatax":this.lastsumtax,
       };
+
+      this.datastore.itemslist.forEach(product => {
+        if(product.code!="000000"){
+          const data1 = {
+            "code": product.code,
+            "name": product.name,
+            "price": product.price,
+            "cost": product.cost,
+            "cat": product.cat,
+            "url": product.url,
+            "stock_qty":(product.stock_qty-product.qty),
+          }
+          this.sp.updateProduct(data1, product.code).then(()=>{
+          })
+        }
+      });
+
+
+
+
       this.sp.storageReady().then(() => {
         console.log(data)
         this.sp.addTransactions(data);
-        
+        this.updateCb(this.lastsum).then(()=>{this.events.publish('cbUpdate:created', 0);});
           let toast = this.toastCtrl.create({
             message: 'ပြီးပြီ',
             duration: 3000

@@ -122,7 +122,11 @@ async getUserData(){
       }
       else{
         tempJSON.itemslist.push(
-          {'name': "ထုတ်ကုန်",
+          {
+          'code': '000000',
+          'cat': 'NIL',
+          'stock_qty': 0,
+          'name': "ထုတ်ကုန်",
           'price': parseInt(element),
           'qty': this.itemsqty[index],
           }) 
