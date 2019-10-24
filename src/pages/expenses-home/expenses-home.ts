@@ -140,7 +140,7 @@ export class ExpensesHomePage {
     this.sp.storageReady().then(() => {
       console.log(dataexp)
       this.sp.addTransactions(dataexp);
-      this.updateCb(this.totalamt).then(()=>{this.events.publish('cbUpdate:created', 0); console.log("update")});
+      this.updateCb(this.prodcost).then(()=>{this.events.publish('cbUpdate:created', 0); console.log("update")});
         let toast = this.toastCtrl.create({
           message: 'ပြီးပြီ',
           duration: 3000
@@ -176,8 +176,9 @@ export class ExpensesHomePage {
           // doc.data() is never undefined for query doc snapshots
           //console.log(doc.id, " => ", doc.data());
           ud=doc.data();
-          //this.userdata=doc.data();     
-          firebase.firestore().collection("users").doc(doc.id).update({cash_balance: (parseInt(ud.cash_balance)-negtransacsum).toString()});  
+          //this.userdata=doc.data();    
+          console.log(ud.cash_balance+" "+negtransacsum); 
+          firebase.firestore().collection("users").doc(doc.id).update({cash_balance: (parseInt(ud.cash_balance)-parseInt(negtransacsum)).toString()});  
       });
   })
   .catch(function(error) {

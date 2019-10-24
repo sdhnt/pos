@@ -99,12 +99,14 @@ export class StorageProvider {
 
       this.storage.ready().then(() => {
       this.storage.get('products').then((val) => {
+       
         parseprod = JSON.parse(val);
         this.storage.get('transactions').then((val) => {
-          if(val!=null)
-          {parsetransac = JSON.parse(val);}
+         parsetransac = JSON.parse(val);
           this.storage.get('categories').then((val) => {
             parsecat = JSON.parse(val);
+  
+            if(parseprod!=null && parsetransac!=null && parsecat!=null){
             const snapshot = firebase.firestore().collection('users').where("owner", "==", firebase.auth().currentUser.uid).get()
             .then(function (querySnapshot) {
               querySnapshot.forEach(function (doc) {
@@ -123,6 +125,7 @@ export class StorageProvider {
             .catch(function (error) {
               console.log("Error getting documents: ", error);
             });
+          }
           }).catch(err => {
             alert(err);
           })
@@ -150,6 +153,8 @@ export class StorageProvider {
           parsetransac = JSON.parse(val);
           this.storage.get('categories').then((val) => {
             parsecat = JSON.parse(val);
+
+            
             const snapshot = firebase.firestore().collection('users').where("owner", "==", firebase.auth().currentUser.uid).get()
             .then(function (querySnapshot) {
               querySnapshot.forEach(function (doc) {
@@ -167,6 +172,10 @@ export class StorageProvider {
             .catch(function (error) {
               console.log("Error getting documents: ", error);
             });
+
+
+
+
           
           }).catch(err => {
             alert("lol  "+err);
