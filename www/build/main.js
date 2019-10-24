@@ -1319,11 +1319,7 @@ var TransactionProductPage = /** @class */ (function () {
         var tempJSON = { "itemslist": [], };
         this.listProducts.forEach(function (element) {
             if (element.qty > 0) {
-                tempJSON.itemslist.push({
-                    'name': element.name,
-                    'price': parseInt(element.price),
-                    'qty': parseInt(element.qty),
-                });
+                tempJSON.itemslist.push(element);
             }
         });
         console.log(this.datlist);
