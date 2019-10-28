@@ -39,38 +39,49 @@ export class LoginPage {
 
 
  
-    firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-    .then( (user) => {
-      //firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-      //console.log(user)
-    this.alertCtrl.create({
-
-      subTitle:"ကြိုဆိုပါတယ် " + user.user.displayName,
-      buttons: [
-        {
-          text: 'Okay!',
-          role: 'cancel',
-        }
-        ],
-    }).present();
-
-    this.sp.clearMem();
-    this.sp.setMem();
-  
-    this.navCtrl.setRoot(TransactionHomePage);
     
+   
+      //firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+      firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(()=>{
+        console.log("yeahh")
+        firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+        .then( (user) => {
+        
+      this.alertCtrl.create({
   
+        subTitle:"ကြိုဆိုပါတယ် " + user.user.displayName,
+        buttons: [
+          {
+            text: 'Okay!',
+            role: 'cancel',
+          }
+          ],
+      }).present();
   
-    }).catch( (err) => {console.log(err)
-      this.toastCtrl.create({
-      message: err.message,
-      duration: 3000
-    }).present();
-  
-  
-  
-  
-    })
+      this.sp.clearMem();
+      this.sp.setMem();
+    
+      this.navCtrl.setRoot(TransactionHomePage);
+      
+    
+    
+      }).catch( (err) => {console.log(err)
+        this.toastCtrl.create({
+        message: err.message,
+        duration: 3000
+      }).present();
+    
+    
+    
+    
+      })
+        
+      
+      
+      
+      });
+      //console.log(user)
+ 
     }
 
     loginAction(){
