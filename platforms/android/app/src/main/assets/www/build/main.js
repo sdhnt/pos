@@ -4,113 +4,6 @@ webpackJsonp([17],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddProductCategoryPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(14);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the AddProductCategoryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AddProductCategoryPage = /** @class */ (function () {
-    function AddProductCategoryPage(navCtrl, navParams, sp, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.sp = sp;
-        this.toastCtrl = toastCtrl;
-        this.newprodCat = "";
-    }
-    AddProductCategoryPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddProductCategoryPage');
-        this.getCategories();
-    };
-    AddProductCategoryPage.prototype.getCategories = function () {
-        var _this = this;
-        console.log(this.listCat + " and " + this.newprodCat);
-        this.sp.storageReady().then(function () {
-            _this.sp.getCategories().then(function (val) {
-                console.log("val = " + val);
-                _this.listCat = JSON.parse(val);
-                console.log(_this.listCat);
-                _this.getCategories();
-            }).catch(function (err) {
-                alert("Error: " + err);
-            });
-        });
-    };
-    AddProductCategoryPage.prototype.addCategory = function () {
-        var _this = this;
-        console.log(this.listCat + " and " + this.newprodCat);
-        if (this.newprodCat != "") {
-            var data_1 = {
-                "name": this.newprodCat,
-            };
-            this.sp.storageReady().then(function () {
-                _this.sp.addCategory(data_1);
-                setTimeout(function () {
-                    var toast = _this.toastCtrl.create({
-                        message: 'ပြီးပြီ',
-                        duration: 3000
-                    });
-                    _this.newprodCat = "";
-                    _this.sp.backupStorage();
-                    //this.navCtrl.push(ProductListPage);
-                    //this.events.publish('prodAdd:created',0);
-                    // (this.navCtrl.parent as Tabs).select(0);
-                    toast.present();
-                }, 1000);
-            });
-        }
-    };
-    AddProductCategoryPage.prototype.delCat = function (element) {
-        var _this = this;
-        this.sp.storageReady().then(function () {
-            _this.sp.deleteCategory(element);
-            _this.sp.backupStorage();
-            setTimeout(function () {
-                var toast = _this.toastCtrl.create({
-                    message: 'ပြီးပြီ',
-                    duration: 3000
-                });
-                _this.getCategories();
-                //this.navCtrl.push(ProductListPage);
-                //this.events.publish('prodAdd:created',0);
-                // (this.navCtrl.parent as Tabs).select(0);
-                toast.present();
-            }, 1000);
-        });
-    };
-    AddProductCategoryPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-product-category',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\add-product-category\add-product-category.html"*/'<!--\n  Generated template for the AddProductCategoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>add-product-category</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-8>\n          <ion-item>\n              <ion-input type="text" placeholder="Enter Category Here"  [(ngModel)]=\'newprodCat\'></ion-input>\n          </ion-item>\n      </ion-col>\n      <ion-col col-4>\n          <button ion-button full color="dark" (click)="addCategory()"> အမျိုးအစားထည့်ပါ</button>\n\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n   \n    \n\n  <ion-item>\n     <h2> <b>အမျိုးအစားကိုကြည့် / ဖယ်ရှားပါ: </b> </h2>\n  </ion-item>\n \n  <ion-list  *ngFor="let element of listCat">\n\n      <ion-item>\n          {{element.name}}\n          <ion-icon item-end name="close-circle" (click)="delCat(element)" color="danger"></ion-icon> \n      </ion-item>\n  </ion-list>\n \n\n\n  \n\n \n    \n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\add-product-category\add-product-category.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
-    ], AddProductCategoryPage);
-    return AddProductCategoryPage;
-}());
-
-//# sourceMappingURL=add-product-category.js.map
-
-/***/ }),
-
-/***/ 113:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AllTransactionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
@@ -393,6 +286,113 @@ var AllTransactionPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=all-transaction.js.map
+
+/***/ }),
+
+/***/ 113:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddProductCategoryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__ = __webpack_require__(14);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the AddProductCategoryPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AddProductCategoryPage = /** @class */ (function () {
+    function AddProductCategoryPage(navCtrl, navParams, sp, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.sp = sp;
+        this.toastCtrl = toastCtrl;
+        this.newprodCat = "";
+    }
+    AddProductCategoryPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddProductCategoryPage');
+        this.getCategories();
+    };
+    AddProductCategoryPage.prototype.getCategories = function () {
+        var _this = this;
+        console.log(this.listCat + " and " + this.newprodCat);
+        this.sp.storageReady().then(function () {
+            _this.sp.getCategories().then(function (val) {
+                console.log("val = " + val);
+                _this.listCat = JSON.parse(val);
+                console.log(_this.listCat);
+                _this.getCategories();
+            }).catch(function (err) {
+                alert("Error: " + err);
+            });
+        });
+    };
+    AddProductCategoryPage.prototype.addCategory = function () {
+        var _this = this;
+        console.log(this.listCat + " and " + this.newprodCat);
+        if (this.newprodCat != "") {
+            var data_1 = {
+                "name": this.newprodCat,
+            };
+            this.sp.storageReady().then(function () {
+                _this.sp.addCategory(data_1);
+                setTimeout(function () {
+                    var toast = _this.toastCtrl.create({
+                        message: 'ပြီးပြီ',
+                        duration: 3000
+                    });
+                    _this.newprodCat = "";
+                    _this.sp.backupStorage();
+                    //this.navCtrl.push(ProductListPage);
+                    //this.events.publish('prodAdd:created',0);
+                    // (this.navCtrl.parent as Tabs).select(0);
+                    toast.present();
+                }, 1000);
+            });
+        }
+    };
+    AddProductCategoryPage.prototype.delCat = function (element) {
+        var _this = this;
+        this.sp.storageReady().then(function () {
+            _this.sp.deleteCategory(element);
+            _this.sp.backupStorage();
+            setTimeout(function () {
+                var toast = _this.toastCtrl.create({
+                    message: 'ပြီးပြီ',
+                    duration: 3000
+                });
+                _this.getCategories();
+                //this.navCtrl.push(ProductListPage);
+                //this.events.publish('prodAdd:created',0);
+                // (this.navCtrl.parent as Tabs).select(0);
+                toast.present();
+            }, 1000);
+        });
+    };
+    AddProductCategoryPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-add-product-category',template:/*ion-inline-start:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\add-product-category\add-product-category.html"*/'<!--\n  Generated template for the AddProductCategoryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<!-- <ion-header>\n  <ion-navbar>\n    <ion-title>add-product-category</ion-title>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-8>\n          <ion-item>\n              <ion-input type="text" placeholder="Enter Category Here"  [(ngModel)]=\'newprodCat\'></ion-input>\n          </ion-item>\n      </ion-col>\n      <ion-col col-4>\n          <button ion-button full color="dark" (click)="addCategory()"> အမျိုးအစားထည့်ပါ</button>\n\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n   \n    \n\n  <ion-item>\n     <h2> <b>အမျိုးအစားကိုကြည့် / ဖယ်ရှားပါ: </b> </h2>\n  </ion-item>\n \n  <ion-list  *ngFor="let element of listCat">\n\n      <ion-item>\n          {{element.name}}\n          <ion-icon item-end name="close-circle" (click)="delCat(element)" color="danger"></ion-icon> \n      </ion-item>\n  </ion-list>\n \n\n\n  \n\n \n    \n</ion-content>\n'/*ion-inline-end:"C:\Users\supre\Downloads\Coding\easycredit\barcode-mpos\barcode-mpos\src\pages\add-product-category\add-product-category.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_storage_storage__["a" /* StorageProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
+    ], AddProductCategoryPage);
+    return AddProductCategoryPage;
+}());
+
+//# sourceMappingURL=add-product-category.js.map
 
 /***/ }),
 
@@ -756,7 +756,7 @@ var ExpensesHomePage = /** @class */ (function () {
         this.sp.storageReady().then(function () {
             console.log(dataexp);
             _this.sp.addTransactions(dataexp);
-            _this.updateCb(_this.totalamt).then(function () { _this.events.publish('cbUpdate:created', 0); console.log("update"); });
+            _this.updateCb(_this.prodcost).then(function () { _this.events.publish('cbUpdate:created', 0); console.log("update"); });
             var toast = _this.toastCtrl.create({
                 message: 'ပြီးပြီ',
                 duration: 3000
@@ -788,8 +788,9 @@ var ExpensesHomePage = /** @class */ (function () {
                                     // doc.data() is never undefined for query doc snapshots
                                     //console.log(doc.id, " => ", doc.data());
                                     ud = doc.data();
-                                    //this.userdata=doc.data();     
-                                    __WEBPACK_IMPORTED_MODULE_3_firebase___default.a.firestore().collection("users").doc(doc.id).update({ cash_balance: (parseInt(ud.cash_balance) - negtransacsum).toString() });
+                                    //this.userdata=doc.data();    
+                                    console.log(ud.cash_balance + " " + negtransacsum);
+                                    __WEBPACK_IMPORTED_MODULE_3_firebase___default.a.firestore().collection("users").doc(doc.id).update({ cash_balance: (parseInt(ud.cash_balance) - parseInt(negtransacsum)).toString() });
                                 });
                             })
                                 .catch(function (error) {
@@ -1925,7 +1926,7 @@ webpackEmptyAsyncContext.id = 132;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StorageProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(5);
@@ -2373,11 +2374,11 @@ var StorageProvider = /** @class */ (function () {
 
 var map = {
 	"../pages/add-product-category/add-product-category.module": [
-		310,
+		311,
 		16
 	],
 	"../pages/all-transaction/all-transaction.module": [
-		311,
+		310,
 		15
 	],
 	"../pages/calculator/calculator.module": [
@@ -2397,15 +2398,15 @@ var map = {
 		11
 	],
 	"../pages/coach-home/coach-home.module": [
-		318,
+		316,
 		10
 	],
 	"../pages/contact-us/contact-us.module": [
-		316,
+		317,
 		9
 	],
 	"../pages/expense-transaction/expense-transaction.module": [
-		317,
+		318,
 		8
 	],
 	"../pages/expenses-home/expenses-home.module": [
@@ -2472,7 +2473,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_firebase__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__product_list_product_list__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_product_category_add_product_category__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__add_product_category_add_product_category__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2984,7 +2985,7 @@ var AddProductPage = /** @class */ (function () {
                     "cost": _this.prodCost,
                     "cat": _this.prodCat,
                     "url": _this.produrl,
-                    "qty": 0,
+                    "stock_qty": _this.currstock,
                 };
                 console.log(data);
                 _this.temp = JSON.stringify(data);
@@ -3300,13 +3301,13 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_barcode_scanner__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_storage_storage__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_gettersetter_gettersetter__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_camera__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_firebase__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_firebase__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_transaction_home_transaction_home__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_all_transaction_all_transaction__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_all_transaction_all_transaction__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_expense_transaction_expense_transaction__ = __webpack_require__(224);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_income_transaction_income_transaction__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_calculator_calculator__ = __webpack_require__(223);
@@ -3318,7 +3319,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_contact_us_contact_us__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_transaction_product_transaction_product__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_product_list_product_list__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_add_product_category_add_product_category__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_add_product_category_add_product_category__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_expenses_home_expenses_home__ = __webpack_require__(118);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3411,15 +3412,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/add-product-category/add-product-category.module#AddProductCategoryPageModule', name: 'AddProductCategoryPage', segment: 'add-product-category', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/all-transaction/all-transaction.module#AllTransactionPageModule', name: 'AllTransactionPage', segment: 'all-transaction', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-product-category/add-product-category.module#AddProductCategoryPageModule', name: 'AddProductCategoryPage', segment: 'add-product-category', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/calculator/calculator.module#CalculatorPageModule', name: 'CalculatorPage', segment: 'calculator', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-businesstips/coach-businesstips.module#CoachBusinesstipsPageModule', name: 'CoachBusinesstipsPage', segment: 'coach-businesstips', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-coach/coach-coach.module#CoachCoachPageModule', name: 'CoachCoachPage', segment: 'coach-coach', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/coach-goals/coach-goals.module#CoachGoalsPageModule', name: 'CoachGoalsPage', segment: 'coach-goals', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/coach-home/coach-home.module#CoachHomePageModule', name: 'CoachHomePage', segment: 'coach-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact-us/contact-us.module#ContactUsPageModule', name: 'ContactUsPage', segment: 'contact-us', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/expense-transaction/expense-transaction.module#ExpenseTransactionPageModule', name: 'ExpenseTransactionPage', segment: 'expense-transaction', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/coach-home/coach-home.module#CoachHomePageModule', name: 'CoachHomePage', segment: 'coach-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/expenses-home/expenses-home.module#ExpensesHomePageModule', name: 'ExpensesHomePage', segment: 'expenses-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/income-transaction/income-transaction.module#IncomeTransactionPageModule', name: 'IncomeTransactionPage', segment: 'income-transaction', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
@@ -3583,7 +3584,7 @@ var MyApp = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__all_transaction_all_transaction__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__all_transaction_all_transaction__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__income_transaction_income_transaction__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transaction_product_transaction_product__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_storage_storage__ = __webpack_require__(14);

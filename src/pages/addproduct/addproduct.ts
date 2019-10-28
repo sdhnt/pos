@@ -245,14 +245,12 @@ export class AddProductPage {
           "cost": this.prodCost,
           "cat": this.prodCat,
           "url": this.produrl,
-          "qty": 0,
+          "stock_qty": this.currstock,
           //"sub-group": (productcode, itemslist)
         };
 
         console.log(data);
         this.temp = JSON.stringify(data);
-
-
 
         this.sp.storageReady().then(() => {
           this.sp.addProduct(data);

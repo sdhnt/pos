@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Oct 24 11:44:16 CST 2019
+#Thu Oct 24 12:25:18 CST 2019
 210.set=ASSET
 282.file=C\:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\html-fr\\about2d.html
 14.set=ASSET
