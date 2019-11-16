@@ -39,10 +39,7 @@ export class MyApp {
     ];
   }
 
-  viewHome() : void
-  {
-   this.nav.setRoot(LoginPage);
-  }
+ 
   
   logout(){
 
@@ -58,14 +55,26 @@ export class MyApp {
 }
 ngAfterViewInit(){
   console.log("yolo1");
-  this.nav.setRoot(LoginPage);
+  //this.nav.setRoot(LoginPage);
 }
   
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.nav.setRoot(LoginPage);
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log(user)// User is signed in.
+          
+          
+          this.nav.setRoot(TransactionHomePage);
+        } else {
+          // No user is signed in.
+          this.nav.setRoot(LoginPage);
+        }
+      });
+    
     });
   }
 

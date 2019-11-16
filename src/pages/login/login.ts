@@ -31,11 +31,32 @@ export class LoginPage {
       //this.loginWithFB();
       //Get email&passfromstorageandcalllogin
       //onlogin-saveemailandpassto"userdat"&tologinarray in memory
-      var user = firebase.auth().currentUser;
-        if (user){
-          console.log(user);
+      
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log(user)// User is signed in.
+          alertCtrl.create({
+  
+            subTitle:"ကြိုဆိုပါတယ် " + user.displayName,
+            buttons: [
+              {
+                text: 'Okay!',
+                role: 'cancel',
+              }
+              ],
+          }).present();
+    
+          sp.clearMem();
+          sp.setMem();
+        
+          navCtrl.setRoot(TransactionHomePage);
+        } else {
+          // No user is signed in.
+          console.log("no-wenis")
         }
-      }
+      });
+    }
+  
 
       ngAfterViewInit(){
         console.log("yolo");
