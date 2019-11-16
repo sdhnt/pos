@@ -71,7 +71,7 @@ ngAfterViewInit(){
           this.nav.setRoot(TransactionHomePage);
         } else {
           // No user is signed in.
-          this.nav.setRoot(LoginPage);
+          //this.nav.setRoot(LoginPage);
         }
       });
     
