@@ -35,12 +35,6 @@ export class LoginPage {
   
   login(){
 
-
-
-
- 
-    
-   
       //firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
       firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(()=>{
         console.log("yeahh")

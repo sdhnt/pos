@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\barcode-mpos\\barcode-mpos\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "outputFile": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\12290740075e2a7eff2884779ae37721\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
