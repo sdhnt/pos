@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, NavController } from 'ionic-angular';
 
+
 import { MyApp } from './app.component';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { ListPage } from '../pages/list/list';
@@ -17,8 +18,7 @@ import { StorageProvider } from '../providers/storage/storage';
 import { IonicStorageModule } from '@ionic/storage';
 import { ToastController } from 'ionic-angular';
 import { GettersetterProvider } from '../providers/gettersetter/gettersetter';
-import { Camera, CameraOptions } from '@ionic-native/camera'; 
-
+import { Camera } from '@ionic-native/camera'; 
 
 import * as firebase from 'firebase';
 import { TransactionHomePage } from '../pages/transaction-home/transaction-home';
@@ -36,6 +36,23 @@ import { TransactionProductPage } from '../pages/transaction-product/transaction
 import { ProductListPage } from '../pages/product-list/product-list';
 import { AddProductCategoryPage } from '../pages/add-product-category/add-product-category';
 import { ExpensesHomePage } from '../pages/expenses-home/expenses-home';
+import { AddProductCategoryPageModule } from '../pages/add-product-category/add-product-category.module';
+import { AllTransactionPageModule } from '../pages/all-transaction/all-transaction.module';
+import { CalculatorPageModule } from '../pages/calculator/calculator.module';
+import { CoachBusinesstipsPageModule } from '../pages/coach-businesstips/coach-businesstips.module';
+import { CoachHomePageModule } from '../pages/coach-home/coach-home.module';
+import { CoachGoalsPageModule } from '../pages/coach-goals/coach-goals.module';
+import { CoachCoachPageModule } from '../pages/coach-coach/coach-coach.module';
+import { ContactUsPageModule } from '../pages/contact-us/contact-us.module';
+import { LoginPageModule } from '../pages/login/login.module';
+import { SignUpPageModule } from '../pages/sign-up/sign-up.module';
+import { TransactionHomePageModule } from '../pages/transaction-home/transaction-home.module';
+import { ExpenseTransactionPageModule } from '../pages/expense-transaction/expense-transaction.module';
+import { IncomeTransactionPageModule } from '../pages/income-transaction/income-transaction.module';
+import { SummaryHomePageModule } from '../pages/summary-home/summary-home.module';
+import { TransactionProductPageModule } from '../pages/transaction-product/transaction-product.module';
+import { ProductListPageModule } from '../pages/product-list/product-list.module';
+import { ExpensesHomePageModule } from '../pages/expenses-home/expenses-home.module';
 
 
 
@@ -63,33 +80,42 @@ firebase.initializeApp(config);
 @NgModule({
   declarations: [
     MyApp,
+    
+    //CalculatorPage,
+  
+    //CoachBusinesstipsPage,
+    
+ 
+
     DashboardPage,
     ListPage,
     AddProductPage,
     SingleProductPage,
-    LoginPage,
-    SignUpPage,
-    TransactionHomePage,
-    AllTransactionPage,
-    ExpenseTransactionPage,
-    IncomeTransactionPage,
-    CalculatorPage,
-    SummaryHomePage,
-    CoachHomePage,
-    CoachGoalsPage,
-    CoachCoachPage,
-    CoachBusinesstipsPage,
-    ContactUsPage,
-    TransactionProductPage,
-    ProductListPage,
-    AddProductCategoryPage,
-    ExpensesHomePage,
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AddProductCategoryPageModule,
+    AllTransactionPageModule,
+    CalculatorPageModule,
+    CoachBusinesstipsPageModule,
+    CoachHomePageModule,
+    CoachGoalsPageModule,
+    CoachCoachPageModule,
+    ContactUsPageModule,
+    LoginPageModule,
+    SignUpPageModule,
+    TransactionHomePageModule,
+    ExpenseTransactionPageModule,
+    IncomeTransactionPageModule,
+    SummaryHomePageModule,
+    TransactionProductPageModule,
+    ProductListPageModule,
+    ExpensesHomePageModule,
+    
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

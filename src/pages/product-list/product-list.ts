@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, ToastController } from 'ionic-angular';
 import { StorageProvider } from '../../providers/storage/storage';
 import { SingleProductPage } from '../singleproduct/singleproduct';
-import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
 
 /**
  * Generated class for the ProductListPage page.

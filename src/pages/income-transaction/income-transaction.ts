@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, Tabs, ToastController, DateTime} from 'ionic-angular';
 import { AllTransactionPage } from '../all-transaction/all-transaction';
 import firebase from 'firebase';
-import { CoachBusinesstipsPageModule } from '../coach-businesstips/coach-businesstips.module';
 import { StorageProvider } from '../../providers/storage/storage';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { ThrowStmt } from '@angular/compiler';

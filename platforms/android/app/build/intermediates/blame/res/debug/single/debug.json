@@ -32,24 +32,24 @@
         "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\src\\main\\res\\drawable-port-hdpi\\screen.png"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
+        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable\\notification_bg_low.xml"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
         "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",
-        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable\\notification_bg_low.xml"
-    },
-    {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
-        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\src\\main\\res\\xml\\network_security_config.xml"
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share_via_barcode.png.flat",
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-barcodescanner-release-2.1.5.aar\\174e7dae43af627402ac221af690bfc3\\res\\drawable\\share_via_barcode.png"
+    },
+    {
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\src\\main\\res\\xml\\network_security_config.xml"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\4b466e18eb3916fe9d4420b82e55c9be\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
-    },
-    {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
+        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\4b466e18eb3916fe9d4420b82e55c9be\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -112,12 +112,12 @@
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\2c0a3ef73c37ead6c7a1023a054bd5e4\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxxhdpi_screen.png.flat",
         "source": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -136,12 +136,12 @@
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\jetified-barcodescanner-release-2.1.5.aar\\174e7dae43af627402ac221af690bfc3\\res\\layout-land\\encode.xml"
     },
     {
-        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
-        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\4b466e18eb3916fe9d4420b82e55c9be\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
-    },
-    {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.0.0.aar\\ba4bbdd010cdb353a0d624dcb579bc0b\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
+        "source": "C:\\Users\\supre\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-17.0.0.aar\\4b466e18eb3916fe9d4420b82e55c9be\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "C:\\Users\\supre\\Downloads\\Coding\\easycredit\\open-fintech\\burmesepos\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_toggle_torch.png.flat",

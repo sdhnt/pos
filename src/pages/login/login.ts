@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import firebase from 'firebase';
-import { DashboardPage } from '../dashboard/dashboard';
 import {SignUpPage} from '../sign-up/sign-up';
 import { TransactionHomePage } from '../transaction-home/transaction-home';
 import { StorageProvider } from '../../providers/storage/storage';

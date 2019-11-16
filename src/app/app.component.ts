@@ -38,6 +38,11 @@ export class MyApp {
       { title: 'ကူညီပါ', component: ContactUsPage },
     ];
   }
+
+  viewHome() : void
+  {
+   this.nav.setRoot(LoginPage);
+  }
   
   logout(){
 
@@ -56,6 +61,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.nav.setRoot(LoginPage);
     });
   }
 
