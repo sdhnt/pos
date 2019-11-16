@@ -56,6 +56,10 @@ export class MyApp {
       this.nav.setRoot(LoginPage);
   });
 }
+ngAfterViewInit(){
+  console.log("yolo1");
+  this.nav.setRoot(LoginPage);
+}
   
   initializeApp() {
     this.platform.ready().then(() => {

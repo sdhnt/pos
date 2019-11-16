@@ -7,6 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-androidx": {
+      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
+    },
     "cordova-plugin-camera": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
@@ -58,14 +64,12 @@
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
+    },
+    "cordova-plugin-facebook4": {
+      "APP_ID": "1521978867943856",
+      "APP_NAME": "Open-Fintech",
+      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-androidx": {
-      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
-    },
-    "cordova-plugin-androidx-adapter": {
-      "PACKAGE_NAME": "com.ferdousulhaque.barcodempos"
-    }
-  }
+  "dependent_plugins": {}
 }

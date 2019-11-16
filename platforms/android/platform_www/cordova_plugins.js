@@ -111,14 +111,22 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugins.barcodeScanner"
       ]
+    },
+    {
+      "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+      "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+      "pluginId": "cordova-plugin-facebook4",
+      "clobbers": [
+        "facebookConnectPlugin"
+      ]
     }
   ];
   module.exports.metadata = {
+    "cordova-plugin-androidx": "1.0.2",
+    "cordova-plugin-androidx-adapter": "1.1.0",
     "cordova-plugin-camera": "4.1.0",
     "cordova-plugin-datepicker": "0.9.3",
     "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-androidx": "1.0.2",
-    "cordova-plugin-androidx-adapter": "1.1.0",
     "cordova-plugin-firebasex": "6.1.0",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "4.1.1",
@@ -127,6 +135,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-x-toast": "2.7.2",
     "cordova-sqlite-storage": "3.3.0",
-    "phonegap-plugin-barcodescanner": "8.1.0"
+    "phonegap-plugin-barcodescanner": "8.1.0",
+    "cordova-plugin-facebook4": "1.7.4"
   };
 });

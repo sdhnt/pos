@@ -14,6 +14,7 @@ export class StorageProvider {
   products: any = [];
   categories: any = [];
   transactions: any = [];
+  login: any =[];
 
   static get parameters() {
     return [[Storage]];

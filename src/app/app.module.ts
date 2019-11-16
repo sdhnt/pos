@@ -19,6 +19,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { ToastController } from 'ionic-angular';
 import { GettersetterProvider } from '../providers/gettersetter/gettersetter';
 import { Camera } from '@ionic-native/camera'; 
+import { Facebook } from '@ionic-native/facebook';
 
 import * as firebase from 'firebase';
 import { TransactionHomePage } from '../pages/transaction-home/transaction-home';
@@ -152,6 +153,7 @@ firebase.initializeApp(config);
     ToastController,
     GettersetterProvider,
     Camera,
+    Facebook,
   ]
 })
 export class AppModule {}
